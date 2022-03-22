@@ -1,0 +1,224 @@
+\BOOKMARK [-1][-]{part.1}{I Topologia}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Espais m\350trics}{part.1}% 2
+\BOOKMARK [1][-]{section.1.1}{Espais m\350trics i isometries}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.2}{Boles obertes i oberts}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.3}{Funcions cont\355nues}{chapter.1}% 5
+\BOOKMARK [0][-]{chapter.2}{Espais topol\362gics}{part.1}% 6
+\BOOKMARK [1][-]{section.2.1}{Espais topol\362gics}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.2}{Exemples de topologies}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.1}{Topologia discreta i grollera}{section.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.2}{Topologia usual i euclidiana}{section.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.3}{Topologia del l\355mit inferior o de Sorgenfrey}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.4}{Topologia del segment inicial i final}{section.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.5}{Topologia dels complements finits i dels complements numerables}{section.2.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.6}{La topologia nidificada}{section.2.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.7}{Topologia subespai}{section.2.2}% 15
+\BOOKMARK [1][-]{section.2.3}{Comparaci\363 de topologies}{chapter.2}% 16
+\BOOKMARK [0][-]{chapter.3}{Oberts i tancats}{part.1}% 17
+\BOOKMARK [1][-]{section.3.1}{Oberts i tancats}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.2}{Punts interiors d'un conjunt en un espai topol\362gic}{chapter.3}% 19
+\BOOKMARK [2][-]{subsection.3.2.1}{Definici\363 de punt interior i exemples}{section.3.2}% 20
+\BOOKMARK [2][-]{subsection.3.2.2}{Propietats}{section.3.2}% 21
+\BOOKMARK [1][-]{section.3.3}{Punts adherents d'un conjunt en un espai topol\362gic}{chapter.3}% 22
+\BOOKMARK [2][-]{subsection.3.3.1}{Definici\363 de punt adherent o d'acumulaci\363 i exemples}{section.3.3}% 23
+\BOOKMARK [2][-]{subsection.3.3.2}{Propietats}{section.3.3}% 24
+\BOOKMARK [1][-]{section.3.4}{Clausura d'un conjunt en un espai topol\362gic}{chapter.3}% 25
+\BOOKMARK [2][-]{subsection.3.4.1}{Clausura d'un conjunt en un espai topol\362gic}{section.3.4}% 26
+\BOOKMARK [2][-]{subsection.3.4.2}{Propietats}{section.3.4}% 27
+\BOOKMARK [2][-]{subsection.3.4.3}{Comparaci\363 de la clausura amb l'interior}{section.3.4}% 28
+\BOOKMARK [1][-]{section.3.5}{La frontera d'un conjunt a un espai topol\362gic}{chapter.3}% 29
+\BOOKMARK [2][-]{subsection.3.5.1}{La frontera d'un conjunt a un espai topol\362gic}{section.3.5}% 30
+\BOOKMARK [2][-]{subsection.3.5.2}{Propietats}{section.3.5}% 31
+\BOOKMARK [1][-]{section.3.6}{Conjunt dens en un espai topol\362gic}{chapter.3}% 32
+\BOOKMARK [0][-]{chapter.4}{Bases de topologies}{part.1}% 33
+\BOOKMARK [1][-]{section.4.1}{Bases}{chapter.4}% 34
+\BOOKMARK [2][-]{subsection.4.1.1}{Bases. Definici\363 i exemples}{section.4.1}% 35
+\BOOKMARK [2][-]{subsection.4.1.2}{Condici\363 suficient per ser una base}{section.4.1}% 36
+\BOOKMARK [2][-]{subsection.4.1.3}{Generant topologies a partir d'una col\267lecci\363 de subconjunts}{section.4.1}% 37
+\BOOKMARK [2][-]{subsection.4.1.4}{Comparaci\363 de topologies a partir de les seves bases}{section.4.1}% 38
+\BOOKMARK [1][-]{section.4.2}{Subbases}{chapter.4}% 39
+\BOOKMARK [1][-]{section.4.3}{Entorns i bases d'entorns}{chapter.4}% 40
+\BOOKMARK [2][-]{subsection.4.3.1}{Entorn d'un punt en un espai topol\362gic}{section.4.3}% 41
+\BOOKMARK [2][-]{subsection.4.3.2}{Bases d'entorns}{section.4.3}% 42
+\BOOKMARK [1][-]{section.4.4}{Axiomes de numerabilitat}{chapter.4}% 43
+\BOOKMARK [2][-]{subsection.4.4.1}{Recordatori dels conjunts numerables}{section.4.4}% 44
+\BOOKMARK [2][-]{subsection.4.4.2}{Primer axioma de numerabilitat}{section.4.4}% 45
+\BOOKMARK [2][-]{subsection.4.4.3}{Segon axioma de numerabilitat}{section.4.4}% 46
+\BOOKMARK [2][-]{subsection.4.4.4}{Propietat important del segon axioma de numerabilitat}{section.4.4}% 47
+\BOOKMARK [2][-]{subsection.4.4.5}{Relaci\363 entre el primer i el segon axioma de numerabilitat}{section.4.4}% 48
+\BOOKMARK [0][-]{chapter.5}{Aplicacions cont\355nues}{part.1}% 49
+\BOOKMARK [1][-]{section.5.1}{Aplicaci\363 cont\355nua}{chapter.5}% 50
+\BOOKMARK [2][-]{subsection.5.1.1}{Aplicacions cont\355nues. Definici\363 i exemples}{section.5.1}% 51
+\BOOKMARK [2][-]{subsection.5.1.2}{Propietats}{section.5.1}% 52
+\BOOKMARK [1][-]{section.5.2}{Homeomorfismes}{chapter.5}% 53
+\BOOKMARK [2][-]{subsection.5.2.1}{Aplicacions obertes i tancades}{section.5.2}% 54
+\BOOKMARK [2][-]{subsection.5.2.2}{Homeomorfismes. Definici\363 i exemples}{section.5.2}% 55
+\BOOKMARK [2][-]{subsection.5.2.3}{Interior, clausura, etc. d'un subconjunt sota homeomorfismes}{section.5.2}% 56
+\BOOKMARK [2][-]{subsection.5.2.4}{El primer i segon axioma de numerabilitat sota homeomorfismes}{section.5.2}% 57
+\BOOKMARK [1][-]{section.5.3}{Successions a espais topol\362gics}{chapter.5}% 58
+\BOOKMARK [2][-]{subsection.5.3.1}{Tancats, continu\357tat i converg\350ncia}{section.5.3}% 59
+\BOOKMARK [2][-]{subsection.5.3.2}{Converg\350ncia uniforme}{section.5.3}% 60
+\BOOKMARK [0][-]{chapter.6}{Construcci\363 d'espais topol\362gics}{part.1}% 61
+\BOOKMARK [1][-]{section.6.1}{Topologies inicials i finals}{chapter.6}% 62
+\BOOKMARK [2][-]{subsection.6.1.1}{Topologia inicial}{section.6.1}% 63
+\BOOKMARK [2][-]{subsection.6.1.2}{Topologia final}{section.6.1}% 64
+\BOOKMARK [2][-]{subsection.6.1.3}{Identificaci\363}{section.6.1}% 65
+\BOOKMARK [1][-]{section.6.2}{Topologia subespai}{chapter.6}% 66
+\BOOKMARK [2][-]{subsection.6.2.1}{Definici\363 alternativa de subespai topol\362gic}{section.6.2}% 67
+\BOOKMARK [2][-]{subsection.6.2.2}{Oberts i tancats en subespais topol\362gics}{section.6.2}% 68
+\BOOKMARK [2][-]{subsection.6.2.3}{Propietats heredit\340ries de subespais topol\362gics}{section.6.2}% 69
+\BOOKMARK [1][-]{section.6.3}{Topologia suma}{chapter.6}% 70
+\BOOKMARK [2][-]{subsection.6.3.1}{Suma topol\362gica d'espais topol\362gics}{section.6.3}% 71
+\BOOKMARK [1][-]{section.6.4}{Topologia producte}{chapter.6}% 72
+\BOOKMARK [2][-]{subsection.6.4.1}{Topologia producte}{section.6.4}% 73
+\BOOKMARK [2][-]{subsection.6.4.2}{Oberts i tancats a la topologia producte}{section.6.4}% 74
+\BOOKMARK [2][-]{subsection.6.4.3}{L'interior, la clausura i la frontera de l'espai producte}{section.6.4}% 75
+\BOOKMARK [1][-]{section.6.5}{Topologia quocient}{chapter.6}% 76
+\BOOKMARK [2][-]{subsection.6.5.1}{Topologia quocient}{section.6.5}% 77
+\BOOKMARK [2][-]{subsection.6.5.2}{Oberts i tancats a la topologia quocient}{section.6.5}% 78
+\BOOKMARK [2][-]{subsection.6.5.3}{Topologia quocient en espais euclidians}{section.6.5}% 79
+\BOOKMARK [1][-]{section.6.6}{Espais localment euclidians}{chapter.6}% 80
+\BOOKMARK [2][-]{subsection.6.6.1}{Espais localment euclidians}{section.6.6}% 81
+\BOOKMARK [2][-]{subsection.6.6.2}{El lema de l'enganxament}{section.6.6}% 82
+\BOOKMARK [2][-]{subsection.6.6.3}{Enganxant espais topol\362gics a ells mateixos}{section.6.6}% 83
+\BOOKMARK [2][-]{subsection.6.6.4}{Enganxant espais topol\362gics disjunts}{section.6.6}% 84
+\BOOKMARK [2][-]{subsection.6.6.5}{La construcci\363 de la banda de M\366bius}{section.6.6}% 85
+\BOOKMARK [2][-]{subsection.6.6.6}{La construcci\363 del pla projectiu real}{section.6.6}% 86
+\BOOKMARK [2][-]{subsection.6.6.7}{Altres construccions}{section.6.6}% 87
+\BOOKMARK [0][-]{chapter.7}{Propietats de separaci\363}{part.1}% 88
+\BOOKMARK [1][-]{section.7.1}{Espais topol\362gics separables}{chapter.7}% 89
+\BOOKMARK [1][-]{section.7.2}{Espais topol\362gics de Kolmogorov}{chapter.7}% 90
+\BOOKMARK [1][-]{section.7.3}{Espais topol\362gics de Fr\351chet}{chapter.7}% 91
+\BOOKMARK [1][-]{section.7.4}{Espais topol\362gics de Hausdorff}{chapter.7}% 92
+\BOOKMARK [1][-]{section.7.5}{Espais topol\362gics regulars i normals}{chapter.7}% 93
+\BOOKMARK [2][-]{subsection.7.5.1}{Espais topol\362gics regulars}{section.7.5}% 94
+\BOOKMARK [2][-]{subsection.7.5.2}{Espais topol\362gics normals}{section.7.5}% 95
+\BOOKMARK [2][-]{subsection.7.5.3}{Relaci\363 entre ells}{section.7.5}% 96
+\BOOKMARK [0][-]{chapter.8}{Compacitat}{part.1}% 97
+\BOOKMARK [1][-]{section.8.1}{Recobriments i subrecobriments}{chapter.8}% 98
+\BOOKMARK [1][-]{section.8.2}{Espais quasi-compactes}{chapter.8}% 99
+\BOOKMARK [2][-]{subsection.8.2.1}{Espais quasi-compactes}{section.8.2}% 100
+\BOOKMARK [2][-]{subsection.8.2.2}{Quasi-compacitat de conjunts finits}{section.8.2}% 101
+\BOOKMARK [2][-]{subsection.8.2.3}{Propietat de la intersecci\363 finita}{section.8.2}% 102
+\BOOKMARK [1][-]{section.8.3}{Propietats dels espais quasi-compactes}{chapter.8}% 103
+\BOOKMARK [2][-]{subsection.8.3.1}{Tancats a espais quasi-compactes}{section.8.3}% 104
+\BOOKMARK [2][-]{subsection.8.3.2}{Conjunts quasi-compactes a espais de Hausdorff}{section.8.3}% 105
+\BOOKMARK [2][-]{subsection.8.3.3}{Preservaci\363 de la quasi-compacitat per aplicacions cont\355nues}{section.8.3}% 106
+\BOOKMARK [2][-]{subsection.8.3.4}{Quocients a espais quasi-compactes}{section.8.3}% 107
+\BOOKMARK [1][-]{section.8.4}{Productes i espais quasi-compactes}{chapter.8}% 108
+\BOOKMARK [2][-]{subsection.8.4.1}{El lema del tub}{section.8.4}% 109
+\BOOKMARK [2][-]{subsection.8.4.2}{Producte de quasi-compactes}{section.8.4}% 110
+\BOOKMARK [1][-]{section.8.5}{Espais compactes}{chapter.8}% 111
+\BOOKMARK [1][-]{section.8.6}{Espais m\350trics compactes}{chapter.8}% 112
+\BOOKMARK [2][-]{subsection.8.6.1}{Espais seq\374encialment compactes}{section.8.6}% 113
+\BOOKMARK [1][-]{section.8.7}{El lema de Heine-Borel}{chapter.8}% 114
+\BOOKMARK [1][-]{section.8.8}{Espais localment compactess}{chapter.8}% 115
+\BOOKMARK [1][-]{section.8.9}{Compactificacions}{chapter.8}% 116
+\BOOKMARK [2][-]{subsection.8.9.1}{Compactificaci\363 per un punt o d'Alexandroff}{section.8.9}% 117
+\BOOKMARK [0][-]{chapter.9}{Propietats de connexi\363}{part.1}% 118
+\BOOKMARK [1][-]{section.9.1}{Espais arc-connexos}{chapter.9}% 119
+\BOOKMARK [2][-]{subsection.9.1.1}{Camins i espais arc-connexos}{section.9.1}% 120
+\BOOKMARK [2][-]{subsection.9.1.2}{Propietats dels espais arc-connexos}{section.9.1}% 121
+\BOOKMARK [2][-]{subsection.9.1.3}{Components arc-connexes}{section.9.1}% 122
+\BOOKMARK [2][-]{subsection.9.1.4}{Localment arc-connex}{section.9.1}% 123
+\BOOKMARK [1][-]{section.9.2}{Espais connexos}{chapter.9}% 124
+\BOOKMARK [2][-]{subsection.9.2.1}{Definici\363 i exemples}{section.9.2}% 125
+\BOOKMARK [2][-]{subsection.9.2.2}{Criteris de connexi\363}{section.9.2}% 126
+\BOOKMARK [2][-]{subsection.9.2.3}{Subespais connexos}{section.9.2}% 127
+\BOOKMARK [2][-]{subsection.9.2.4}{Criteris de connexi\363 de subespais}{section.9.2}% 128
+\BOOKMARK [2][-]{subsection.9.2.5}{Espais connexos i homeomorfismes}{section.9.2}% 129
+\BOOKMARK [2][-]{subsection.9.2.6}{Producte d'espais connexos}{section.9.2}% 130
+\BOOKMARK [2][-]{subsection.9.2.7}{Relaci\363 entre connexi\363 i arc-connexi\363}{section.9.2}% 131
+\BOOKMARK [2][-]{subsection.9.2.8}{Components connexes}{section.9.2}% 132
+\BOOKMARK [0][-]{chapter.10}{App\350ndix: Projecci\363 estereogr\340fica}{part.1}% 133
+\BOOKMARK [1][-]{section.10.1}{En dimensi\363 1}{chapter.10}% 134
+\BOOKMARK [2][-]{subsection.10.1.1}{Interpretaci\363 gr\340fica}{section.10.1}% 135
+\BOOKMARK [2][-]{subsection.10.1.2}{Construcci\363 de la funci\363 expl\355cita}{section.10.1}% 136
+\BOOKMARK [2][-]{subsection.10.1.3}{Demostrem que \351s un homeomorfisme}{section.10.1}% 137
+\BOOKMARK [1][-]{section.10.2}{En dimensi\363 2}{chapter.10}% 138
+\BOOKMARK [-1][-]{part.2}{II Grup fonamental}{}% 139
+\BOOKMARK [0][-]{chapter.11}{Homotopia}{part.2}% 140
+\BOOKMARK [1][-]{section.11.1}{Homotopies entre aplicacions}{chapter.11}% 141
+\BOOKMARK [1][-]{section.11.2}{Equival\350ncies homot\362piques}{chapter.11}% 142
+\BOOKMARK [1][-]{section.11.3}{Espais contr\340ctils}{chapter.11}% 143
+\BOOKMARK [2][-]{subsection.11.3.1}{Retractes}{section.11.3}% 144
+\BOOKMARK [2][-]{subsection.11.3.2}{Deformacions}{section.11.3}% 145
+\BOOKMARK [1][-]{section.11.4}{Homotopia de camins}{chapter.11}% 146
+\BOOKMARK [0][-]{chapter.12}{El grup fonamental}{part.2}% 147
+\BOOKMARK [1][-]{section.12.1}{El grup fonamental}{chapter.12}% 148
+\BOOKMARK [1][-]{section.12.2}{Canvi de punt base}{chapter.12}% 149
+\BOOKMARK [1][-]{section.12.3}{Relaci\363 entre grups fonamentals de diferents espais}{chapter.12}% 150
+\BOOKMARK [2][-]{subsection.12.3.1}{El grup fonamental \351s un invariant topol\362gic}{section.12.3}% 151
+\BOOKMARK [2][-]{subsection.12.3.2}{El grup fonamental \351s un invariant homot\362pic}{section.12.3}% 152
+\BOOKMARK [2][-]{subsection.12.3.3}{El grup fonamental del producte}{section.12.3}% 153
+\BOOKMARK [1][-]{section.12.4}{El grup fonamental de TEXT}{chapter.12}% 154
+\BOOKMARK [1][-]{section.12.5}{Aplicacions del grup fonamental a la topologia del pla}{chapter.12}% 155
+\BOOKMARK [2][-]{subsection.12.5.1}{Teorema del punt fix de Brouwer}{section.12.5}% 156
+\BOOKMARK [2][-]{subsection.12.5.2}{\315ndex d'un cam\355 tancat al pla respecte un punt}{section.12.5}% 157
+\BOOKMARK [2][-]{subsection.12.5.3}{Teorema de Bolzano al pla}{section.12.5}% 158
+\BOOKMARK [2][-]{subsection.12.5.4}{Conjunt de teoremes cl\340ssics de topologia del pla}{section.12.5}% 159
+\BOOKMARK [2][-]{subsection.12.5.5}{El tipus d'homotopia d'un graf}{section.12.5}% 160
+\BOOKMARK [2][-]{subsection.12.5.6}{Exercicis proposats}{section.12.5}% 161
+\BOOKMARK [1][-]{section.12.6}{El teorema de Seifert-Van Kampen}{chapter.12}% 162
+\BOOKMARK [2][-]{subsection.12.6.1}{Grups lliures i presentacions de grups}{section.12.6}% 163
+\BOOKMARK [2][-]{subsection.12.6.2}{Producte lliure amalgamat}{section.12.6}% 164
+\BOOKMARK [2][-]{subsection.12.6.3}{Enunciat i demostraci\363 del teorema}{section.12.6}% 165
+\BOOKMARK [2][-]{subsection.12.6.4}{Conseq\374\350ncies i exemples}{section.12.6}% 166
+\BOOKMARK [0][-]{chapter.13}{Superf\355cies topol\362giques}{part.2}% 167
+\BOOKMARK [1][-]{section.13.1}{Varietats topol\362giques}{chapter.13}% 168
+\BOOKMARK [2][-]{subsection.13.1.1}{El concepte de varietat topol\362gica}{section.13.1}% 169
+\BOOKMARK [2][-]{subsection.13.1.2}{Varietats amb vora}{section.13.1}% 170
+\BOOKMARK [2][-]{subsection.13.1.3}{Varietats connexes}{section.13.1}% 171
+\BOOKMARK [2][-]{subsection.13.1.4}{Varietats de dimensi\363 1}{section.13.1}% 172
+\BOOKMARK [1][-]{section.13.2}{Superf\355cies topol\362giques}{chapter.13}% 173
+\BOOKMARK [2][-]{subsection.13.2.1}{Superf\355cies poligonals}{section.13.2}% 174
+\BOOKMARK [2][-]{subsection.13.2.2}{Invari\340ncia topol\362gica de la dimensi\363}{section.13.2}% 175
+\BOOKMARK [1][-]{section.13.3}{El grup fonamental de les superf\355cies topol\362giques}{chapter.13}% 176
+\BOOKMARK [2][-]{subsection.13.3.1}{El cas d'un sol v\350rtex}{section.13.3}% 177
+\BOOKMARK [2][-]{subsection.13.3.2}{El cas general}{section.13.3}% 178
+\BOOKMARK [2][-]{subsection.13.3.3}{Orientabilitat}{section.13.3}% 179
+\BOOKMARK [1][-]{section.13.4}{Classificaci\363 de superf\355cies}{chapter.13}% 180
+\BOOKMARK [2][-]{subsection.13.4.1}{Demostraci\363 del teorema de classificaci\363 de superf\355cies}{section.13.4}% 181
+\BOOKMARK [1][-]{section.13.5}{Triangulaci\363}{chapter.13}% 182
+\BOOKMARK [2][-]{subsection.13.5.1}{Superf\355cies triangulables}{section.13.5}% 183
+\BOOKMARK [2][-]{subsection.13.5.2}{Triangulaci\363 de superf\355cies}{section.13.5}% 184
+\BOOKMARK [2][-]{subsection.13.5.3}{Complexos simplicials i complexos cel\267lulars}{section.13.5}% 185
+\BOOKMARK [2][-]{subsection.13.5.4}{Teorema de classificaci\363 de superf\355cies triangulables}{section.13.5}% 186
+\BOOKMARK [2][-]{subsection.13.5.5}{Caracter\355stica d'Euler}{section.13.5}% 187
+\BOOKMARK [-1][-]{part.3}{III Grups d'homologia}{}% 188
+\BOOKMARK [0][-]{chapter.14}{Pol\355edres}{part.3}% 189
+\BOOKMARK [1][-]{section.14.1}{S\355mplexs i pol\355edres simplicials}{chapter.14}% 190
+\BOOKMARK [1][-]{section.14.2}{Aplicacions simplicials}{chapter.14}% 191
+\BOOKMARK [0][-]{chapter.15}{Homologia simplicial}{part.3}% 192
+\BOOKMARK [1][-]{section.15.1}{Cadenes d'un pol\355edre. Homologia simplicial}{chapter.15}% 193
+\BOOKMARK [1][-]{section.15.2}{Complexos de R-m\362duls}{chapter.15}% 194
+\BOOKMARK [1][-]{section.15.3}{Morfismes de complexos}{chapter.15}% 195
+\BOOKMARK [1][-]{section.15.4}{Homotopies entre morfismes de complexos de TEXT-m\362duls}{chapter.15}% 196
+\BOOKMARK [0][-]{chapter.16}{Homologia singular}{part.3}% 197
+\BOOKMARK [1][-]{section.16.1}{Cadenes singulars d'un espai topol\362gic}{chapter.16}% 198
+\BOOKMARK [1][-]{section.16.2}{TEXT i arc-connexi\363}{chapter.16}% 199
+\BOOKMARK [1][-]{section.16.3}{El teorema d'invari\340ncia homot\362pica}{chapter.16}% 200
+\BOOKMARK [1][-]{section.16.4}{El teorema de les cadenes petites}{chapter.16}% 201
+\BOOKMARK [1][-]{section.16.5}{La successi\363 exacta de Mayer-Vietoris}{chapter.16}% 202
+\BOOKMARK [1][-]{section.16.6}{C\340lcul d'homologies singulars}{chapter.16}% 203
+\BOOKMARK [1][-]{section.16.7}{Homologia relativa singular}{chapter.16}% 204
+\BOOKMARK [1][-]{section.16.8}{El teorema d'escissi\363}{chapter.16}% 205
+\BOOKMARK [1][-]{section.16.9}{Comparaci\363 homologia singular i simplicial}{chapter.16}% 206
+\BOOKMARK [0][-]{chapter.17}{Aplicacions de l'homologia}{part.3}% 207
+\BOOKMARK [1][-]{section.17.1}{Homologia redu\357da}{chapter.17}% 208
+\BOOKMARK [1][-]{section.17.2}{Teorema de no separaci\363}{chapter.17}% 209
+\BOOKMARK [1][-]{section.17.3}{El teorema de separaci\363 de Jordan-Brouwer}{chapter.17}% 210
+\BOOKMARK [1][-]{section.17.4}{Altres teoremes importants}{chapter.17}% 211
+\BOOKMARK [1][-]{section.17.5}{Annex: Grau d'aplicacions entre esferes}{chapter.17}% 212
+\BOOKMARK [-1][-]{part.4}{IV Ap\350ndix}{}% 213
+\BOOKMARK [0][-]{appendix.A}{Introducci\363 a la teoria de categories}{part.4}% 214
+\BOOKMARK [0][-]{appendix.B}{Teoria b\340sica de grups \(en angl\350s\)}{part.4}% 215
+\BOOKMARK [1][-]{section.B.1}{Preliminary concepts}{appendix.B}% 216
+\BOOKMARK [1][-]{section.B.2}{Cosets and Lagrange's Theorem}{appendix.B}% 217
+\BOOKMARK [1][-]{section.B.3}{Normality, quotient groups and isomorphism's theorems}{appendix.B}% 218
+\BOOKMARK [1][-]{section.B.4}{Actions and Sylow theorems}{appendix.B}% 219
+\BOOKMARK [1][-]{section.B.5}{Grups abelians finitament generats}{appendix.B}% 220
+\BOOKMARK [2][-]{subsection.B.5.1}{Bases}{section.B.5}% 221
+\BOOKMARK [2][-]{subsection.B.5.2}{Subgrup de torsi\363}{section.B.5}% 222
+\BOOKMARK [2][-]{subsection.B.5.3}{Estructura dels grups abelians finitament generats}{section.B.5}% 223
+\BOOKMARK [2][-]{subsection.B.5.4}{C\340lcul efectiu dels factors invariants}{section.B.5}% 224

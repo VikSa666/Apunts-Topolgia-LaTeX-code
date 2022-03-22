@@ -1,0 +1,491 @@
+\documentclass[../main.tex]{subfiles}
+
+
+
+
+\begin{document}
+
+
+
+
+\chapter{Espais mètrics}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Espais mètrics i isometries}
+
+
+\begin{defi}
+[Espai mètric]\label{derf:espaimetric}\index{Espai mètric} Un \textit{espai mètric} és una parella $(X,d)$ on $X$ és un conjunt i $d:X\times X\rightarrow \mathbb{R}$ és una aplicació que satisfà
+\begin{enumerate}[(1)]
+    \item $d(x,y)\geq 0\quad\forall x,y\in X$;
+    \item $d(x,y) = 0 \Longleftrightarrow x = y$;
+    \item $d(x,y) = d(y,x)\quad \forall x,y\in X$;
+    \item $d(x,z)\leq d(x,y)+d(y,z)\quad \forall x,y,z\in X$ (desigualtat triangular).
+\end{enumerate}
+\end{defi}
+
+\begin{defi}
+[Distància]\label{def:distancia}\index{Distància} Tota funció $d$ que satisfà les propietats (axiomes) de la funció $d$ de (\ref{derf:espaimetric}) s'anomena \textit{distància} o \textit{mètrica} a $X$ i es llegeix $d(x,y)$ com \textit{distància de $x$ a $y$}.
+\end{defi}
+
+\begin{ej}
+Vegem-ne alguns exemples.
+\begin{enumerate}[(1)]
+    \item $X=\mathbb{R}^n$, $d((x_1,\ldots,x_n),(y_1,\ldots,y_n)) = \left(\sum_{i=1}^n|x_i-y_i|^2\right)^{1/2} = \|x-y\|$. Distància euclidiana\index{Distància euclidiana}.
+    \item $X=\mathbb{R}^n$, $d_1((x_1,\ldots,x_n),(y_1,\ldots,y_n)) = \sum_{i=1}^n |x_i-y_i|$.\index{Distància $d_1$ o de Manhattan} Distància de Manhattan.
+    \item $X = \mathbb{R}^n$, $d_\infty((x_1,\ldots,x_n),(y_1,\ldots,y_n)) = \max_i|x_i-y_i|$.\index{Distància $d_\infty$}
+    \item $X$ conjunt arbitrari i $d:X\times X\rightarrow \mathbb{R}$ definida com $d(x,y) = 1$ si $x\not=y$ i $d(x,y) = 0$ si $x= y$. Es diu distància discreta. \index{Distància discreta}.
+    \item Si $(X,d)$ és un espai mètric i $Y\subseteq X$ és un subconjunt qualsevol, aleshores $(Y,d|_{Y\times Y})$ és un espai mètric (es diu subespai mètric de $(X,d)$)\index{Subespai mètric}.
+    \item $X=\{f:[0,1]\rightarrow \mathbb{R}\;:\;\text{contínua}\}$. Definim la distància de la següent manera:
+    \begin{equation}
+        \notag
+        d(f,g) = \sup_{t\in[0,1]}|f(t)-g(t)| = \max_{t\in[0,1]}|f(t)-g(t)|<\infty
+    \end{equation}
+\end{enumerate}
+\end{ej}
+
+\begin{defi}
+[Isometria]\label{def:isometria}\index{Isometria} Una \textit{isometria} d'un espai mètric $(X,d)$ cap a un altre espai mètric $(Y,d_Y)$ és una bijecció $f:X\rightarrow Y$ que satisfà $d_Y(f(x),f(x')) = d_X(x,x')$ $\forall x,x'\in X$.
+\end{defi}
+
+\begin{defi}
+[Espais isomètrics]\label{def:espaisisometrics}\index{Espais isomètrics} Dos espais mètrics són \textit{isomètrics} si hi ha una isometria d'un a l'altre.
+\end{defi}
+
+
+
+
+
+
+
+\section{Boles obertes i oberts}
+
+\begin{defi}
+[Bola oberta]\label{def:bolaoberta}\index{Bola oberta} Sigui $(X,d)$ un espai mètric. Donat $x\in X$ i $r\in\mathbb{R}_+$ definim la \textit{bola oberta} de radi $r$ i centre $x$ com
+\begin{equation}
+    \notag
+    B_r(x) = \{y\in X\;:\;d(x,y)<r\}
+\end{equation}
+\end{defi}
+
+\begin{lema}
+\label{lema:propietatsbolesobertes} Propietats de les boles obertes:
+\begin{enumerate}[(1)]
+    \item $x\in B_r(x),\;\forall r\in \mathbb{R}_+$. En particular $B_r(x)\not=\emptyset$.
+    \item $X = \bigcup_{x\in X,\;r\in\mathbb{R}_+} B_r(x)$.
+    \item Si $y\in B_r(x)$, $\exists s\in \mathbb{R}_+$ tal que $B_s(y) \subseteq B_r(x)$.
+    \item $B_r(x)\cap B_{r'}(x')$ és unió de boles obertes.
+\end{enumerate}
+\end{lema}
+\begin{proof}
+\begin{enumerate}[(1)]
+    \item $d(x,x) = 0<r\;\forall r\in\mathbb{R}$.
+    \item Conseqüència de (1).
+    \item Sigui $y\in B_r(x)$ i sigui $s = r-d(x,y)>0$. Aleshores, si $z\in B_s(y)$, $d(x,z)\leq d(x,y)+d(y,z) = r-s+d(y,z)<r-s+s = r$. Així, $d(x,z)< r$ que implica $z\in B_r(x)$.
+    \item Per tot $y\in B_r(x)\cap B_{r'}(x')$ $\exists s,s'>0$ tal que $B_s(y)\subseteq B_r(x)$ i $B_{s'}(y')\subseteq B_{r'}(x')$ per (3). Aleshores, definim $\rho_y:=\min\{s,s'\}$. Se satisfà $B_{\rho_y}(y)\subseteq B_r(x)\cap B_{r'}(x')$. Aleshores
+    \begin{equation}
+        \notag
+        B_r(x)\cap B_{r'}(x') = \bigcup_{y\in B_r(x)\cap B_{r'}(x')} B_{\rho_y}(y).
+    \end{equation}
+    (quan $B_r(x)\cap B_{r'}(x') = \emptyset$, a la dreta la unió es fa sobre el conjunt buit de subconjunts, i per tant és el buit.
+\end{enumerate}
+\end{proof}
+
+\begin{ej}
+Exemples de boles obertes.
+\begin{enumerate}[(1)]
+    \item Si $X=\mathbb{R}^2$ i $d$ és la distància euclidiana, és a dir $d(x,y) = \sqrt{x^2+y^2}$, la bola $B_r(x)$ és un disc al pla $XY$ de centre $x$ i radi $r$:
+    \begin{equation}
+        \notag
+        \begin{tikzpicture}[scale = 0.5]
+            \draw[->] (-1,0) -- (3,0) node[right] {$x$};
+            \draw[->] (0,-1) -- (0,3) node[above] {$y$};
+            \draw[dashed] (2,2) circle (30pt);
+            \draw (2,2) circle (2pt) node[above] {$x$};
+            \draw[->] (2,2) -- (2,1) node[anchor = south west] {$r$};
+        \end{tikzpicture}
+    \end{equation}
+    \item Si $X = \mathbb{R}^2$ i $d = d_\infty$ de l'exemple anterior, és a dir, $d_\infty((x_1,x_2),(y_1,y_2)) = \max\{|y_1-x_1|,|y_2-x_2|\}$, aleshores la bola $B_r(x)$ es representa com un quadrat de costat $2r$ i centre $x$:
+    \begin{equation}
+        \notag
+        \begin{tikzpicture}[scale = 0.5]
+            \draw[->] (-1,0) -- (3,0) node[right] {$x$};
+            \draw[->] (0,-1) -- (0,3) node[above] {$y$};
+            \draw[dashed] (1,1) -- (3,1) -- (3,3) -- (1,3) -- (1,1);
+            \draw (2,2) circle (2pt) node[above] {$x$};
+            \draw[->] (2,2) -- (2,1) node[anchor = south west] {$r$};
+        \end{tikzpicture}
+    \end{equation}
+    
+    
+    
+    \item Si $X = \mathbb{R}^2$ i $d = d_1$ de l'exemple anterior, és a dir, $d_1((x_1,x_2),(y_1,y_2)) = |x_1-y_1| + |x_2-y_2|$, aleshores la bola $B_r(x)$ té una forma com de rombe de diagonals iguals a $2r$ i de costat igual a $\sqrt{2}r$.
+    \begin{equation}
+        \notag
+        \begin{tikzpicture}[scale = 0.5]
+            \draw[->] (-1,0) -- (3,0) node[right] {$x$};
+            \draw[->] (0,-1) -- (0,3) node[above] {$y$};
+            \draw[dashed] (2,1) -- (3,2) -- (2,3) -- (1,2) -- (2,1);
+            \draw (2,2) circle (2pt) node[above] {$x$};
+            \draw[->] (2,2) -- (2,1) node[anchor = south west] {$r$};
+        \end{tikzpicture}
+    \end{equation}
+    
+    
+    \item Si prenem $X$ un conjunt arbitrar i $d$ la distància discreta, aleshores
+    \begin{equation}
+        \notag
+        B_r(x) = \left\{
+        \begin{array}{ll}
+            \{x\} & si\;r\leq 1\\
+            X & si\;r>1
+        \end{array}
+        \right.\qquad \forall x\in X.
+    \end{equation}
+\end{enumerate}
+\end{ej}
+
+
+\begin{defi}
+[Obert d'un espai mètric]\label{def:obertem}\index{Obert d'un espai mètric} Direm que un subconjunt $U\subset X$ és \textit{obert} si i només si $\forall x\in U$ $\exists r>0$ tal que $B_r(x)\subseteq U$.
+\end{defi}
+
+\begin{ej}\label{ej:exemplesdoberts}
+Alguns exemples.
+\begin{enumerate}[(1)]
+    \item $\emptyset$ és obert per conveni.
+    \item $X$ és obert. En efecte, $B_r(x)\subseteq X$, $\forall x\in X$.
+    \item Les boles obertes són oberts.
+    \begin{proof}
+    Prenem $x\in X$ i $r>0$, llavors si $y\in B_r(x)$, prenem $\rho = r-d(x,y) > 0$ ja que $d(x,y)< r$ perquè $y\in B_r(x)$. Se satisfà doncs, $B_\rho(y) \subseteq B_r(x)$ ja que si $z\in B_\rho(y)$, aleshores
+    \begin{equation}
+        \notag
+        d(x,z)\leq d(x,y) + d(y,z) < d(x,y)+r-d(x,y) = r \Rightarrow z\in B_r(x).
+    \end{equation}
+    \end{proof}
+    
+    \item $\forall x\in X$, $U = X\setminus\{x\}$ és un obert.
+    \begin{proof}
+    Si $y\in U$, aleshores $r=d(x,y)>0$. Per tant, $B_r(y)$ és una bola oberta centrada a $y$ i continguda a $U$.
+    \end{proof}
+    
+    \item Sigui $(X,d)$ un espai mètric arbitrari. Considerem $x\in X$ i $r\geq 0$ i definim
+    \begin{equation}
+        \notag
+        U_r(x) := \{y\in X\;:\; d(x,y)>0\}
+    \end{equation}
+    Aquest conjunt $U_r(x)$ és un obert.
+    \begin{proof}
+    Si $y\in U_r(x)$, prenem $\rho = d(x,y)-r>0$. Se satisfà, per la desigualtat triangular, que $B_\rho(y)\subseteq U_r(x)$.
+    \end{proof}
+    
+    \item Sigui $(X,d)$ un espai mètric arbitrari, $x\in X$ i $a,b\in \mathbb{R}$ tals que $0<a<b$. El conjunt
+    \begin{equation}
+        \notag
+        U_{a,b}(x):=\{y\in X\;:\;a<d(x,y)<b\}
+    \end{equation}
+    és un obert.
+    \begin{proof}
+    Podem considerar $U_{a,b}(x) = B_b(x)\cap U_a(x)$ i com que $B_b(x)$ és obert perquè ho hem vist a aquest exemple i $U_a(x)$ també, aleshores $U_{a,b}(x)$ és intersecció d'oberts. Encara no ha sortit, però a la proposició (\ref{prop:propietatsoberts}) es demostra que la intersecció d'oberts és obert i aleshores $U_{a,b}(x)$ és obert, com volíem veure.
+    \end{proof}
+    
+    
+    \item Si considerem $X =\mathbb{R}^n$ i $d_e$ la distància euclidiana, és a dir, $d_e(x,y) = \|x-y\|$, aleshores recuperem la noció d'obert que ja coneixíem.
+    
+    \item Si considerem $X = \mathbb{R}^n$ i $d_\infty$ la distància donada per $d_\infty(x,y) = \max_i|x_i-y_i|$, aleshores els oberts són els mateixos que els de l'espai mètric $(\mathbb{R}^n,d_e)$ tot i que si $n\geq 2$, aquests espais mètrics no són isomètrics.
+    \begin{proof}
+    Anem a demostrar que els oberts de $(\mathbb{R}^n,d_e)$ són els mateixos que els de $(\mathbb{R}^n,d_\infty)$. És suficient comprovar que, $\forall x\in\mathbb{R}^n$,
+    \begin{itemize}
+        \item $\forall r>0\;\exists s>0$ tal que $B_s^{d_\infty}(x)\subseteq B_r^{d_e}(x)$ (que els oberts de $d_\infty$ són oberts de $d_e$). En efecte, si $n=2$, la bola $B_{r/\sqrt{2}}^{d_\infty}(x)\subseteq B_r^{d_e}(x)$. En general, si $x\in\mathbb{R}^n$, $B_{r/\sqrt{n}}^{d_\infty}(x)\subseteq B_r^{d_e}(x)$, ja que si $(x_1,\ldots,x_n)\in\mathbb{R}^n$ se satisfà $\max_i|x_i|\leq \frac{r}{\sqrt{n}}$, aleshores $x_1^2+\cdots+x_n^2< \left(\frac{r}{\sqrt{n}}\right)^2+\cdots+\left(\frac{r}{\sqrt{n}}\right)^2 = n\cdotp\frac{r^2}{n} = r^2$.
+        
+        \item $\forall r>0\;\exists s>0$ tal que $B_s^{d_e}\subseteq B_r^{d_\infty}$ (que els oberts de $d_e$ són oberts de $d_s$). En efecte, la bola $B_r^{d_e}(x)\subseteq B_r^{d_\infty}(x)$ ja que si $x_1^2+\cdots+x_n^2< r^2$, aleshores $\max_i\{x_i^2\}< r^2$ i per tant, trivialment, $\max_i|x_i|< r$.
+    \end{itemize}
+    \end{proof}
+    
+    
+    \item Si $X = \mathbb{R}^n$ i $d_1$ és la distància donada per $d_1(x,y) = \sum_i|x_i-y_i|$, aleshores els oberts són els mateixos que a $(\mathbb{R}^n,d_e)$.
+\end{enumerate}
+\end{ej}
+
+
+
+\begin{prop}
+\label{prop:propietatsoberts}
+Algunes propietats dels oberts. Sigui $(X,d)$ un espai mètric
+\begin{enumerate}[(1)]
+    \item $\emptyset$ i $X$ són oberts.
+    \item La unió arbitrària d'oberts és un obert. És a dir, si $\{U_i\}_{i\in I}$ és una col·lecció d'oberts de $X$ ($I$ arbitràriament gran) aleshores $\bigcup_{i\in I} U_i$ és obert de $X$.
+    \item La intersecció finita d'oberts és obert. És a dir, si $U_1,\ldots,U_k$ són oberts de $X$, aleshores $U_1\cap \cdots \cap U_k$ també és obert.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+\begin{enumerate}[(1)]
+    \item $\emptyset$ és obert per conveni. $\emptyset$ no té cap element.
+    
+    $X$ és obert perquè $B_1(x)\subseteq X$, $\forall x\in X$.
+    
+    \item Siguin $\{U_i\}_{i\in I}$ oberts. Si $x\in \bigcup_{i\in I}U_i$, aleshores $\exists i\in I$ tal que $x\in U_i$. Per tant, existeix $r>0$ tal que $B_r(x)\subseteq U_i$ (ja que $U_i$ és obert). Aleshores,
+    \begin{equation}
+        \notag
+        B_r(x)\subseteq U_i\subseteq \bigcup_{i\in I}U_i.
+    \end{equation}
+    
+    \item Siguin $U_1,\ldots,U_k$ oberts i sigui $x\in U_1\cap \cdots\cap U_k$. Aleshores, $\forall j = 1,\ldots,k$, $x\in U_j$ i per tant $\exists r_j>0$ tal que $B_{r_j}(x)\subseteq U_j$ (ja que $U_j$ és obert). Sigui $r = \min\{r_1,\ldots,r_k\}>0$. Aleshores
+    \begin{equation}
+        \notag
+        B_r(x)\subseteq B_{r_j}(x)\subseteq U_j\quad \forall j\quad \Longrightarrow \quad B_r(x)\subseteq \bigcap_{j=1}^kU_j.
+    \end{equation}
+\end{enumerate}
+\end{proof}
+
+
+
+\begin{nota}
+En general, les interseccions infinites d'oberts no són necessàriament oberts. Per exemple, si $(X,d) = (\mathbb{R},d_e)$, agafem l'obert $\left(-\frac{1}{m},\frac{1}{m}\right)\subset \mathbb{R}$ que és obert $\forall m\in\mathbb{N}$. Però en canvi
+\begin{equation}
+    \notag
+    \bigcap_{n=1}^\infty \left(-\frac{1}{n},\frac{1}{n}\right) = \{0\}
+\end{equation}
+no és obert.
+\end{nota}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Funcions contínues}
+
+\begin{defi}
+[Funció contínua]\label{def:funciocontinua}\index{Funció contínua} Sigui $(X,d_X)$ i $(Y,d_Y)$ dos espais mètrics. Sigui $f:X\rightarrow Y$ una aplicació. Direm que \textit{$f$ és contínua al punt $x\in X$} si $\forall \varepsilon>0\;\exists\delta>0$ tq. $\forall x'\in X$, si $d_X(x,x')<\delta$ aleshores $d_Y(f(x),f(x'))<\varepsilon$. Direm que $f$ és contínua si ho és a tots els punts de $X$.
+\end{defi}
+
+
+\begin{nota}
+\label{nota:definicioalternativadefunciocontinua} Una definició alternativa de la definició (\ref{def:funciocontinua}) de funció contínua és la següent: Una funció $f:X\rightarrow Y$ és contínua al punt $x$ si $\forall \varepsilon>0\;\exists\delta>0$ tal que 
+\begin{equation}
+    \notag
+    f\left(B_{\delta}^X(x)\right)\subseteq B_\varepsilon^Y(f(x)) \quad \Longleftrightarrow \quad B_\delta^X(x)\subseteq f^{-1}\left(B_\varepsilon^Y(f(x))\right).
+\end{equation}
+\end{nota}
+
+
+\begin{ter}
+\label{ter:propietatsdefuncionscontinuesioberts} Donada una aplicació $f:X\rightarrow Y$ entre espais mètrics, es compleix que $f$ és contínua si, i només si, $\forall U\subseteq Y$ obert, $f^{-1}(U)$ és un obert de $X$.
+\end{ter}
+\begin{proof}
+Suposem que $f$ és contínua. Sigui $U\subseteq Y$ un obert, sigui $x\in f^{-1}(U)$. Aleshores $\exists \varepsilon>0$ tal que $B_\varepsilon(f(x))\subseteq U$. Com que $f$ és contínua a $x$, $\exists \delta>0$ tal que $B_\delta(x)\subseteq f^{-1}(B_\varepsilon(f(x)))\subseteq f^{-1}(U)$.
+
+Recíprocament, suposem que $\forall$ obert $U\subseteq Y$, $f^{-1}(U)$ és obert de $X$. Sigui $x\in X,\varepsilon>0$. Com que $B_\varepsilon(f(x))$ és un obert de $Y$, la hipòtesis implica que $f^{-1}(B_\varepsilon(f(x)))\subseteq X$ és obert. Com que $x\in f^{-1}(B_\varepsilon(f(x)))$, $\exists \delta>0$ tal que $B_\delta(x)\subseteq f^{-1}(B_\varepsilon(f(x)))$.
+\end{proof}
+
+
+\begin{ej}
+\label{ej:exemplesdefuncionscontinues} Alguns exemples de funcions contínues:
+\begin{enumerate}[(1)]
+    \item Tota aplicació constant és contínua.
+    \item \label{prop:composiciodecontinues} La composició de funcions contínues és una funció contínua. És a dir, si $f:X\rightarrow Y$, $g:Y\rightarrow Z$ són dues aplicacions contínues, on $(X,d_X),(Y,d_Y),(Z,d_Z)$ són espais mètrics, aleshores $g\circ f:X\rightarrow Z$ és contínua.
+    \begin{proof}
+    Antiimatge d'un obert respecte composició és
+    \begin{equation}
+        \notag
+        (g\circ f)^{-1}(obert) = f^{-1}(g^{-1}(obert)) = f^{-1}(obert) = obert
+    \end{equation}
+    pel teorema (\ref{ter:propietatsdefuncionscontinuesioberts}).
+    \end{proof}
+    \item\label{prop:funciodistanciacontinua} Dotem $\mathbb{R}$ de la distància euclidiana (que en dimensió 1 és la distància usual dels valors absoluts). Si $(X,d)$ és un espai mètric, $\forall p\in X$ la funció
+    \begin{equation}
+        \notag
+        \begin{array}{rl}
+            d_p:X & \longrightarrow\mathbb{R} \\
+            x & \longmapsto d(p,x)
+        \end{array}
+    \end{equation}
+    és contínua (i no és constant, a menys que $X=\{p\}$).
+    \begin{proof}
+    Sigui $x\in X$ i sigui $\varepsilon>0$. Suposem que $x'\in B_\varepsilon(x)$. Aleshores, $d_p(x') = d(p,x')\leq d(p,x)+d(x,x')< d_p(x)+\varepsilon$ que implica que $d_p(x')-d_p(x)< \varepsilon$. Repetint l'argument intercanviant $x$ per $x'$ obtenim que $d_p(x)-d_p(x')<\varepsilon$ i tot ajuntant-ho obtenim
+    \begin{equation}
+        \notag
+        |d_p(x)-d_p(x')|<\varepsilon
+    \end{equation}
+    i resulta que el valor absolut és la distància euclidiana.
+    \end{proof}
+    \item Sigui $(X,d)$ un espai mètric. Dotem $X\times X$ de la següent distància:
+    \begin{equation}
+        \notag
+        \delta((x,x'),(y,y')):=\max\{d(x,y),d(x',y')\}
+    \end{equation}
+    L'aplicació $d:X\times X\rightarrow \mathbb{R}$, $(x,x')\mapsto d(x,x')$ és contínua (on a $X\times X$ utilitzem la distància $\delta$ i a $\mathbb{R}$ la distància usual euclidiana).
+    \begin{proof}
+    Primer de tot, caldria comprovar que $\delta$ és realment una distància. Es deixa com a exercici. Així doncs, per provar que $d$ és contínua, és suficient veure que $d^{-1}((a,b))\subseteq X\times X$ és un obert $\forall a,b\in \mathbb{R}$, $a<b$. Sigui
+    \begin{equation}
+        \notag
+        (x,x')\in d^{-1}((a,b))\Longleftrightarrow a<d(x,x')<b
+    \end{equation}
+    Sigui
+    \begin{equation}
+        \notag
+        r = \min\left\{\frac{d(x,x')-a}{2},\frac{b-d(x,x')}{2}\right\}>0
+    \end{equation}
+    Suposem que $\delta((x,x'),(y,y'))<r$. Aleshores,
+    \begin{equation}
+        \notag
+        d(x,y)<r,\qquad d(x',y')<r
+    \end{equation}
+    de la definició de $\delta$. Aleshores, per la desigualtat triangular,
+    \begin{equation}
+        \notag
+        d(y,y')\leq \underbrace{d(y,x)}_{<r}+d(x,x')+\underbrace{d(x',y')}_{<r}< d(x,x')+2r\leq b
+    \end{equation}
+    També tenim,
+    \begin{equation}
+        \notag
+        a+2r\leq d(x,x')\leq d(x,y)+d(y,y')+d(y',x') \Rightarrow d(y,y')>d(x,x')-2r\geq a.
+    \end{equation}
+    És a dir, hem demostrat que $\delta((x,x'),(y,y'))<r\Rightarrow a<d(y,y')<b$. Per tant, $B_r((x,x'))\subseteq d^{-1}((a,b))$. En conclusió $d^{-1}((a,b))$ és un obert de $X\times X$.
+    \end{proof}
+\end{enumerate}
+\end{ej}
+
+
+
+\begin{prop}
+\label{prop:funciocontinuaperescalar} Si $(X,d)$ és un espai mètric i $f:X\rightarrow \mathbb{R}$ és contínua, aleshores, per $\lambda\in\mathbb{R}$, la funció $\lambda f$ és contínua.
+\end{prop}
+\begin{proof}
+Sigui $x\in X$, $\varepsilon>0$. Volem veure que $\exists\delta>0$ tal que $\forall x'\in X$ tal que si $d(x,x')<\delta$ aleshores $|\lambda f(x)-\lambda f(x')|<\varepsilon$ (definició $\ref{def:funciocontinua}$)
+\begin{itemize}
+    \item Si $\lambda = 0$, qualsevol valor de $\delta$ funciona.
+    \item Si $\lambda\not = 0$, per la continuïtat de $f$ al punt $x$, sabem que $\exists\delta'>0$ tal que si $d(x,x')<\delta'\Rightarrow |f(x)-f(x')|<\varepsilon$. En $\lambda f$ tenim que $|\lambda||f(x)-f(x')|<\varepsilon$ que implica que $|f(x)-f(x')|<\varepsilon/|\lambda|$ i per tant, podem prendre $\delta = \varepsilon|\lambda|$.
+\end{itemize}
+\end{proof}
+
+\begin{prop}
+\label{prop:sumadefuncionscontinues} Si $f,g:X\rightarrow \mathbb{R}$ són contínues (on $(X,d)$ és un espai mètric), aleshores $f+g:X\rightarrow \mathbb{R}$ és contínua.
+\end{prop}
+\begin{proof}
+per tot $\varepsilon>0$, al ser $f$ contínua $\exists\delta_f>0$ tal que $\forall x'\in X$ tal que $d(x,x')<\delta_f$ implica que $|f(x)-f(x')|<\varepsilon/2$. Anàlogament, $\exists \delta_g>0$ tal que $\forall x'\in X$ complint que $d(x,x')<\delta_g$, implica que $|g(x)-g(x')|<\varepsilon/2$.
+
+Prenem ara $\delta:=\min\{\delta_f,\delta_g\}>0$ i se satisfà que si $d(x,x')<\delta$, aleshores $|f(x)-f(x')|+|g(x)-g(x')|<\varepsilon/2 + \varepsilon/2 = \varepsilon$. Això implica que
+\begin{equation}
+    \notag
+    |f(x)+g(x) - (f(x')+g(x'))| = |(f+g)(x)-(f+g)(x')|<\varepsilon
+\end{equation}
+com volíem veure.
+\end{proof}
+
+
+\begin{prop}
+\label{prop:productedefuncions} Si $f,g:X\rightarrow \mathbb{R}$ són funcions contínues, on $(X,d)$ és un espai mètric, aleshores $fg$ és contínua.
+\end{prop}
+\begin{proof}
+Siguin $x\in X$ i $\varepsilon >0$. Volem trobar $\delta>0$ tal que si $d(x,x')<\delta$, aleshores
+\begin{equation}
+    \notag
+    |(fg)(x)-(fg)(x')|<\varepsilon \Longleftrightarrow |f(x)g(x)-f(x')g(x')|<\varepsilon \Longleftrightarrow
+\end{equation}
+\begin{equation}
+    \notag
+    \Longleftrightarrow|f(x)g(x)-f(x')g(x)+f(x')g(x)-f(x')g(x')| < \varepsilon \Longleftrightarrow
+\end{equation}\begin{equation}
+    \notag
+    \Longleftrightarrow |g(x)(f(x)-f(x'))+f(x')(g(x)-g(x'))|\leq
+\end{equation}
+\begin{equation}
+    \notag
+    \leq  |g(x)||f(x)-f(x')|+|f(x')||g(x)-g(x')|<\varepsilon.
+\end{equation}
+\begin{itemize}
+    \item Vegem que $\exists \delta_1>0$ tal que $\forall x'\in X$, si $d(x,x')<\delta_1$, aleshores $|g(x)||f(x)-f(x')|<\varepsilon/2$.
+    \begin{itemize}
+        \item Si $g(x) = 0$ qualsevol $\delta_1$ funciona.
+        \item Si $g(x)\not=0$, al ser $f$ contínua $\exists\delta_1$ tal que si $d(x,x')<\delta_1$, aleshores
+        \begin{equation}
+            \notag
+            |f(x)-f(x')|<\frac{\varepsilon}{2|g(x)|}\Longrightarrow |g(x)||f(x)-f(x')|<\frac{\varepsilon}{2}.
+        \end{equation}
+    \end{itemize}
+    
+    \item Vegem que $\exists \delta_2>0$ tal que si $d(x,x')<\delta_2$, aleshores $|f(x')||g(x)-g(x')|<\varepsilon/2$. Sigui $c = |f(x)|$. Com que $f$ és contínua, $\exists \delta_3>0$ tal que si $d(x,x')<\delta_3$ aleshores $|f(x)-f(x')\leq 1 = \varepsilon$ (per exemple). Aleshores $|f(x')|\leq |f(x)|+1 = c+1$.
+    
+    Com que $g$ també és contínua, $\exists \delta_4>0$ tal que si $d(x,x')<\delta_4$, aleshores
+    \begin{equation}
+        \notag
+        |g(x)-g(x')|<\frac{\varepsilon}{2(c+1)} \Longrightarrow |f(x')||g(x)-g(x')|<(c+1)\frac{\varepsilon}{2(c+1)} = \varepsilon/2
+    \end{equation}
+    Prenem $\delta_2 = \min\{\delta_3,\delta_4\}$ i aleshores si $d(x,x')<\delta_2$ es compleix $|f(x')||g(x)-g(x')|<\varepsilon/2$.
+\end{itemize}
+Finalment, prenent $\delta = \min\{\delta_1,\delta_2\}$ satisfà que si $d(x,x')<\delta$, aleshores
+\begin{equation}
+    \notag
+    |(fg)(x)-(fg)(x')|\leq|g(x)||f(x)-f(x')|+|f(x')||g(x)-g(x')|<\frac{\varepsilon}{2}+\frac{\varepsilon}{2} = \varepsilon.
+\end{equation}
+\end{proof}
+
+
+
+\begin{defi}
+[Tancat]\label{def:tancat}\index{Tancat} Sigui $(X,d)$ un espai mètric. Direm que un subconjunt qualsevol $Z\subseteq X$ és \textit{tancat} si i només si $X\setminus Z$ és obert.
+\end{defi}
+
+\begin{prop}
+\label{prop:continuatancat} Sigui $f:X\rightarrow Y$ una aplicació entre espais mètrics. $f$ és contínua si $\forall Z\subseteq Y$ tancat, $f^{-1}(Z)$ és un tancat de $X$.
+\end{prop}
+\begin{proof}
+$Z\subseteq Y$ tancat si i només si $Y\setminus Z$ obert. D'altra banda, $X\setminus f^{-1}(Z) = f^{-1}(Y\setminus Z)$ i llavors el teorema és conseqüència del teorema (\ref{ter:propietatsdefuncionscontinuesioberts}).
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,38 @@
+\documentclass[../main.tex]{subfiles}
+
+
+
+
+\begin{document}
+
+
+
+
+\section*{Introducció}
+
+Busquem una cosa semblant al grup fonamental $\pi_1(X)$, on $X$ és un espai topològic, per poder estudiar les seves propietats algebraicament i treure'n conclusions topològiques. Això és l'homologia singular.
+
+Llibres: \textsc{A.Hatcher}, Algebraic Topology; \textsc{V. Navarro} i \textsc{P. Pascual}, Introducció a la topologia algebraica (ed. UB); \textsc{Greenberg-Harper}, Algebraic Topology.
+
+Donat un espai topològic $X$, definirem els grups $H_0(X)$, $H_1(X)$, etc. que sempre seran grups abelians (avantatge respecte el grup fonamental) i sovint finitament generats.
+
+Podríem pensar que és una versió millorada del grup fonamental però no ho és per vàries raons:
+\begin{itemize}
+    \item $H_1(X) = \frac{\pi_1(X)}{[\pi_1(X),\pi_1(X)]}$, és a dir, és el quocient abelià més gran del grup fonamental. És a dir, que el grup fonamental té més informació que el primer grup d'homologia. Això és molt important per teoria de nusos.
+    \item Podríem estendre els grups d'homotopia a dimensions més grans i aleshores obtindríem de forma general $\pi_k(X) = \{\mathbb{S}^k\rightarrow X\}/\sim$ (on $\sim$ és la relació d'homotopia de camins) i de fet, a partir de $k =2$, són abelians. Realment són millors que els d'homologia però són molt més difícils de calcular per espais relativament senzills.
+\end{itemize}
+
+
+
+
+\subfile{chapters/chapter1.tex}
+\subfile{chapters/chapter2.tex}
+\subfile{chapters/chapter3.tex}
+\subfile{chapters/chapter4.tex}
+
+
+
+
+
+
+\end{document}

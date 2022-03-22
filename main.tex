@@ -1,0 +1,230 @@
+\documentclass[titlepage, main=catalan, 11pt]{book}
+\renewcommand{\baselinestretch}{1.2}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{color}
+\usepackage{biblatex}
+\usepackage{graphicx}
+\usepackage{vmargin}
+\usepackage{enumerate}
+\usepackage{cancel}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[catalan]{babel}
+\usepackage{mathrsfs}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage{float}
+\usepackage{lscape}
+\usepackage{multirow}
+\usepackage[all]{xy}
+\usepackage{makeidx}
+\usepackage{lipsum}
+%\usepackage[T1]{fontenc}
+\usepackage{comment}
+\usepackage{transparent}
+\usepackage{textcomp} %podem escriure ``o'' amb la comanda \textdegree també € amb \texteuro
+\usepackage[gen]{eurosym} %tb official en lloc de ``gen''
+\usepackage[section]{placeins} %Evita que les figures saltin de secció
+\usepackage{fancyref}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{mathtools}
+\usepackage{commath}
+\usepackage{stmaryrd}
+
+\usepackage{scrextend}%Indentar un bloc sencer
+%\usepackage{tgpagella} % Para la letra guay
+\usepackage{dtk-logos}
+\addbibresource{AAbibliografia.bibtex}
+
+\usepackage{blindtext}
+\usepackage{multicol}
+
+\usepackage{subfiles} % Best loaded last in the preamble
+\usepackage{pst-all}
+\usepackage{qtree}
+
+
+
+
+
+%   MÁRGENES
+\setmargins
+{1.5cm}                     % margen izquierdo
+{1cm}                     % margen superior
+{18cm}                    % anchura del texto
+{25cm}                   % altura del texto
+{8pt}                      % altura de los encabezados
+{0.8cm}                       % espacio entre el texto y los encabezados
+{0pt}                       % altura del pie de página
+{2cm}                       % espacio entre el texto y el pie de página
+
+
+
+
+
+
+%   Para enumerar las definiciones y demás ponemos 
+%   \newtheorem{abreviatura}{Nombre}[chapter]. Donde:
+%       abreviatura es el nombre que le damos al entorno
+%       Nombre es la palabra que aparecerá en negrita, junto con el número
+%       Chapter si queremos que haga la numeración rollo 1.4 y eso
+%   https://www.emis.de/journals/RCE/IntroLatex/Curso%20LaTeX%208.pdf
+
+\theoremstyle{definition}
+    \newtheorem{defi}{Definició}[section] %   DEFINICIONES
+
+    \newtheorem{ej}[defi]{Exemple}   %   EJEMPLOS    quiero que la numeración sea independiente
+    \newtheorem{alg}{Agorisme}
+
+    
+\theoremstyle{plain}
+    \newtheorem{prop}[defi]{Proposició}   %   PROPOSICIONES para que la numeración sea correlativa a la de defi, ponemos [defi]
+    \newtheorem{lema}[defi]{Lema}
+    \newtheorem{coro}[defi]{Corol·lari}
+    \newtheorem{ter}[defi]{Teorema}
+    \newtheorem{exercici}{Exercici}
+    \newtheorem*{rnd}{Continuació}
+    \newtheorem{nota}[defi]{Observació}    %   NOTAS
+    \newtheorem{rec}[defi]{Recordatori}     %   RECORDATORIS
+
+\theoremstyle{remark}
+    \newtheorem*{sol}{Solució}
+    
+    
+    
+    
+\newcommand{\mcd}{\text{mcd}}
+\newcommand{\mcm}{\text{mcm}}
+\newcommand{\gr}{\text{gr}\;}
+\newcommand{\Irr}{\text{Irr}}
+\newcommand{\Ima}{\text{Im}}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\Aut}{\text{Aut}}
+\newcommand{\F}[1]{\mathbb{F}_{#1}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\elevadoam}[1]{#1^{\mathcal{M}}}
+\newcommand{\sust}[2]{\left(\begin{smallmatrix}#1\\#2\end{smallmatrix}\right)}
+\newcommand{\ob}[1]{\mathrm{Ob}(\mathcal{#1})}
+%\newcommand{\hom}[1]{\mathrm{Hom}_{\mathcal{#1}}}
+
+\newcommand{\interpretami}[2]{#1^{\mathcal{M}_{#2}}}
+
+\newcommand{\noproof}{I will not do this proof as it migth be found on my ``Estructures Algebraiques'' course's notes and it is not necessary for the purpose of this text.}
+    
+
+
+
+
+
+
+    
+    
+    
+
+
+
+
+
+\title{Lógica proposicional}
+\author{Víctor Santiago Blanco}
+\date{Tardor 2018}
+
+\setpapersize{A4}
+\makeindex
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\pgfplotsset{compat=1.15}
+\begin{document}    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+
+
+
+
+
+\begin{titlepage}
+    \centering
+    {\bfseries\LARGE Universitat de Barcelona \par}
+    \vspace{1cm}
+    {\scshape\Large Facultat de Matemàtiques \par}
+    \vspace{3cm}
+    {\scshape\Huge Topologia \par}
+    \vspace{3cm}
+    {\itshape\Large Apunts de teoria i exercicis \par}
+    \vfill
+    {\Large Autor: \par}
+    {\Large Víctor Santiago Blanco \par}
+    \vfill
+    {\Large 2020 - 2021 \par}
+    \end{titlepage}
+
+\newpage
+
+
+
+\tableofcontents
+\newpage
+
+
+
+
+
+
+
+\setcounter{section}{-1}
+
+\chapter*{Introducció}
+
+En el present document es troba la gran compilació d'apunts de totes les assignatures de topologia que he realitzat a la carrera. En total he realitzat tres assignatures relacionades amb la topologia: una anomenada \textit{Topologia} que la vaig cursar a tercer de carrera, essent l'assignatura de segon en realitat, i durant el primer semestre de pandèmia, amb la qual cosa va ser una mica caòtica la docència i, per tant, és una assignatura que em vaig treure bastant autodidàcticament; la segona s'anomena \textit{Topologia i Geometria Diferencial de Superfícies}, que constava de dues parts, la primera de les quals referida a la part de topologia algebraica que parla sobre el grup fonamental, que és la que incloc aquí. La tercera és una optativa que, a dia d'avui 17 de gener de 2022 estic cursant i, de fet, demà tinc l'examen final de l'assignatura. S'anomena \textit{Topologia Algebraica} i consisteix en l'estudi de l'homologia simplicial i singular.
+
+Aquestes notes no són gens rigoroses i no han estat pròpiament revisades, amb la qual cosa estaran plenes d'errors tipogràfics i de contingut, però ja em serveixen per a l'estudi. Cada part té la seva introducció amb la qual cosa ja no hi ha res més a dir aquí.
+
+
+
+
+
+
+
+
+
+\part{Topologia}
+\subfile{topo1/topo1.tex}
+\part{Grup fonamental}
+\subfile{topo2/topo2.tex}
+\part{Grups d'homologia}
+\subfile{topo3/topo3.tex}
+
+
+\part{Apèndix}
+\appendix
+
+\subfile{appendix/appendix.tex}
+
+
+
+
+\printindex
+\printbibliography
+\end{document}

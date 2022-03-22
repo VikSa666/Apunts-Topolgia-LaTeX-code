@@ -1,0 +1,172 @@
+\documentclass[../main.tex]{subfiles}
+
+
+
+
+\begin{document}
+
+
+
+
+\chapter{Introducció a la teoria de categories}
+
+Farem una mini introducció a la teoria de categories, que és una teoria molt extensa i que donaria per una assignatura sencera, però que per raons pràctiques farem només una introducció a les seves nocions bàsiques.
+
+\begin{defi}
+[Categoria]\index{Categoria} Una \textit{categoria} $\mathcal{C}$ consta de
+\begin{enumerate}[1)]
+    \item Una \textit{classe d'objectes} $\mathrm{Ob}(\mathcal{C})$;
+    \item Per a cada parella d'objectes $X$ i $Y$ de $\mathcal{C}$, un conjunt $\mathrm{Hom}(X,Y)$ (també pot ser anomenat $\mathrm{Mor}(X,Y)$ o $\mathcal{C}(X,Y)$) que anomenarem \textit{conjunt de morfismes de $X$ en $Y$};
+    \item Si $X,Y,Z$ són objectes de $\mathrm{Ob}(\mathcal{C})$, una aplicació $\mathrm{Hom}(X,Y)\times \mathrm{Hom}(Y,Z)\rightarrow \mathrm{Hom}(X,Z)$ que anomenem \textit{composició}. La imatge de $(f,g)$ la denotarem $g\circ f$. És a dir,
+    \begin{equation}
+        \notag
+        \begin{array}{rl}
+            \mathrm{Hom}(X,Y)\times \mathrm{Hom}(Y,Z) & \longrightarrow \mathrm{Hom}(X,Z)\\
+            (f,g) & \longmapsto g\circ f
+        \end{array}
+    \end{equation}
+\end{enumerate}
+tals que es verifiquen dues propietats:
+\begin{enumerate}[(i)]
+    \item Si $f\in \mathrm{Hom}(X,Y)$ i $g\in\mathrm{Hom}(Y,Z)$ i $h\in \mathrm{Hom}(Z,W)$, llavors, $h\circ(g\circ f) = (h\circ g)\circ f$.
+    \item Per tot $X\in\mathrm{Ob}(\mathcal{C})$, existeix $\mathrm{id}_X\in\mathrm{Hom}(X,X)$ i que verifica que
+    \begin{equation}
+        \notag
+        \begin{array}{ll}
+            f = \mathrm{id}_X\circ f\quad \forall f\in\mathrm{Hom}(Y,X)\\
+            g = g\circ \mathrm{id}_X\quad \forall g\in\mathrm{Hom}(X,Y)
+        \end{array}
+    \end{equation}
+\end{enumerate}
+\end{defi}
+
+
+
+\begin{ej}Exemples de categories
+\begin{enumerate}
+    \item \textit{Sets}: la categoria que té per objectes els conjunts, les aplicacions són els morfismes, etc.
+    \item \textit{Gr}: la categoria on els objectes són els grups, els morfismes són els morfismes de grups, etc.
+    \item \textit{Top}: la categoria on els objectes són els espais topològics, els morfismes són les aplicacions entre espais topològics, etc.
+    \item \textit{$\mathrm{Vect}_k$}: la categoria on els objectes són els $k$-espais vectorials, etc.
+    \item També podem parlar de ``sub''-categories com $\mathrm{Gr}_{ab}$, la dels grups abelians, etc.
+    \item Suposem que $G$ és un grup. Definim la categoria associada al grup $G$ com $\mathcal{C}_G$, on
+    \begin{enumerate}
+        \item $\mathrm{Ob}(\mathcal{C}_G) = \{\bullet\}$
+        \item $\mathrm{Hom}(\bullet,\bullet)=G$
+        \item La composició és el producte del grup, i.e. $(g,h)\mapsto g\bullet h$.
+    \end{enumerate}
+    O sigui és un grup que es pot re-interpretar com a categoria.
+\end{enumerate}
+\end{ej}
+
+
+\begin{defi}
+[Functor]\index{Functor} Suposem que tenim dues categories $\mathcal{C}, \mathcal{D}$. Un \textit{functor covariant}\index{Functor covariant} de $\mathcal{C}$ a $\mathcal{D}$, que denotarem
+\begin{equation}
+    \notag
+    F:\mathcal{C}\leadsto\mathcal{D},
+\end{equation}
+és una assignació del tipus següent:
+\begin{enumerate}[(i)]
+    \item Per a tot $X\in\mathcal{Ob}(\mathcal{C})$, tenim $F(X)\in\ob{D}$.
+    \item Per a tot morfisme $f\in\mathrm{Hom}_{\mathcal{C}}(X,Y)$, tenim $F(f)\in\mathrm{Hom}_{\mathcal{D}}(F(X),F(Y))$.
+    tals que
+    \begin{equation}
+        \notag
+        F(f\circ g)=F(f)\circ F(g)
+    \end{equation}
+    \begin{equation}
+        \notag
+        F(\mathrm{id}_X)=\mathrm{id}_{F(X)},\quad \forall X\in\ob{C}
+    \end{equation}
+\end{enumerate}
+\end{defi}
+
+
+
+
+
+\begin{ej}
+Vegem exemples de functors:
+\begin{enumerate}
+    \item El functor ``forgetful'' que es defineix com $\mathrm{For}:\mathrm{Gr}\rightarrow \mathrm{Sets}$ i envia cada grup a ell mateix però reinterpretat com a conjunt.
+    \item Considerem la categoria $\mathrm{Top}_*$ tal que els objectes siguin $(X,x)$, on $X$ és un espai topològic i $x\in X$ un punt fixat (espai topològic puntejat) i $\mathrm{Hom}((X,x),(Y,y)) = \{f:X\rightarrow Y$ contínues tals que $f(x) = y\}$. Llavors podem definir $F:\mathrm{Top}_*\rightarrow\mathrm{Gr}$ tal que $(X,x)\mapsto \pi_1(X,x)$ (a cada espai puntejat l'envia al seu grup fonamental). Aquest és el \textit{functor grup fonamental}\index{Functor grup fonamental}.
+    \item Un altre exemple de functor és prendre la categoria d'espai vectorial i considerem l'aplicació que envia un espai vectorial $E$ al seu espai dual $E^*$. Això estrictament no és un functor. Però és un functor contravariant. Per això a la definició hem posat ``covariant''. Nosaltres treballarem només amb aquests. Sí que és un functor una aplicació que envia $E$ a $E^{**}$.
+\end{enumerate}
+\end{ej}
+
+
+\begin{defi}[Isomorfisme]
+\index{Isomorfisme} Sigui $\mathcal{C}$ una categoria, siguin $X,Y$ objectes de $\mathcal{C}$, $f\in\mathrm{Hom}_{\mathcal{C}}(X,Y)$. Direm que $f$ és un isomorfisme si $\exists g\in \mathrm{Hom}_{\mathcal{C}}(Y,X)$ tal que
+\begin{equation}
+    \notag
+    f\circ g = \mathrm{id}_Y\quad\text{i}\quad g\circ f = \mathrm{id}_X
+\end{equation}
+\end{defi}
+
+\begin{prop}
+\label{prop:isomorfismes} Si $F:\mathcal{C}\rightarrow\mathcal{D}$ és un functor covariant i $f\in\mathrm{Hom}_{\mathcal{C}}(X,Y)$ és un isomorfisme, aleshores $F(f)\in\mathrm{Hom}_{\mathcal{D}}(F(X),F(Y))$ és un isomorfisme en $\mathcal{D}$.
+\end{prop}
+\begin{proof}
+Si $\exists g\in\mathrm{Hom}(Y,X)$, llavors
+\begin{equation}
+    \notag
+    \left.
+    \begin{array}{ll}
+        f\circ g = \mathrm{id}_Y\\
+        g\circ f = \mathrm{id}_X
+    \end{array}
+    \right\}\Longrightarrow \left\{
+    \begin{array}{ll}
+        F(f)\circ F(g) = F(\mathrm{id}_Y)= \mathrm{id}_{F(Y)}\\
+        F(g)\circ F(f) = F(\mathrm{id}_X) = \mathrm{id}_{F(X)}
+    \end{array}
+    \right.
+\end{equation}
+\end{proof}
+
+
+\begin{defi}[Transformació natural]\index{Morfismes entre functors}\index{Transformació natural}
+\label{def:isomorfismefunctors} Sigui $\mathcal{C}, \mathcal{D}$ categories, $F,G:\mathcal{C}\rightarrow\mathcal{D}$ functors (covariants). Una \textit{transformació natural} $\tau$ de $F$ en $G$ (o \textit{morfisme de functors}) és una familia de morfismes
+\begin{equation}
+    \notag
+    \{\tau_X\in \mathrm{Hom}(F(X),G(X))\}_{X\in\mathrm{Ob}(\mathcal{C})}
+\end{equation}
+tal que, per a tot morfisme $f:X\rightarrow Y$ (i.e. $f\in\mathrm{Hom}(X,Y)$), el diagrama següent és commutatiu:
+\begin{equation}
+    \notag
+    \xymatrix{
+    F(X) \ar[r]^{F(f)} \ar[d]^{\tau_X} & F(Y) \ar[d]^{\tau_Y} \\
+    G(X) \ar[r]^{F(g)}                 & G(Y)
+    }
+\end{equation}
+és a dir, $F(g)\circ\tau_X = \tau_Y\circ F(f)$.
+\end{defi}
+
+\begin{defi}
+Si $F,G:\mathcal{C}\rightarrow\mathcal{D}$ són functors i $\tau:F\rightarrow G$ és una transformació natural es diu que $\tau$ és una \textit{equivalència natural} (o \textit{isomorfisme de functors}) si per a cada $X\in\mathrm{Ob}(\mathcal{C})$, el morfisme $\tau_X:F(X)\rightarrow G(X)$ és un isomorfisme. Es diu que $F$ i $G$ són \textit{isomorf}.\index{Isomorfisme de functors}\index{Equivalència natural}
+\end{defi}
+
+\begin{ej}
+Sigui $k$ un cos. Prenem $\mathcal{C} = \mathrm{Vectfin}_k$ la categoria dels $k$-espais vectorials finits. Prenem $F = \mathrm{id}:\mathcal{C}\rightarrow\mathcal{C}$, $E\mapsto E$ i $G:\mathcal{C}\rightarrow\mathcal{C}$, $E\mapsto E^{**}$. Llavors, per a tot $E$ se satisfà $f^{**}\circ\tau_E = \tau_F\circ f$ i aleshores $F\cong G$.
+\end{ej}
+
+
+
+
+%%% FALTA REVISAR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

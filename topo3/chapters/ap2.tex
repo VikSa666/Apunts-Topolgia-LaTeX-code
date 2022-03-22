@@ -1,0 +1,500 @@
+\documentclass[../main.tex]{subfiles}
+
+
+
+
+
+
+\begin{document}
+
+
+
+\chapter{Grups abelians finitament generats}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Aquesta secció està inclosa originalment al temari de grups. Jo, però, no la he inclòs perquè no ho vam donar ja que no hi va haver temps. La incloc aquí perquè em sembla important i pot ser necessari per algun cop en la vida, i a més em sembla interessant.
+
+En aquesta secció considerarem grups abelians i denotarem l'operació del grup com a suma, l'element neutre per 0, l'element simètric d'un element $x$ com $-x$. Si $(E,+)$ és grup abelià, $x\in E$, $n\in\mathbb{Z}$, posem 
+\begin{equation}
+    \notag
+    nx := x^n = \left\{
+    \begin{array}{ll}
+        x+\overset{n}{\cdots}+x & \text{si $n>0$}\\
+        0 & \text{si $n = 0$} \\
+        (-x)+\overset{n}{\cdots}+(-x) & \text{si n<0}
+    \end{array}
+    \right.
+\end{equation}
+Anomenarem suma directa el producte directe de grups abelians i el denotarem per $\oplus$.
+
+Havíem vist que un grup finit és finitament generat però no recíprocament. El grup $\mathbb{Z}$ i, més generalment, la suma directa $\mathbb{Z}\oplus\cdots\oplus\mathbb{Z}$ d'un nombre finit de còpies de $\mathbb{Z}$ són grups infinits finitament generats.
+
+
+
+\section{Bases}
+\begin{defi}
+Siguin $E$ un grup abelià i $e_1,\ldots,e_r$ elements de $E$.
+\begin{enumerate}[1)]
+    \item Els elements $e_1,\ldots,e_r$ són \textit{linealment independents sobre $\mathbb{Z}$} si, per a $n_1,\ldots,n_r\in\mathbb{Z}$,
+    \begin{equation}
+        \notag
+        n_1e_1+\cdots+n_re_r = 0 \Longrightarrow n_1 = 0,\ldots, n_r = 0.
+    \end{equation}
+    \item $(e_1,\ldots,e_r)$ és \textit{base de $E$} si els elements $e_1,\ldots,e_r$ són linealment independents sobre $\mathbb{Z}$ i generen $E$.
+\end{enumerate}
+\end{defi}
+
+\begin{prop}
+Siguin $E$ un grup abelià i $e_1,\ldots,e_r$ elements de $E$. Aleshores $(e_1, \ldots, e_r)$ és base de $E$ si i només si tot element de $E$ s'escriu de manera única en la forma $n_1e_1+\cdots+n_re_r$, amb $n_1,\ldots,n_r\in \mathbb{Z}$.
+\end{prop}
+\begin{proof}
+Aquesta proposició es demostra igual que pels espais vectorials.
+\end{proof}
+
+\begin{defi}
+Un grup abelià finitament generat és \textit{lliure} si és isomorf a $\mathbb{Z}\oplus\overset{r}{\cdots}\oplus\mathbb{Z}$, per algun enter $r>0$.
+\end{defi}
+
+\begin{prop}
+Un grup abelià finitament generat és lliure si i només si té una base.
+\end{prop}
+\begin{proof}
+Si $(e_1,\ldots,e_r)$ és base de $E$, definim l'aplicació
+\begin{equation}
+    \notag
+    \begin{array}{rl}
+        \mathbb{Z}\oplus\overset{r}{\cdots}\oplus\mathbb{Z} & \longrightarrow E \\
+        (n_1,\ldots,n_r) & \longmapsto n_1e_1+\cdots+n_re_r.
+    \end{array}
+\end{equation}
+Clarament és isomorfisme de grups. Recíprocament, si $\varphi$ és isomorfisme de $\mathbb{Z}\oplus\overset{r}{\cdots}\oplus\mathbb{Z}$ en $E$, $(\varphi(1,0,\ldots,0),\ldots,\varphi(0,\ldots,0,1))$ és base de $E$.
+\end{proof}
+
+\begin{lema}\label{lema:lemalema}
+Si $(e_1,\ldots,e_r)$ és base de $E$, $d_1,\ldots,d_r$ són enters naturals, aleshores
+\begin{equation}
+    \notag
+    E/\langle d_1e_1,\ldots,d_re_r\rangle\cong \mathbb{Z}/d_1\mathbb{Z}\oplus\cdots\oplus\mathbb{Z}/d_r\mathbb{Z}.
+\end{equation}
+\end{lema}
+\begin{proof}
+Definim l'aplicació
+\begin{equation}
+    \notag
+    \begin{array}{rl}
+        E & \longrightarrow \mathbb{Z}/d_1\mathbb{Z}\oplus\cdots\oplus\mathbb{Z}/d_r\mathbb{Z} \\
+        n_1e_1+\cdots+n_re_r & \longmapsto (n_1\mod d_1,\ldots,n_r\mod d_r).
+    \end{array}
+\end{equation}
+clarament és epimorfisme de grups i el seu nucli és el subgrup $\langle d_1e_1,\ldots,d_re_r\rangle$ del grup $E$. Pel teorema d'isomorfia (\ref{ter:1isomorfia}), obtenim l'isomorfisme volgut.
+\end{proof}
+
+\begin{prop}
+Si un grup abelià $E$ té una base amb $r$ elements, totes les bases de $E$ tenen $r$ elements. L'enter $r$ es diu rang de $E$.
+\end{prop}
+\begin{proof}
+Sigui $(e_1,\ldots,e_r)$ una base de $E$. Posem $2E:=\{2x\;:\;x\in E\}$. Clarament $2E$ és el subgrup de $E$ generat per $2e_1,\ldots,2e_r$ i, per tant $E/2E\cong \mathbb{Z}/2\mathbb{Z}\oplus\overset{r}{\cdots}\oplus\mathbb{Z}/2\mathbb{Z}$. Com $2E$ no depèn de la base escollida, $r$ tampoc.
+\end{proof}
+
+
+
+
+
+
+
+
+\section{Subgrup de torsió}
+\begin{defi}
+Els elements d'ordre finit d'un grup abelià $E$ s'anomenen també \textit{elements de torsió} i formen un subgrup $F(E)$ de $E$ anomenat \textit{subgrup de torsió de $E$}. Diem que $E$ és \textit{lliure de torsió} si $F(E) = \{0\}$.
+\end{defi}
+
+Clarament un grup abelià és lliure de torsió. Veiem ara el recíproc.
+
+\begin{lema}
+Si un conjunt de generadors $\{e_1,\ldots,e_r\}$ d'un grup abelià $E$ no és $\mathbb{Z}$-linealment independent, aleshores existeixen un altre conjunt de generadors $\{e_1',\ldots,e_r'\}$ de $E$ (amb el mateix nombre d'elements) i un enter no nul $q$ tals que $qe_i' = 0$, per a algun índex $i$.
+\end{lema}
+\begin{proof}
+Siguin $n_1,\ldots,n_r$ enters no tots nuls tals que $n_1e_1+\cdots+n_re_r = 0$. Si només un $n_i$ és no nul, ja tenim el resultat volgut. Suposem doncs que al menys dos $n_i$'s són nuls. Reordenant els $e_i$ si cal, podem suposar $|n_1|\geq |n_2|>0$. Tenim les igualtats
+\begin{equation}
+    \notag
+    n_1e_1+n_2e_2 = (n_1-n_2)e_1+n_2(e_1+e_2) = (n_1+n_2)e_1+n_2(e_2-e_1)
+\end{equation}
+i un dels nombres $|n_1-n_2|$ o $|n_1+n_2|$ és estrictament més petit que $|n_1|$. Per tant existeix una relació no trivial, o bé entre els generadors $e_1,e_1+e_2,\ldots,e_r$, o bé entre els generadors $e_1,e_2-e_1,\ldots,e_r$, per a la qual la suma dels valors absoluts dels coeficients és estrictament més petita que $m = |n_1|+\cdots+|n_r|>0$. El resultat s'obté doncs fent inducció sobre $m$.
+\end{proof}
+
+\begin{prop}
+Sigui $E$ un grup abelià finitament generat i lliure de torsió. Aleshores $E$ és un grup abelià lliure.
+\end{prop}
+\begin{proof}
+Sigui $\{e_1,\ldots,e_r\}$ un conjunt de generadors de $E$ amb $r$ mínim. Vegem que $e_1,\ldots,e_r$ són $\mathbb{Z}$-linealment independents. Siguin $n_1,\ldots,n_r$ enters tals que
+\begin{equation}
+    \notag
+    n_1e_1+\cdots+n_re_r = 0.
+\end{equation}
+Volem veure $n_i = 0$, per a tot $i,\;1\leq i \leq r$. Raonem per l'absurd. Suposem que no tots els $n_i$ són nuls. aleshores, pel lema anterior, existeixen un conjunt de generadors $\{e_1',\ldots,e_r'\}$ de $E$, un enter no nul $q$ i un índex $i$ tals que $qe_i' ? '$. com $E$ no té elements de torsió no nuls, ha de ser $e_i' = 0$ però aleshores, $E$ es pot generar amb $r-1$ elements, contradient la minimalitat de $r$.
+\end{proof}
+
+\begin{prop}
+Tot grup abelià finitament generat és suma directa d'un grup abelià lliure i un grup finit.
+\end{prop}
+\begin{proof}
+Sigui $E$ un grup abelià finitament generat i sigui $F$ el seu subgrup de torsió. Aleshores $L = E/F$ és lliure de torsió i finitament generat. Per la proposició anterior, $L$ és lliure. Siguin $e_1,\ldots,e_r$ elements de $E$ tals que les seves classes $[e_1],\ldots,[e_r]$ a $L$ formin base de $L$. Sigui $L' = \langle e_1,\ldots,e_r\rangle$. Com la imatge de $L'$ p3el morfisme de pas al quocient $E\rightarrow L$ és igual a $L$, tenim $L'+F = E$. D'altra banda, $e_1,\ldots,e_r$ són linealment independents sobre $\mathbb{Z}$, ja que una relació de dependència entre ells donaria una entre $[e_1],\ldots,[e_r]$, per tant $L'$ és lliure. Això implica que $L'\cap F = \{0\}$. Notem que $F$ és isomorf al quocient $E/L'$ i per tant finitament generat i, per ser de torsió, finit.
+\end{proof}
+
+direm que un grup abelià finitament generat $E$ té \textit{rang $r$} si $E/F(E)$ té rang $r$. Els grups abelians finits són els grups abelians finitament generats de rang 0.
+
+
+
+
+
+
+
+
+
+\section{Estructura dels grups abelians finitament generats}
+\begin{prop}\label{prop:existenciadeunabase}
+Sigui $L$ un grup abelià lliure de rang $r$ i $L'$ un subgrup de $L$. Aleshores existeixen una base $(e_1,\ldots,e_r)$ de $L$, un enter natural $s\leq r$ i enters positius $d_1,\ldots,d_s$ tals que $(d_1e_1,\ldots,d_se_s)$ és una base de $L'$ i $d_i|d_{i+1}$, per a $1\leq i\leq s$.
+\end{prop}
+\begin{proof}
+Fem inducció sobre $r$. Per a $r = 1$, és la proposició (\ref{prop:subgrupsdez}), tenint en compte que 1 és base de $\mathbb{Z}$. Suposem doncs $r\geq 2$. Si existeix una base $(v_1,v_2,\ldots,v_r)$ de $L$ tal que $L'\subset \langle v_2,\ldots,v_r\rangle$, aleshores l'enunciat és cert per la hipòtesi d'inducció. Podem doncs suposar que, per a tota base $v = (v_1,v_2,\ldots,v_r)$ de $L$ es compleix $L'\not\subset\langle v_2,\ldots,v_r\rangle$. Donada $v$, considerem el morfisme
+\begin{equation}
+    \notag
+    \begin{array}{rl}
+        p_v: L & \longrightarrow \mathbb{Z} \\
+        x = n_1v_1+\cdots+n_rv_r & \longmapsto n_1
+    \end{array}
+\end{equation}
+Com $L'\not\subset \langle v_2,\ldots,v_r\rangle$, el subgrup $p_v(L')$ és no nul per a tota base $v$. Per a cada base $v$ de $L$, existeix doncs un enter $d_v>0$ tal que $p_v(L') = \langle d_v\rangle$. Escollim $v$ tal que $d_v$ sigui mínim i posem $d_1 = d_v$. Vegem que, si $x'\in L'$ és de la forma $x' = d_1v_1 + n_2'v_2+\cdots+n_r'v_r$, aleshores $d_1|n_j'$, $2\leq j\leq r$, de forma que, en particular, existeix $x\in L$ tal que $x'=d_1x$. En efecte, si $n_j' = c_jd_1+k_j$, amb $0\leq k_j\leq d_1$, $2\leq j\leq r$, aleshores $x' = d_1(v_1+c_2v_2+\cdots+c_rv_r)+k_2v_2+\cdots+k_rv_r$ i, com $v_1+c_2v_2+\cdots+c_rv_r,v_2,\ldots,v_r$ és base de $L$, la definició de $d_1$ implica $k_2 = \cdots = k_r = 0$.
+
+Sigui $e_1'\in L'$ qualsevol element tal que $p_v(e_1') = d_1$ i sigui $e_1\in L$ tal que $e_1' = d_1e_1$. Aleshores és clar que $p_v(e_1)=1$, de forma que $e_1,v_2,\ldots,v_r$ és una base de $L$. Vegem que
+\begin{equation}
+    \label{eq:eleprima}
+    L' = (L'\cap\langle v_2,\ldots,v_r\rangle)\oplus\langle d_1e_1\rangle .
+\end{equation}
+Com la intersecció dels dos sumands és clarament $\{0\}$. n'hi ha prou amb veure 
+\begin{equation}
+    \notag
+    L' = (L'\cap \langle v_2,\ldots,v_r\rangle)+\langle d_1e_1\rangle.
+\end{equation}
+Sigui $x'\in L'$. Per definició de $d_1$, existeix un enter $k$ tal que $p_v(x') = kd_1$. Per tant $kd_1e_1\in \langle d_1e_1\rangle$ i $x'-kd_1e_1\in L'\cap \langle v_2,\ldots,v_r\rangle$, ja que $x'-kd_1e_1\in L'$ i $p_v(x'-kd_1e_1) = 0$. Per tant, $x' = (x'-kd_1e_1)+kd_1e_1\in (L'\cap \langle v_2,\ldots,v_r\rangle)+\langle d_1e_1\rangle$.
+
+Per hipòtesi d'inducció, existeix una base $(e_2,\ldots,e_r)$ de $\langle v_2,\ldots, v_r\rangle$, un enter $s\leq r$ i enters positius $d_2,\ldots, d_s$ tals que $(d_2e_2,\ldots,d_se_s)$ és base de $L'\cap \langle v_2,\ldots, v_r\rangle$ i tals que $d_i|d_{i+1}$, per a $i=2,\ldots,s-1$. Aleshores, $(e_1,e_2,\ldots,e_r)$ és base de $E$ i per \ref{eq:eleprima}, $(d_1e_1,d_2e_2,\ldots,d_se_s)$ és base de $L'$.
+
+Només falta veure que, si $s>1$, $d_1|d_2$. Com $x' = d_1e_1+d_2e_2\in L'$ i $p_v(x') = d_1$, se segueix del que hem demostrat abans.
+\end{proof}
+
+
+
+\begin{ter}
+[Estructura dels grups abelians finitament generats] Sigui $E$ un grup abelià finitament generat de rang $r$. Existeixen un nombre natural $s$ i enters positius $d_1,\ldots,d_s$ amb $d_j$ dividint $d_{j+1}$, per a $1\leq j < s$, tals que $E$ és suma directa de subgrups cíclics $F_j$ d'ordre $d_j$ ($1\leq j \leq s$) i de $r$ subgrups cíclics finits.
+\end{ter}
+\begin{proof}
+Sigui $E$ un grup abelià finitament generat. Si $\{g_1,\ldots,g_k\}$ és un sistema de generadors de $E$, l'aplicació
+\begin{equation}
+    \notag
+    \begin{array}{rl}
+        \varphi:\mathbb{Z}\oplus\overset{k}{\cdots}\oplus\mathbb{Z} & \longrightarrow E \\
+        (n_1,\ldots,n_k) & \longmapsto n_1g_1+\cdots+n_kg_k
+    \end{array}
+\end{equation}
+és epimorfisme de grups. Per la proposició anterior, existeix una base $(e_1,\ldots,e_k)$ de $\mathbb{Z}^k$, un enter natural $s\leq k$ i enters naturals $d_1,\ldots,d_s$, amb $d_j|d_{j+1}$, $1\leq j < s$, tals que $(d_1e_1,\ldots,d_se_s)$ és una base de $\ker \varphi$. Com $\varphi$ indueix un isomorfisme entre $E$ i $\mathbb{Z}^k/\ker\varphi$ i el quocient $\mathbb{Z}^k/\ker\varphi$ és isomorf a $\mathbb{Z}/d_1\mathbb{Z}\oplus \cdots \oplus\mathbb{Z}/d_s\mathbb{Z}\oplus \mathbb{Z}\overset{r}{\cdots}\oplus\mathbb{Z}$, pel lema (\ref{lema:lemalema}), obtenim el resultat.
+\end{proof}
+
+\begin{coro}
+Si $F$ és un grup abelià finit, existeixen un nombre natural $s$ i enters positius $d_1,\ldots,d_s$ amb $d_j$ dividint $d_{j+1}$, per a $1\leq j< s$, tals que $F$ és suma directa de subgrups cíclics $F_j$ d'ordre $d_j$ ($1\leq j\leq s$). En particular, l'ordre de $F$ és igual al producte $d_1\cdots d_s$.
+\end{coro}
+
+
+\begin{defi}
+Els enters $d_1,\ldots,d_s$ d'aquest corol·lari s'anomenen \textit{factors invariants} del grup $F$.
+\end{defi}
+
+
+
+\begin{prop}\label{prop:proposicioproposicio}
+Sigui $F$ un grup abelià finit. Sigui $|F| = p_1^{k_1}\cdots p_l^{k_l}$ la descomposició de l'ordre de $F$ en producte de nombres primers. Aleshores existeixen enters positius $s_i$, $1\leq i \leq l$ i $k_{i1}\geq k_{i2}\geq \cdots\geq k_{is_i}>0$ tals que 
+\begin{equation}
+    \notag
+    F = \bigoplus_{1\leq i\leq l}\left(\bigoplus_{1\leq j\leq s_i} F_{ij}\right)
+\end{equation}
+on $F_{ij}$ és grup cíclic d'ordre $p_i^{k_{ij}}$, $1\leq j\leq s_i,\;1\leq i\leq l$, i $k_i = k_{i1}+\cdots+k_{is_i}$, $1\leq i\leq l$.
+
+A més, els primers $p_1,\ldots,p_l$ i les successions $k_{ij}$ queden determinats unívocament pel grup $F$.
+\end{prop}
+\begin{proof}
+En el corol·lari vist anteriorment podem suposar $d_i>0$, per a cada $i$, ja que $F_i = \{0\}$ si $d_i = 1$. Sigui ara $d_s = p_1^{k_{s1}}\cdots p_l^{k_{sl}}$ la descomposició de $d_s$ en producte de nombres primers. Com $d_1|d_2|\cdots|d_s$, la descomposició dels $d_i$ en producte de primers és $d_i = p_1^{k_{i1}}\cdots p_l^{k_{il}}$, amb $k_{sj}\geq\cdots\geq k_{1j}\geq 0$, per a tot $j = 1,\ldots, l$. A partir d'aquesta factorització de $d_i$, sabem que
+\begin{equation}
+    \notag
+    \mathbb{Z}/d_i\mathbb{Z}\cong \mathbb{Z}/p_1^{k_{i1}}\mathbb{Z}\oplus\cdots\oplus\mathbb{Z}/p_l^{k_{il}}\mathbb{Z},
+\end{equation}
+per ser els factors $p_1^{k_{i1}},\ldots,kp_l^{k_{il}}$ primers entre ells dos a dos. Observem que, si $k_{ij}=0$, el sumand corresponent és 0. L'ordre de $F$ és igual a $d_1d_2\cdots d_s = p_1^{k_1}\cdots p_l^{k_l}$ i, per tant, $k_j = k_{1j}+\cdots+k_{sj}$, $1\leq j\leq l$.
+
+És clar que els primers $p_1,\ldots,p_l$ queden determinats per $F$. Ara, sigui $P$ un grup cíclic d'ordre $p^t$ amb $p$ primer. Si $P_j$ és el subgrup de $P$ format pels elements amb ordre dividint $p^j$, tenim $P_0\subset P_1\subset \cdots\subset P_t = P$ i $P_j/P_{j-1}$ té ordre $p$. De fet, $P_j$ és el subgrup d'ordre $p^j$ de $P$. Sigui ara $F$ un grup d'ordre potència de $p$ tal que $F = Q_1\oplus\cdots\oplus Q_s$, amb $Q_i$ cíclic d'ordre $p^{ki}$, $1\leq i\leq s$, amb $k_1\geq k_2\geq \cdots \geq k_s>0$. Sigui $F_j$ (resp. $Q_{ij}$) el subgrup de $F$ (resp. $Q_i$) format pels elements amb ordre dividint $p_j$. Clarament $F_j$ és suma directa de $Q_{ij}$. Posem $p^{d_j}$ l'ordre de $F_j$. Aleshores $d_j-d_{j-1}$ és el nombre $h_j$ de subgrups $Q_i$ amb ordre $\geq p^j$. En conseqüència, $\nu_j = h_j-h_{j+1}$ és el nombre de subgrups $Q_i$ amb ordre exactament igual a $p^j$ i, per tant, $\nu_j = -d_{j+1}+d_j-d_{j-1}$. Com el terme de la dreta d'aquesta igualtat depèn només  de $F$, queda demostrat que el nombre de subgrups $Q_i$ de la descomposició de $F$ amb ordre igual a un $p^j$ donat depèn només de $F$. Si $|F| = p_1^{k_1}\cdots p_l^{k_l}$, $F$ és suma directa de grups d'ordres $p_1^{k_1},\ldots,p_l^{k_l}$. Aplicant el que acabem de veure a cada sumand, queda provada la proposició.
+\end{proof}
+
+\begin{defi}
+Els enters $p_i^{k_{ij}}$ de la proposició (\ref{prop:proposicioproposicio}) s'anomenen divisors elementals del grup $F$. 
+\end{defi}
+
+\begin{coro}
+\begin{itemize}
+    \item Dos grups abelians finits són isomorfs si i només si tenen els mateixos divisors elementals.
+    \item Dos grups abelians finits són isomorfs si i només si tenen els mateixos factors invariants.
+\end{itemize}
+\end{coro}
+
+Aplicant la proposició (\ref{prop:proposicioproposicio}), podem determinar, tret d'isomorfisme, totes els grups abelians finits d'un ordre donat $n$. Si $n = p_1^{k_1}\cdots p_l^{k_l}$, com $k_j = k_{1j}+\cdots+k_{sj}$, $1\leq j\leq l$, el conjunt de les classes d'isomorfisme dels grups abelians d'ordre $n$ està en bijecció amb el conjunt $\Pi_1\times\cdots \times \Pi_l$, on $\Pi_j$ és el conjunt de particions de $k_j$.
+
+\begin{ej}
+Determinarem tots els grups abelians d'ordre 72, tret d'isomorfisme. Tenim $72 = 2^3\cdotp 3^2$. Aleshores $l = 2$, $k_1 = 3$, $k_2=2$. Tenim $3 = 2+1 = 1+1+1$, $2 = 1+1$, per tant, $\Pi_1 = \{3,2+1,1+1+1\}$, $\Pi_2 = \{2,1+1\}$, de forma que hi ha 6 classes d'isomorfisme de grups abelians d'ordre 72:
+\begin{enumerate}[1)]
+    \item $\mathbb{Z}/8\mathbb{Z}\oplus\mathbb{Z}/9\mathbb{Z}$ amb divisors elementals 8, 9;
+    \item $\mathbb{Z}/4\mathbb{Z}\oplus\mathbb{Z}/2\mathbb{Z}\oplus\mathbb{Z}/9\mathbb{Z}$ amb divisors elementals 4, 2, 9;
+    \item $(\mathbb{Z}/2\mathbb{Z})^3\oplus \mathbb{Z}/9\mathbb{Z}$ amb divisors elementals 2, 2, 2, 9;
+    \item $\mathbb{Z}/8\mathbb{Z}\oplus (\mathbb{Z}/3\mathbb{Z})^2$ amb divisors elementals 8, 3, 3;
+    \item $\mathbb{Z}/4\mathbb{Z}\oplus\mathbb{Z}/2\mathbb{Z}\oplus(\mathbb{Z}/3\mathbb{Z})^2$ amb divisors elementals 4, 2, 3, 3;
+    \item $(\mathbb{Z}/2\mathbb{Z})^3\oplus(\mathbb{Z}/3\mathbb{Z})^2$ amb divisors elementals 2, 2, 2, 3, 3.
+\end{enumerate}
+
+Determinem ara els factors invariants. Tenim
+\begin{enumerate}[1)]
+    \item $\mathbb{Z}/8\mathbb{Z}\oplus\mathbb{Z}/9\mathbb{Z}\cong \mathbb{Z}/72\mathbb{Z}$ té factors invariants $d_1 = 72$.
+    \item $\mathbb{Z}/4\mathbb{Z}\oplus\mathbb{Z}/2\mathbb{Z}\oplus\mathbb{Z}/9\mathbb{Z}\cong \mathbb{Z}/36\mathbb{Z}\oplus\mathbb{Z}/2\mathbb{Z}$ té factors invariants $d_1 = 2$, $d_2 = 36$.
+    \item $(\mathbb{Z}/2\mathbb{Z})^3\oplus \mathbb{Z}/9\mathbb{Z}\cong \mathbb{Z}/18\mathbb{Z}\oplus\mathbb{Z}/2\mathbb{Z}\oplus\mathbb{Z}/2\mathbb{Z}$ té factors invariants $d_1 = 2$, $d_2 = 2$, $d_3 = 18$.
+    \item $\mathbb{Z}/8\mathbb{Z}\oplus (\mathbb{Z}/3\mathbb{Z})^2\cong \mathbb{Z}/24\mathbb{Z}\oplus \mathbb{Z}/3\mathbb{Z}$ té factors invariants $d_1 = 3$, $d_2 = 24$.
+    \item $\mathbb{Z}/4\mathbb{Z}\oplus\mathbb{Z}/2\mathbb{Z}\oplus(\mathbb{Z}/3\mathbb{Z})^2\cong \mathbb{Z}/12\mathbb{Z}\oplus\mathbb{Z}/6\mathbb{Z}$ té factors invariants $d_1 = 6$, $d_2 = 12$.
+    \item $(\mathbb{Z}/2\mathbb{Z})^3\oplus(\mathbb{Z}/3\mathbb{Z})^2 \cong \mathbb{Z}/6\mathbb{Z}\mathbb{Z}/6\mathbb{Z}\oplus\mathbb{Z}/2\mathbb{Z}$ té factors invariants $d_1 = 2$, $d_2 = 6$, $d_3 = 6$.
+\end{enumerate}
+\end{ej}
+
+
+
+
+
+
+
+
+\section{Càlcul efectiu dels factors invariants}
+Donarem ara un algoritme per classificar un grup abelià finitament generat donat per generadors i relacions. Sigui $E$ un grup abelià amb generadors $g_1,\ldots,g_n$ i relacions
+\begin{equation}
+    \notag
+    \left\{
+    \begin{array}{ll}
+        a_{11}g_1+\cdots +a_{1n}g_n = 0 \\
+        \vdots\\
+        a_{m1}g_1+\cdots+a_{mn}g_n = 0
+    \end{array}
+    \right.
+\end{equation}
+amb $a_{ij}\in \mathbb{Z}$, $1\leq i\leq m$, $1\leq j\leq n$. Si $(e_1,\ldots,e_n)$ és una base de $\mathbb{Z}^n$, tenim un epimorfisme
+\begin{equation}
+    \notag
+    \begin{array}{rl}
+        \mathbb{Z}^n & \longrightarrow E \\
+        e_i & \longmapsto g_i\;(1\leq i\leq n)
+    \end{array}
+\end{equation}
+amb nucli $L' = \langle a_{11}e_1+\cdots+a_{1n}e_n,\ldots,a_{m1}e_1+\cdots+a_{mn}e_n\rangle$. Per tant, $E$ és isomorf al quocient $\mathbb{Z}^n/L'$. Posem $r_1 = a_{11}e_1+\cdots+a_{1n}e_n,\ldots, r_m = a_{1m}e_1+\cdots+a_{nm}e_n$. Si $A = (a_{ij})_{1\leq i\leq m,1\leq j\leq n}$ és la matriu de coeficients de les relacions de $E$, tenim
+\begin{equation}
+    \notag
+    \begin{pmatrix}
+        r_1\\
+        \vdots \\
+        r_m
+    \end{pmatrix}
+    =
+    A
+    \begin{pmatrix}
+    e_1\\\vdots\\e_n
+    \end{pmatrix}
+\end{equation}
+
+Per la proposició (\ref{prop:existenciadeunabase}), existeixen una base $(e_1',\ldots,e_n')$ de $\mathbb{Z}^n$, un enter natural $s\leq n$ i enters positius $d_1,\ldots, d_s$ tals que $(d_1e_1',\ldots,d_se_s')$ és base de $L'$ i $d_i|d_{i+1}$, per a $1\leq i < s$. Tenim una matriu $V\in \text{GL}(n,\mathbb{Z})$ tal que
+\begin{equation}
+    \notag
+    \begin{pmatrix}e_1\\\vdots\\e_n\end{pmatrix} = V\begin{pmatrix}e_1'\\\vdots\\e_n'\end{pmatrix} .
+\end{equation}
+
+Si trobem matrius $V\in\text{GL}(n,\mathbb{Z})$, $W\in \text{GL}(m,\mathbb{Z})$ tals que
+\begin{equation}
+    \notag
+    WAV = 
+    \begin{pmatrix}
+        d_1 &        &     &     &     &     & \cdots \\
+            & \ddots &     &     &     &     & \cdots \\
+            &        & d_s &     &     &     & \cdots \\
+            &        &     &  0  &     &     & \cdots \\
+            &        &     &     & \ddots &  & \cdots \\
+            &        &     &     &     &  0  & \cdots
+    \end{pmatrix},
+\end{equation}
+la base $(d_1e_1',\ldots,d_se_s')$ de $L'$ s'expressa com $WAV(e_1',\ldots,e_n')^T$.
+
+Construirem les matrius $V$ i $W$ per passos. Denotem per $E_{ij}$ la matriu quadrada d'ordre $n$ que té un 1 en el lloc $(i,j)$ i 0's en la resta de llocs i posem $P_{ij}$ la matriu quadrada d'ordre $n$ que té un 1 en els llocs $(k,k)$, amb $k\not=i$ i $k\not=j$, un 1 en els llocs $(i,j)$ i $(j,i)$ i 0's en la resta de llocs. Observem que $A(Id+qE_{ij})$ és la matriu obtinguda a partir de $A$ sumant a la columna $j$ de $A$ el resultat de multiplicar per $q$ la columna $i$, $(Id+qE_{ij})A$ (on ara $Id+qE_{ij}$ és matriu d'ordre $m$) és la matriu obtinguda a partir de $A$ sumant a la fila $j$ de $A$ el resultat de multiplicar per $q$ la fila $i$, $AP_{ij}$ (on ara $P_{ij}$ és matriu d'ordre $m$) és la matriu obtinguda a partir de $A$ permutant les files $i$ i $j$.
+
+\subsubsection{Algoritme}
+L'algoritme consisteix en reduir la matriu $A$ fent transformacions successives que són permutacions de files (resp. columnes) o sumar a una fila (resp. columna) un múltiple enter d'una altra fila (resp. columna). Cada una d'aquestes transformacions equival a multiplicara $A$ a l'esquerra (resp. a la dreta) per una matriu $Id+qE_{ij}$ o $P_{ij}$. Si ens interessa obtenir les matrius $W$ i $V$ anirem guardant les matrius $Id+qE_{ij}$ o $P_{ij}$ corresponents a cada transformació.
+\begin{enumerate}
+    \item Busquem a la matriu $A$ un element $a_{ij}$ no nul que sigui menor en valor absolut que qualsevol altre element de $A$ i el portem al lloc $(1,1)$.
+    \item Per a cada enter $k = 2,\ldots, n$, siguin $q_{1k}$ i $r_{1k}$ el quocient i el residu de la divisió entera de $a_{1k}$ entre $a_{11}$. Restem a la columna $k$ la primera columna multiplicada per $q_{1k}$. La primera fila de la matriu és ara $a_{11}, r_{12},\ldots,r_{1n}$. Si algun dels residus és no nul tornem al pas 1.
+    
+    En un nombre finit de passos, obtenim una matriu amb la primera fila $a_{11},0,\ldots,0$. Fem el procés anàleg amb la primera columna, fins a obtenir una matriu de la forma
+    \begin{equation}
+        \label{eq:matriu}
+        \begin{pmatrix}
+            a_{11} & 0 & \cdots & 0 \\
+            0 & & & \\
+            \vdots & & A' & \\
+            0 & & & 
+        \end{pmatrix}.
+    \end{equation}
+    \item Si $A'$ és nul·la ja estem. Si no, si existeix un element $a_{ij}$ de $A'$ no divisible per $a_{11}$, sumem la fila $i$-èssima de $A$ a la primera i tornem al punt 1. En un nombre finit de passos, arribem a una matriu de la forma \ref{eq:matriu} tal que $a_{11}$ divideix tots els elements de $A'$. Aleshores, posem $d_1 = a_{11}$ i fem de nou el mateix procés amb la matriu $A'$ en comptes de $A$.
+\end{enumerate}
+
+
+\begin{ej}
+[Exercici] Determineu els factors invariants i els divisors elementals dels grups abelians definits pels generadors i les relacions següents.
+\begin{enumerate}[(a)]
+    \item Generadors $a,b,c,d$; relacions $\left\{
+    \begin{array}{ll}
+        2a+3b= 0 \\
+        4a = 0 \\
+        4c+11d = 0
+    \end{array}
+    \right.$
+    
+    \item Generadors $a,b,c,d,e$; relacions $\left\{
+    \begin{array}{ll}
+        a-7b+14c-21d = 0 \\
+        5a-7b-2c+10d-15e = 0 \\
+        3a-3b-2c+6d-9e = 0 \\
+        a-b+2d-3e = 0
+    \end{array}
+    \right.$
+\end{enumerate}
+\end{ej}
+\begin{proof}
+Solució.
+\begin{enumerate}[(a)]
+    \item Posem
+    \begin{equation}
+        \notag
+        A = 
+        \begin{pmatrix}
+            2 & 3 & 0 & 0 \\
+            4 & 0 & 0 & 0 \\
+            0 & 0 & 5 & 11
+        \end{pmatrix}.
+    \end{equation}
+    Apliquem l'algoritme
+    \begin{equation}
+        \notag
+        \begin{pmatrix}
+            2 & 3 & 0 & 0 \\
+            4 & 0 & 0 & 0 \\
+            0 & 0 & 5 & 11
+        \end{pmatrix}
+        \leadsto
+        \begin{pmatrix}
+            2 & 1 & 0 & 0 \\
+            4 & -4 & 0 & 0 \\
+            0 & 0 & 5 & 11
+        \end{pmatrix}
+        \leadsto
+        \begin{pmatrix}
+            1 & 2 & 0 & 0 \\
+            -4 & 4 & 0 & 0 \\
+            0 & 0 & 5 & 11
+        \end{pmatrix}
+    \end{equation}
+    \begin{equation}
+        \notag\leadsto
+        \begin{pmatrix}
+            1 & 0 & 0 & 0 \\
+            -4 & 12 & 0 & 0 \\
+            0 & 0 & 5 & 11
+        \end{pmatrix}
+        \leadsto
+        \begin{pmatrix}
+            1 & 0 & 0 & 0 \\
+            0 & 12 & 0 & 0 \\
+            0 & 0 & 5 & 11
+        \end{pmatrix}
+        \leadsto
+        \begin{pmatrix}
+            1 & 0 & 0 & 0 \\
+            0 & 5 & 0 & 11 \\
+            0 & 0 & 12 & 0
+        \end{pmatrix}
+    \end{equation}
+    \begin{equation}
+        \notag\leadsto
+        \begin{pmatrix}
+            1 & 0 & 0 & 0 \\
+            0 & 5 & 0 & 1 \\
+            0 & 0 & 12 & 0
+        \end{pmatrix}
+        \leadsto
+        \begin{pmatrix}
+            1 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 5 \\
+            0 & 0 & 12 & 0
+        \end{pmatrix}
+        \leadsto
+        \begin{pmatrix}
+            1 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 0 \\
+            0 & 0 & 12 & 0
+        \end{pmatrix}
+    \end{equation}
+    Obtenim $d_1 = d_2 = 1$, $d_3 = 12$, $E = \mathbb{Z}/12\mathbb{Z}\oplus \mathbb{Z}$ i els divisors elementals són $2^2,3$. Tenim
+    \begin{equation}
+        \notag
+        \begin{array}{ll}
+            W = (Id-E_{12})P_{12}(Id-2E_{12})P_{23}(Id-2E_{24})P_{24}(Id-5E_{24}),\\
+            V = P_{23}(Id+4E_{21}).
+        \end{array}
+    \end{equation}
+    Operant, 
+    \begin{equation}
+        \notag
+        W = 
+        \begin{pmatrix}
+            -1 & 0 & 3 & 0 \\
+            1 & 0 & -2 & 0 \\
+            0 & -2 & 0 & 11 \\
+            0 & 1 & 0 & -5
+        \end{pmatrix},\quad V =
+        \begin{pmatrix}
+            1 & 0 & 0 \\
+            0 & 0 & 1 \\
+            4 & 1 & 0
+        \end{pmatrix}.
+    \end{equation}
+    
+    \item Es deixa com a exercici.
+\end{enumerate}
+\end{proof}
+
+
+
+%%% C'EST FINI
+
+\end{document}

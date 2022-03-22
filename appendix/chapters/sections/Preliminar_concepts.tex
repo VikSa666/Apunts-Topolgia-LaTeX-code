@@ -1,0 +1,134 @@
+\documentclass[../main.tex]{subfiles}
+
+
+
+
+
+\begin{document}
+
+
+\section{Preliminary concepts}
+
+In this section, I will cover the very preliminary concepts of Group Theory, such as the definition of group itself, and the basic notation and definitions such as subgroups, homomorphisms, etc. This will be done by translating into English my old notes from Estructures Algebraiques classes with Carlos d'Andrea.
+
+
+\begin{defi}[Group]\index{Group}
+A \textit{group} is a set $G$ together with a binary intern operation which satisfies
+\begin{enumerate}[(i)]
+    \item \textit{Associative}: $\forall x, y, z\in G$, $(xy)z = x(yz)$;
+    \item \textit{Neutral element}\index{Neutral element}: $\exists e\in G$ such that $ex = xe = x$, $\forall x\in G$;
+    \item \textit{Inverse or symmetric element}\index{Symmetric element}\index{Inverse element}: $\forall x\in G$, $\exists x'\in G$ such that $gg' = g'g = e$.
+\end{enumerate}
+If the operation is commutative, i.e. $xy = yx$, $\forall x,y\in G$, we say that $G$ is an \textit{abelian group}\index{Abelian group}.
+\end{defi}
+
+\begin{defi}[Order of a group]\index{Order of a group}
+If $G$ is a group, we define the order of $G$, denoted $|G|$ or $\mathrm{ord}(G)$ as the number of elements of $G$ as a set, i.e. $|G| = \#G$. If $|G|$ is finite, we will call $G$ a \textit{finite group}\index{Finite group}, and if it is infinite, i.e. $|G| = \infty$, then $G$ will be called a group of an infinite order.
+\end{defi}
+
+
+\begin{prop}
+Some properties of a group $(G,\cdotp)$ are as follows:
+\begin{enumerate}[(a)]
+    \item Neutral element is unique.
+    \item If $g\cdotp g = g$ for some $g\in G$, then $g = e$, the neutral element.
+    \item Cancellative property: $\forall a,b,c\in G$, if we have $ab=ac$ we can ``cancel'' $a$ and it is equivalent to $b= c$. Same happens if we have $ba = ca$, then $b = c$.
+    \item $\forall x\in G$, its inverse is unique.
+    \item $\forall x\in G$, $(x^{-1})^{-1} = x$.
+    \item $\forall x,y\in G$, $(xy)^{-1} = y^{-1}x^{-1}$.
+\end{enumerate}
+\end{prop}
+
+
+\begin{defi}
+[Subgroup]\index{Subgroup} Let $(G,\cdotp)$ be a group. A subset $H\subseteq G$, $H\not=\emptyset$, will be called \textit{subgroup of $G$} if
+\begin{enumerate}[(i)]
+    \item $1\in H$
+    \item $H$ is closed, i.e. if $x,y\in H$, then $xy\in H$.
+    \item If $x\in H$, then $x^{-1}\in H$.
+\end{enumerate}
+Sometimes $H$ being a subgroup of $G$ is denoted by $H<G$.
+\end{defi}
+
+\begin{ej}
+The set $\mathbb{Z}$ with the sum is a group. All the subgroups of this group is equal to $m\mathbb{Z}$ for some $m\in \mathbb{Z}_{\geq 0}$. Note that $(\mathbb{Z},\cdotp)$, where $\cdotp$ represents the standard product of integers, does not conform a group, as for example $2$ has no inverse with respect to the product, because $\frac{1}{2}\not\in\mathbb{Z}$.
+\end{ej}
+
+\begin{prop}
+Useful ways of checking whether a given set $H\not=\emptyset$ is a subgroup of a given group $(G,\cdotp)$:
+\begin{enumerate}[(a)]
+    \item $\forall a,b\in H$, $ab^{-1}\in H$ implies that $H$ is subgroup of $G$.
+    \item If $H$ is finite and $\forall a,b\in H$ we have $ab\in H$, then $H$ is a subgroup of $G$.
+    \item If $H_1$ and $H_2$ are both subgroups of the same group $G$, then $H_1\cap H_2$ is a subgroup of $G$. We can generalize it to a more general family of subgroups $\{H_i\}_{i\in I}$.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+\noproof
+\end{proof}
+
+
+\begin{defi}
+[Centre]\index{Centre} Let $(G,\cdotp)$ be a group. We call the \textit{centre} (or \textit{center} in american english) of $G$ to the set
+\begin{equation}
+    \notag
+    \mathcal{Z}(G) :=\{g\in G\;:\;gx = xg,\;\forall x\in G\}
+\end{equation}
+i.e. the set of all elements of $G$ such that they commute with every other element in $G$.
+\end{defi}
+
+\begin{prop}
+Let $G$ be a group and $\mathcal{Z}(G)$ its center. Then,
+\begin{enumerate}[(a)]
+    \item $G$ is abelian if, and only if, $\mathbb{Z}(G) = G$;
+    \item $\mathbb{Z}(G)\not=\emptyset$ for all group $G$;
+    \item $(\mathbb{Z}(G),\cdotp_G)$ is a subgroup of $G$ with its operation;
+    \item $\mathbb{Z}(G)$ is, of course, abelian.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+\noproof
+\end{proof}
+
+
+
+\begin{defi}
+[Homomorphism]\index{Homomorphism}\index{Group morfism}\index{Morphism} Let $(G_1,\bullet_1)$ and $(G_2,\bullet_2)$ be groups and let $f:G_1\rightarrow G_2$ be an application. Then it is called \textit{group morphism} or \textit{homomorphism} if $f(x\bullet_1y) = f(x)\bullet_2f(y)$, $\forall x,y\in G$. If $f$ is an injective map, then it is called \textit{monomorphism}\index{Monomophism}, if it is surjective, then it is called \textit{epimorphism}\index{Epimorphism} and if it is bijective, then it is \textit{isomorphism}\index{Isomorphism}. In this last case, $G_1$ and $G_2$ are said to be \textit{isomorphic}\index{Isomophic groups} and it is written $G_1\cong G_2$. Also, a homomorphism $f:G\rightarrow G$ is called \textit{automorphism}\index{Automorphism} and if is an isomorphism then it is called \textit{endomorphism}\index{Endomorphism}.
+\end{defi}
+
+
+\begin{nota}
+If $G_1$ and $G_2$ are groups and $f:G_1\rightarrow G_2$ is an homomorphism, and let $e_1\in G_1$ and $e_2\in G_2$ be the respective neutral elements of $G_1$ and $G_2$, then it is easy to see that both satisfy:
+\begin{equation}
+    \notag
+    f(e_1) = e_2\qquad \text{and}\qquad f(x^{-1}) = f(x)^{-1}.
+\end{equation}
+\end{nota}
+\begin{proof}
+\noproof
+\end{proof}
+
+
+\begin{defi}[Kernel, image and inverse image]\index{Kernel}\index{Image}\index{Inverse image}
+Let $f:G\rightarrow G'$ be a homomorphism of groups. The \textit{kernel} of $f$, denoted $\ker f$ is $\{x\in G\;:\;f(x) = e_{G'}\}\subset G$. The \textit{image} of $f$, denoted $\textit{Im(f)}$ or also $f(G)$ is $\{b\in G'\;:\;b = f(a)$, for some $a\in G\}\subset G'$. The \textit{inverse image} or \textit{pre-image}\index{Pre-image} of $f$ is $f^{-1}(G') = \{a\in G\;:\;f(a)\in G'\}$.
+\end{defi}
+
+
+\begin{ter}
+\label{ter:homomorphism} Let $f:G\rightarrow G'$ be a homomorphism of groups. Then
+\begin{enumerate}[(i)]
+    \item $f$ is a monomorphism if, and only if, $\ker f = \{e\}$;
+    \item $f$ is an isomorphism if, and only if, there is a homomorphism $f^{-1}:G'\rightarrow G$ such that $f\circ f^{-1} = 1_{G'}$ and $f^{-1}\circ f = 1_G$.
+\end{enumerate}
+\end{ter}
+\begin{proof}
+\noproof
+\end{proof}
+
+
+
+
+
+
+
+
+\end{document}

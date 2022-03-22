@@ -1,0 +1,312 @@
+\documentclass[../main.tex]{subfiles}
+
+
+
+
+
+
+\begin{document}
+
+
+
+\section{Actions and Sylow theorems}
+
+\begin{defi}
+[Action of a group on a set]\index{Action of a group on a set} Let $X$ be a set and $G$ a group. A map
+\begin{equation}
+    \notag
+    \begin{array}{rl}
+        \rho:G\times X & \longrightarrow X \\
+        (g,x) & \longmapsto \rho(g,x):=gx
+    \end{array}
+\end{equation}
+is called an \textit{action from $G$ on $X$}, or alternatively it is said that \textit{$G$ acts on $X$} if it satisfies the following conditions:
+\begin{enumerate}[(i)]
+    \item $ex = x$, for all $x\in X$;
+    \item $g(g'x) = (gg')x$, for all pair $g,g'\in G$ and all element $x\in X$.
+\end{enumerate}
+\end{defi}
+
+If $G$ acts on a set $X$, we also say that $X$ is a $G$-set.
+
+If a group $G$ acts on a set $X$, then fixing the first variable, say $g$, gives a function $\alpha_g:X\rightarrow X$, namely $\alpha_g:x\mapsto gx$. This function is a permutation of $X$, for its inverse is $\alpha_{g^{-1}}$:
+\begin{equation}
+    \notag
+    \alpha_g\alpha_{g^{-1}} = \alpha_1 = 1_X = \alpha_{g^{-1}}\alpha_g
+\end{equation}
+
+\begin{defi}
+[Orbit, stabilizer, orbit space]\index{Orbit}\index{Stabilizer}\index{Orbit space} If $G$ acts on $X$ and $x\in X$, then the \textit{orbit} of $x$, denoted by $\mathcal{O}(x)$, is the subset
+\begin{equation}
+    \notag
+    \mathcal{O}(x) := \{gx\;:\;g\in G\}\subseteq X;
+\end{equation}
+the \textit{stabilizer} of $x$, denoted by $G_x$ or also $E(x)$, is the subgroup
+\begin{equation}
+    \notag
+    G_x:=\{g\in G\;:\;gx = x\}\subseteq G.
+\end{equation}
+The \textit{orbit space}, denoted by $X/G$, is the set of all the orbits.
+\end{defi}
+
+If $G$ acts on a set $X$, define a relation on $X$ by $x\sim y$ if, an only if there exists $g\in G$ with $y = gx$. It is easy to see that this is an equivalence relation whose equivalence classes are the orbits. The orbit space is the family of equivalent classes.
+
+Before getting into the heavy examples, let's see a few properties that will be useful in the future.
+
+\begin{prop}
+Let $\rho$ be an action of $G$ over $X$. Then, 
+\begin{enumerate}[(i)]
+    \item if $x\in X$ is an arbitrary element, the stabilizer $G_x$ is, indeed, a subgroup of $G$;
+    \item it is satisfied $gG_xg^{-1} = G_{gx}$, for all $x\in X$ and $g\in G$.
+    \item if $G$ is a finite group and $x\in X$, then $\#Gx$ is finite and, moreover,
+    \begin{equation}
+        \notag
+        |Gx| = [G:G_x] = \frac{|G|}{|G_x|}.
+    \end{equation}
+\end{enumerate}
+\end{prop}
+\begin{proof}
+\noproof
+\end{proof}\index{$G_x$}
+
+
+
+\begin{ej}[Heavy examples]\index{Heavy examples of actions}\label{ej:heavyexamplesactions}
+Let's begin with the heavy examples. I call them ``heavy examples'' because they are a little bit more than examples, as they work for the theory as well. And they are heavy, because they are a lot to take.
+\begin{enumerate}[(1)]
+    \item Given a group $G$, let's consider the action
+    \begin{equation}
+        \notag
+        \begin{array}{rl}
+            \rho:G\times G & \longrightarrow G \\
+            (g,h) & \longmapsto ghg^{-1}
+        \end{array}
+    \end{equation}
+    this action is called \textit{action by conjugation on a group by himself}\index{Action by conjugation on a group by himself}. We define the \textit{centre of $G$}\index{Centre of $G$} as the kernel of $\rho$, i.e.
+    \begin{equation}
+        \notag
+        Z(G) = \{g\in G\;:\;ghg^{-1} = h,\;\forall h\in G\}
+    \end{equation}
+    Notice that it is the same definition we got at the beginning. We also say that the orbit of an element $h\in G$ by this action is the \textit{conjugation class of $h$}\index{Conjugation class}. Finally, we call \textit{centralizer of $h$ in $G$}\index{Centralizer} to the stabilizer of an element by this particular action. It is written
+    \begin{equation}
+        \notag
+        Z_G(h):=G_x = \{g\in G\;:\;ghg^{-1} = h\}
+    \end{equation}\index{$Z_G$}
+    
+    \item If $G$ is a group, $H$ a subgroup of $G$ and $g\in G$, we call \textit{conjugated of $H$ by $g$}\index{Subgroup conjugated by an element} to the set $gHg^{-1} = \{ghg^{-1}\;:\;h\in H\}$. It can be easily proved that it is indeed a subgroup of $G$. Take now $\mathcal{H}$ the set of all subgroups of $G$, i.e.\index{$\mathcal{H}$}
+    \begin{equation}
+        \notag
+        \mathcal{H}:= \{H\subseteq G\;:\;\text{$H$ subgroup of $G$}\}
+    \end{equation}
+    Then we consider the following map
+    \begin{equation}
+        \notag
+        \begin{array}{rl}
+            \rho:G\times\mathcal{H} & \longrightarrow \mathcal{H} \\
+            (g,H) & \longmapsto gH_0g^{-1}
+        \end{array}
+    \end{equation}
+    We can observe that $\rho$ is an action of $G$ on $\mathcal{H}$, the set of all subgroups of $G$, and we can call it \textit{action by conjugation of a group on its subgroups' set}\index{Action by conjugation of a group on its subgroups' set} The orbit of a picked subgroup $H_0$ by this action is the set of all its conjugated, i.e.
+    \begin{equation}
+        \notag
+        \mathcal{O}(H_0) = \{gH_0g^{-1}\;:\;g\in G\}
+    \end{equation}
+    The stabilizer of $H_0\in\mathcal{H}$ by this action is called \textit{normalizer of $H_0$ in $G$}\index{Normalizer}\index{$N_G(H_0)$} and it is written $N_G(H_0)$. It has been proved in ``Estructures Algebraiques'' that $N_G(H_0)$ is the biggest subgroup of $G$ which contains $H_0$ as a normal subgroup.
+    
+    \item Let $H$ be a subgroup of a group $G$, then we consider the action 
+    \begin{equation}
+        \notag
+        \begin{array}{rl}
+            \rho:H\times G & \longrightarrow G \\
+            (h,g) & \longmapsto hg
+        \end{array}
+    \end{equation}
+    which is called the \textit{right translation}. We can analogously consider the \textit{left translation}. This allows us to define the \textit{centralizer} of a subgroup $H$ of $G$ as
+    \begin{equation}
+        \notag
+        C_G(H) = \{g\in G\;:\;gh = hg,\;\forall h\in H\}
+    \end{equation}
+    which is easy to see that it is a subgroup of $G$ and also that $C_G(G) = Z(G)$. Finally, note that $C_G(H)\subseteq N_G(H)$
+\end{enumerate}
+\end{ej}
+
+
+
+\begin{prop}
+[The $N/C$ lemma]\index{$N/C$ lemma} 
+\begin{enumerate}[(i)]
+    \item If $H\subseteq G$, then $C_G(H)\vartriangleleft N_G(H)$ and there is an embedding
+    \begin{equation}
+        \notag
+        N_G(H)/C_G(H)\hookrightarrow \mathrm{Aut}(G).   
+    \end{equation}
+    \item $G/Z(G)\cong \mathrm{Inn}(G)$, where $\mathrm{Inn}(G)$\index{$\mathrm{Inn}(G)$} is the subgroup of $\mathrm{Aut}(G)$ consisting of all the inner automorphisms\footnote{An \textit{inner automorphism} is an automorphism of a group $G$, given by the conjugated action. That is, all homomorphisms $f:G\rightarrow G$ such that, for some fixed $a\in G$ we have for all $x\in G$, $f(x) = axa^{-1}$.}.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+\noproof
+\end{proof}
+
+\begin{nota}
+\index{Outer automorphisms} We claim that $\mathrm{Inn}(G)\vartriangleleft\mathrm{Aut}(G)$. Indeed, if $\varphi\in\mathrm{Aut}(G)$ and $g\in G$, then 
+\begin{equation}
+    \notag
+    \varphi\gamma_a\varphi^{-1}:g\mapsto\varphi^{-1}g\mapsto a\varphi^{-1}ga^{-1}\mapsto\varphi(a)g\varphi(a^{-1})
+\end{equation}
+thus $\varphi\gamma_a\varphi^{-1} = \gamma_{\varphi(a)}\in\mathrm{Inn}(G)$. Recall that an automorphism is called \textit{outer} if it is not inner. The \textit{outer automorphism group} is defined by $\mathrm{Out}(G) = \mathrm{Aut}(G)/\mathrm{Inn}(G)$.
+\end{nota}
+
+We may now define, given a group $G$ and an action $\rho$ of $G$ over a set $X$, the relation
+\begin{equation}
+    \notag
+    x\sim y\Longleftrightarrow y = gx,
+\end{equation}
+for some $g\in G$, where $x,y\in X$. This is an equivalence relation which is very easy to prove. We may observe that the orbits of all $x\in X$ form a partition of $X$, i.e. $\bigcup_{x\in X}\mathcal{O}(x) = X$. We can write $X/G$ to express $G/\sim$, i.e. the set of all the orbits. 
+
+\begin{prop}
+It is satisfied
+\begin{equation}
+    \notag
+    |X| = \sum_{\mathcal{O}\in X/G}|\mathcal{O}| = \sum_{x\in X}|\mathcal{O}(x)|
+\end{equation}
+and if $X$ is finite, say $X = \{x_1,\ldots,x_\ell\}$, then
+\begin{equation}
+    \notag
+    |X| = \sum_{i=1}^\ell |\mathcal{O}(x_i)|
+\end{equation}
+\end{prop}
+\begin{proof}
+\noproof
+\end{proof}
+
+\begin{ter}
+If $G$ acts on a set $X$ and $x\in X$, then
+\begin{equation}
+    \notag
+    |\mathcal{O}(x)| = [G:G_x],
+\end{equation}
+the index of the stabilizer $G_x$ in $G$.
+\end{ter}
+\begin{proof}
+\noproof
+\end{proof}
+
+With this result, we can rewrite the last proposition we saw by
+\begin{equation}
+    \notag
+    |X| = \sum_{x\in X}[G:G_x]
+\end{equation}
+All these equations are called \textit{orbit equations}\index{Orbit equations}. We can adapt the orbit equations to the heavy example's actions. For example, if $x$ lies in a finite group $G$, then the number of conjugates of $x$ is the index of its centralizer; or if $H$ is a subgroup of a finite group $G$, then the number of conjugates of $H$ in $G$ is $[G:N_G(H)]$.
+
+We will now introduce the $p$-groups, after saying some more results of orbits and actions, and finally we will state Cauchy's Theorem which characterizes the subgroups of a finite group regarding the divisors of its order.
+
+\begin{defi}
+[$p$-group]\index{$p$-group} Let $p$ be an odd prime number and $G$ a finite group. Then $G$ is called \textit{$p$-group} if there exists $r\in\mathbb{Z}_{\geq 0}$ such that $|G| = p^r$. Analogously we will say that $H$ is a \textit{$p$-subgroup}\index{$p$-subgroup}.
+\end{defi}
+
+
+\begin{prop}
+\begin{enumerate}[(1)]
+    \item If $G$ is a $p$-group that acts on a finite set $X$, then
+    \begin{equation}
+        \notag
+        |X|\cong |X_0|\quad \text{(mod $p$)}
+    \end{equation}
+    where $X_0$ is the subset of $X$ of fixed points.
+    \item If $G$ is a $p$-group, its center $Z(G)$ is not trivial.
+    \item If $H$ is a $p$-subgroup of a finite group $G$, then
+    \begin{equation}
+        \notag
+        [N_G(H):H]\equiv[G:H]\quad\text{(mod $p$)}
+    \end{equation}
+\end{enumerate}
+\end{prop}
+\begin{proof}
+\noproof
+\end{proof}
+
+We can finally state the Cauchy's theorem, although it will not be proved in this notes, because again, it is not very relevant for the purpose of this text.
+
+\begin{ter}
+[Cauchy] Let $G$ be a finite group of order $m$ and $p\in\mathbb{Z}$ prime which divides $m$. Then $G$ has an element (and hence a subgroup) of order $p$.
+\end{ter}
+
+I will now state some results regarding simple groups, due to the fact that I will use them in the future and I have not yet even defined them.
+
+\begin{defi}
+[Simple group]\index{Simple group} A group $G$ is called \textit{simple} if $G\not=\{1\}$ and $G$ has no normal subgroups other than $\{1\}$ and $G$ itself.
+\end{defi}
+
+\begin{prop}
+An abelian group $G$ is simple if and only if it is finite of prime order.
+\end{prop}
+\begin{proof}
+\noproof
+\end{proof}
+
+\begin{coro}
+A finite $p$-groupe $G$ is simple if and only if $|G| = p$.
+\end{coro}
+
+From this point I will start with Sylow Theorems. I will not only state these theorems, but also I will give relevant results and definitions around them. We begin by defining a new type of group.
+
+\begin{defi}
+[Sylow $p$-subgroup]\index{Sylow $p$-subgroup} Let $G$ be a finite group and $P$ a subgroup. We call $P$ a \textit{Sylow $p$-subgroup} of $G$ if $P$ is a $p$-subgroup and also it is maximal between all possible $p$-subgroups. That is, if $P'$ is another $p$-subgroup, then the Sylow $p$-subgroup will contain $P'$.
+\end{defi}
+
+
+It follows from Lagrange's Theorem that if $p^{e}$ is the largest power of $p$ dividing the order of a group $G$, then a subgroup of $G$ of order $p^{e}$ is a maximal $p$-subgroup. It is not clear though that $G$ has any subgroups of order $p^{e}$, but it is clear that the maximal $p$-subgroup always exists. This maximality means that if $Q$ is another $p$-subgroup of $G$ such that $P\subseteq Q$, then $P=Q$.
+
+Let us show that if $S$ is any $p$-subgroup of $G$ (perhaps $S = \{1\}$), then there exists a Sylow $p$-subgroup $P$ containing $S$. If there is no $p$-subgroup strictly containing $S$, then $S$ itself is a Sylow $p$-subgroup. Otherwise, there is a $p$-subgroup $P_1$ with $S\varsubsetneq P_1$. If $P_1$ is maximal, it is Sylow, and we are done. Otherwise there is some $p$-subgroup $P_2$ with $P_1\varsubsetneq P_2$. This procedure of producing larger and larger $p$-subgroups $P_i$ must end after a finite number of steps because by hypothesis $|G|<\infty$ and $|P_i|<|G|$ for all $i$; the largest $P_i$ must, therefore, be a Sylow $p$-subgroup.
+
+\begin{lema}
+Let $P$ be a Sylow $p$-subgroup of a finite group $G$.
+\begin{enumerate}[(i)]
+    \item Every conjugate of $P$ is also a Sylow $p$-subgroup of $G$.
+    \item $|N_G(P)/P|$ is prime to $p$.
+    \item If $a\in G$ has order some power of $p$ and $aPa^{-1} = P$, then $a\in P$.
+\end{enumerate}
+\end{lema}
+\begin{proof}
+\begin{enumerate}[(i)]
+    \item Suppose $a\in G$ and $aPa^{-1}$ not a Sylow $p$-subgroup of $G$. Then there exists a $p$-subgroup greater, i.e. $Q$ with $aPa^{-1}\varsubsetneq Q$. But then $P\varsubsetneq a^{-1}Qa$ contradicting that $P$ is a Sylow $p$-subgroup of $G$.
+    
+    \item If $p$ divides $|N_G(P)/P|$, then Cauchy's Theorem shows that $N_G(P)/P$ contains an element $aP$ of order $p$, and hence $N_G(P)/P$ contains a subgroup $S^*=\langle aP\rangle$ of order $p$. By the Correspondence Theorem (\ref{prop:correspondencetheorem}), there is a subgroup $S$ with $P\subseteq S\subseteq N_G(P)$ such that $S/P\cong S^*$. But $S$ is a $p$-subgroup of $N_G(P)\subseteq G$ strictly larger than $P$, contradicting the maximality of $P$. We conclude that $p$ does not divide $|N_G(P)/P|$.
+    
+    \item By the definition of normalizer, the element $a$ lies in $N_G(P)$. If $a\not\in P$, then the coset $aP$ is a nontrivial element of $N_G(P)/P$ having order some power of $p$; inlight of part (ii), this contradicts Lagrange's Theorem.
+\end{enumerate}
+\end{proof}
+
+
+Now I will state the three Sylow Theorems all at once, and I will not change anything from what I got from the classes of ``Estructures Algebraiques''. Again, I will not provide the proofs because they can be found in my old notes and also in the references \cite{rotmanadvancedmodernalgebra}, \cite{hungerfordalgebra} and \cite{dummitfooteabstractalgebra}. 
+
+\begin{ter}[Sylow]\index{Sylow theorems}\label{ter:sylow}
+\begin{enumerate}[(1)]
+    \item Let $G$ be a finite group, $p$ a prime number and $r>0$ an integer such that $p^r\mid |G|$. Then there exist $H_1,\ldots,H_r$ subgroups of $G$ such that
+    \begin{enumerate}[(i)]
+        \item $|H_i| = p^{i}$, for all $1\leq i\leq r$, and
+        \item $H_i\vartriangleleft H_{i+1}$, for all $1\leq i\leq r-1$.
+    \end{enumerate}
+    
+    \item Let $G$ be a finite group, $H$ a $p$-subgroup of $G$ and $S$ a Sylow $p$-subgroup of $G$. Then, there exists $x\in G$ such that $H\subset xSx^{-1}$. In particular, every Sylow $p$-subgroup is conjugate to $S$. This also means that all Sylow $p$-subgroups are isomorphic (with same $p$).
+    
+    \item Let $G$ be a group and $n_p$ the number of Sylow $p$-subgroups of $G$. Then it is satisfied
+    \begin{enumerate}[(i)]
+        \item $n_p = [G:N_G(S_p)]$, for all $S_p$ Sylow $p$-subgroup of $G$;
+        \item $n_p\mid [G:S_p]$, for all Sylow $p$-subgroup $S_p$;
+        \item $n_p\equiv 1$ mod $p$.
+    \end{enumerate}
+\end{enumerate}
+\end{ter}
+
+
+From these theorems it follows some further results that can be useful.
+
+\begin{coro}
+A finite group $G$ has a unique Sylow $p$-subgroup $S$ for some prime $p$ if and only if $S\vartriangleleft G$.
+\end{coro}
+
+
+
+
+\end{document}

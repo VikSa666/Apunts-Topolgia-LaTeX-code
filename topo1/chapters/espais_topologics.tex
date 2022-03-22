@@ -1,0 +1,407 @@
+\documentclass[../main.tex]{subfiles}
+
+
+
+\begin{document}
+
+
+
+
+
+
+
+\chapter{Espais topològics}
+
+
+
+%%%%%%%%%%%%
+
+
+
+
+\section{Espais topològics}
+\begin{defi}
+[Conjunt de les parts]\label{def:conjuntdelesparts}\index{Conjunt de les parts} Donat un conjunt $X$ qualsevol, definim el conjunt de \textit{les parts de $X$} com la família de tots els seus subconjunts. L'escrivim com $\mathscr{P}(X)$.
+\end{defi}
+
+\begin{ej}
+Sigui $X = \{a,b,c\}$. Aleshores
+\begin{equation}
+    \notag
+    \mathscr{P}(X) = \{\emptyset,\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\},\{a,b,c\}\}
+\end{equation}
+\end{ej}
+
+\begin{nota}
+Per qualsevol conjunt $X$, $\emptyset,X\in \mathscr{P}(X)$. En efecte, ja que $\forall X$ conjunt $\emptyset \subseteq X$ i $X\subseteq X$.
+\end{nota}
+
+\begin{defi}
+[Topologia]\label{def:topologia}\index{Topologia} Sigui $X$ un conjunt. Una \textit{topologia} a $X$ és un subconjunt
+\begin{equation}
+    \notag
+    \tau\subseteq \mathscr{P}(X)
+\end{equation}
+que satisfà
+\begin{enumerate}[(1)]
+    \item $\emptyset,X\in \tau$.
+    \item $\forall\{A_i\}_{i\in I},\;A_i\in \tau\;\forall i\Rightarrow \bigcup_{i\in I}A_i\in \tau$. És a dir, la unió arbitrària d'elements de $\tau$ és un element de $\tau$.
+    \item $A_1,\ldots,A_n\in\tau\Rightarrow A_1\cap\cdots\cap A_n\in \tau$. És a dir, la intersecció finita d'elements de $\tau$ és un element de $\tau$.
+\end{enumerate}
+\index{Obert de $\tau$} Si $\tau$ és una topologia, els seus elements s'anomenen \textit{els oberts de $\tau$}. 
+\end{defi}
+
+\begin{defi}
+[Espai topològic]\label{def:espaitopologic} \index{Espai topològic} Un \textit{espai topològic} és una parella $(X,\tau)$, on $X$ és un conjunt i $\tau$ és una topologia a $X$.
+\end{defi}
+
+Habitualment escriurem $X$ directament en lloc d'escriure $(X,\tau)$ per referir-nos a l'espai topològic.
+
+\section{Exemples de topologies}
+\subsection{Topologia discreta i grollera}
+
+\begin{defi}
+[Topologia discreta i grollera]\index{Topologia discreta}\index{Topologia grollera}\label{def:topologiagrollera}\label{def:topologiadiscreta} Sigui $X$ un conjunt. La \textit{topologia discreta} és $\tau = \mathscr{P}(X)$. La \textit{topologia grollera} és $\tau_g = \{\emptyset,X\}$.
+\end{defi}
+
+\subsection{Topologia usual i euclidiana}
+
+Sigui $(X,d)$ un espai mètric on $d$ és una mètrica o distància. Aleshores, podem definir una topologia a $X$ que reculli tots aquells conjunts que siguin oberts amb la mètrica $d$. Així doncs, $\tau$ recollirà tots els conjunts oberts de $X$ amb $d$. Per tant, els oberts de $X$ (com a espai topològic amb la topologia aquesta) seran els oberts de $X$ (com a espai mètric, amb la distància $d$). Així doncs:
+
+\begin{defi}
+[Topologia usual]\label{def:topologiausual}\label{def:topologiaeuclidiana}\index{Topologia usual}\index{Topologia euclidiana} Si $(X,d)$ és un espai mètric, aleshores la col·lecció dels oberts de $X$ (amb la distància $d$) 
+    \begin{equation}
+        \notag
+        \tau = \{A\subseteq X\;:\;A\text{ obert respecte de }d\}
+    \end{equation}
+    és una topologia, és a dir, satisfà els axiomes de la definició (\ref{def:topologia}) com a propietats. Se li'n diu la \textit{topologia definida per $d$}\label{def:topologiadefinidaperd}\index{Topologia definida per $d$}. Si, a més, $d$ és la distància euclidiana, se li'n diu topologia euclidiana i sovint l'escriuré com $\tau_e$.
+\end{defi}
+
+\begin{ej}
+\label{ej:topologiausual1} Si prenem l'espai mètric $(\mathbb{R},|\cdotp|)$, aleshores els oberts són els intervals $(a,b)$, amb $a<b,\;a,b\in\mathbb{R}$, i les unions arbitràries d'aquests intervals. Per tant, l'espai topològic $(\mathbb{R},\tau_e)$ té la topologia euclidiana, els oberts de la qual són intervals oberts i unions d'aquests.
+\end{ej}
+
+\begin{ej}
+\label{ej:topologiausual2} Si prenem l'espai mètric $(\mathbb{R}^n,d)$, on $d$ és la distància euclidiana $d(x,y) = \|x-y\|$, aleshores l'espai topològic provinent d'aquest espai mètric $(\mathbb{R}^n,\tau_e)$ tindrà com a obert les boles obertes (o unió d'aquestes) de $\mathbb{R}^n$, amb la distància euclidiana.
+\end{ej}
+
+\begin{nota}
+Si $d$ és la distància discreta (veure \ref{def:distancia} i exemples), aleshores la topologia donada per $d$ és la topologia discreta.
+\end{nota}
+\begin{proof}
+Si $d$ és la distància discreta és de la forma
+\begin{equation}
+    \notag
+    d(x,y) = \left\{
+    \begin{array}{ll}
+        1 & si\;x\not=y \\
+        0 & si\;x=y
+    \end{array}
+    \right. \qquad \forall x,y\in X
+\end{equation}
+Aleshores, $B_1(x) = \{x\}$ i amb això $\forall U\subseteq X$, $\forall x\in U$, $B_1(x)\subseteq U\Rightarrow U$ és un obert de la topologia definida per $d$.
+\end{proof}
+
+\begin{nota}\label{nota:nometricax}
+Si $X$ té més d'un punt, no hi ha cap mètrica a $X$ que doni lloc a la topologia grollera a $X$.
+\end{nota}
+\begin{proof}
+Si $d$ és una distància qualsevol a $X$ i $x,y\in X$ són punts tals que $x\not=y$, prenent $r = d(x,y)>0$ el subconjunt $B_r(x)$ és un obert de la topologia definida per $d$ que conté $x$ però no conté $y$, ergo $B_r(x)\not=\emptyset$ i $B_r(x)\not=X$.
+\end{proof}
+
+
+\begin{nota}
+\label{nota:noinjectivaniexhaustiva} L'assignació
+\begin{equation}
+    \notag
+    \{\text{espais mètrics}\}\longrightarrow \{\text{espais topològics}\}
+\end{equation}
+\begin{itemize}
+    \item No és injectiva.
+    \item Ni tampoc és exhaustiva. És a dir, hi ha espais topològics que no provenen de cap espai mètric.
+    
+    Per exemple, si $X = \{a,b\}$ i $\tau = \{\emptyset,X\}$ (topologia grollera), no existeix cap mètrica $d$ a $X$ que tingui $\tau$ per conjunt d'oberts. Això és conseqüència de l'observació (\ref{nota:nometricax}).
+\end{itemize}
+\end{nota}
+
+\subsubsection{Topologia dels intervals oberts $\texorpdfstring{(-n,n)}{TEXT}$}
+
+\label{def:topologiadelsintervalsnn}\index{Topologia dels intervals $(-n,n)$}
+Considerem la col·lecció d'intervals oberts
+\begin{equation}
+    \notag 
+    \tau = \{\emptyset,\mathbb{R}\}\cup\{(-n,n)\;:\;n\in\mathbb{N}\}= \{\emptyset,\mathbb{R},(-1,1),(-2,2),\ldots\}
+\end{equation}
+
+\begin{prop}
+\label{prop:topologiadelsintervalsnn} $\tau$ és una topologia.
+\end{prop}
+\begin{proof}
+Primerament, ja veiem que $\emptyset,\mathbb{R}\in\tau$. Per veure (2), veiem que 
+\begin{equation}
+    \notag
+    \emptyset\subset (-1,1)\subset (-2,2)\subset\cdots\subset(-n,n)\subset\cdots\subset\mathbb{R}
+\end{equation}
+Per tant, una unió arbitrària
+\begin{equation}
+    \notag
+    \bigcup_{i\in I}U_i,\qquad U_i\in\tau,\;\forall i\in I
+\end{equation}
+serà igual a ``l'interval més llarg'' que hi hagi, i per tant estarà contingut en $\tau$.
+
+Per últim, per veure (3), veiem que les interseccions finits
+\begin{equation}
+    \notag
+    \bigcap_{i=1}^n U_i,\qquad U_i\in\tau,\; i=1,\ldots,n
+\end{equation}
+donaran com a resultat ``l'interval més curt'' que hi hagi a la intersecció. Per tant, serà també a $\tau$.
+\end{proof}
+
+Es pot provar de forma anàloga que el conjunt
+\begin{equation}
+    \notag
+    \tau = \{[-n,n]\;:\;n\in\mathbb{N}\}\cup\{\emptyset,\mathbb{R}\}
+\end{equation}
+també és una topologia sobre $\mathbb{R}$.
+
+\subsection{Topologia del límit inferior o de Sorgenfrey}
+Aquesta és una topologia que s'utilitza en alguns exemples i/o exercicis i per tant la introduiré aquí. Font: \cite{problemasyecuaciones}.
+\begin{defi}
+[Topologia de Sorgenfrey]\index{Topologia de Sorgenfrey}\index{Topologia del límit inferior} La topologia de \textit{Sorgenfrey}\footnote{Robert Henry Sorgenfrey (1915 - 1996) va ser un matemàtic dels Estats Units, professor emèrit de Matemàtiques a la Universitat de Califòrnia. Font: \cite{wikisorgenfrey}} o \textit{topologia del límit inferior} és una topologia sobre $\mathbb{R}$ que té per base
+\begin{equation}
+    \notag
+    \beta = \{[a,b)\;:\;a<b,\;a,b\in\mathbb{R}\}
+\end{equation}
+\end{defi}
+
+A l'espai topològic resultat se'l denomina la \textit{recta de Sorgenfrey} $\mathbb{R}_\ell$ i al producte de dues rectes de Sorgenrfey se'l denomina el \textit{pla de Sorgenfrey} $\mathbb{R}_\ell\times\mathbb{R}_\ell$:
+
+\subsection{Topologia del segment inicial i final}
+
+\begin{defi}
+[Topologia del segment inicial]\label{def:topologiadelsegmentinicial}\index{Topologia del segment inicial} Considerem el conjunt dels naturals $\mathbb{N}$. La col·lecció de subconjunts 
+\begin{equation}
+    \notag
+    \tau = \{\emptyset,\mathbb{N}\}\cup\{\{1,2,\ldots,n\}\;:\;n\in\mathbb{N}\}
+\end{equation}
+de $\mathbb{N}$ és anomenada la \textit{topologia del segment inicial}. 
+\end{defi}
+
+\begin{prop}
+\label{prop:topologiadelsegmentinicial} Aquesta $\tau$ és efectivament una topologia.
+\end{prop}
+\begin{proof}
+Veiem que compleix les tres propietats:
+\begin{enumerate}[(1)]
+    \item Explícitament $\mathbb{R},\emptyset\in\tau$.
+    \item Notem que $\emptyset\subset\{1\}\subset\{1,2\}\subset\cdots\subset\{1,\ldots,n\}\subset\cdots\subset\mathbb{N}$ i que, per tant, la unió arbitrària de conjunts d'aquests donarà com a resultat el conjunt més gran dels que hàgim agafat.
+    \item Per la mateixa raó que a (2), la intersecció finita de conjunts de $\tau$ donarà com a resultat el conjunt més petit dels que hàgim escollit.
+\end{enumerate}
+Per tant, $\tau$ és una topologia i $(\mathbb{N},\tau)$ és un espai topològic.
+\end{proof}
+
+De manera molt anàloga podem definir la següent topologia
+\begin{defi}
+[Topologia del segment final]\label{def:topologiadelsegmentfinal}\index{Topologia del segment final} La col·lecció de subconjunts
+\begin{equation}
+    \notag
+    \tau = \{\mathbb{N},\emptyset\}\cup\}\{\{n,n+1,\ldots,\}\;:\;n\in\mathbb{N}\}
+\end{equation}
+de $\mathbb{N}$ s'anomena \textit{la topologia del segment final}.
+\end{defi}
+
+\begin{prop}
+\label{prop:topologiadelsegmentfinal} Aquesta és també una topologia sobre $\mathbb{N}$.
+\end{prop}
+\begin{proof}
+Com que es compleix la cadena
+\begin{equation}
+    \notag
+    \emptyset\subseteq \{n,n+1,\ldots\}\subseteq \{n-1,n,n+1,\ldots\}\subseteq \cdots\subseteq \{2,3,4,\ldots\}\subset\mathbb{N}
+\end{equation}
+la demostració és anàloga a l'anterior (\ref{prop:topologiadelsegmentfinal})
+\end{proof}
+
+\subsection{Topologia dels complements finits i dels complements numerables}
+
+\begin{defi}
+[Topologia dels complements finits]\label{def:topologiadelscomplementsfinits}\index{Topologia dels complements finits} Sigui $X$ un conjunt no buit. Definim la \textit{topologia dels complements finits} sobre $X$ com
+\begin{equation}
+    \notag
+    \tau_c = \{U\subseteq X\;:\;U = \emptyset,\text{ o bé $U^c$ és finit}\} .
+\end{equation}
+\end{defi}
+
+\begin{prop}
+\label{prop:topologiadelscomplementsfinits} La topologia $\tau_c$ és, en efecte, una topologia sobre $X$.
+\end{prop}
+\begin{proof}
+Veiem que satisfà les tres condicions:
+\begin{enumerate}[(1)]
+    \item $\emptyset\in\tau$ per definició. $X\in\tau$ perquè $X = X\setminus\emptyset$ i $\emptyset$ es considera finit.
+    \item Sigui $\{U_i\}_{i\in I}$ una col·lecció arbitrària d'oberts de $\tau$. Tenim
+    \begin{equation}
+        \notag
+        \left(\bigcup_{i\in I}U_i\right)^c = \bigcap_{i\in I}U_i^c.
+    \end{equation}
+    Si algun $U_i = \emptyset$, la intersecció és $\emptyset\in\tau$. Suposem que $\forall i\in I$, $U_i\not=\emptyset$. Aleshores, $U_i^c$ és finit $\forall i\in I$.  Per tant $\cap_i U_i^c$ és finit i aleshores $\cup_i U_i\in\tau$
+    \item Sigui $\{U_1,\ldots,U_n\}$ una col·lecció finita d'elements de $\tau$. Aplicant les lleis de De Morgan, observem que
+    \begin{equation}
+        \notag
+        \left(\bigcap_{i=1}^n U_i\right)^c = \bigcup_{i=1}^n U_i^c.
+    \end{equation}
+    Aleshores, si algun $U_i=\emptyset$, $\cap_i U_i = \emptyset$ i per tant $(\cap_i U_i)^c = \emptyset^c = X\in\tau$. Suposem que cap $U_i\not=\emptyset$, $\forall i=1,\ldots, n$. Aleshores, $U_i^c$ és finit $\forall i=1,\ldots,n$ i per tant $\cup_i U_i^c$ és finit, ergo $\cap_i U_i\in\tau$.
+\end{enumerate}
+\end{proof}
+
+\begin{prop}
+\label{prop:complementsfinitsigualadiscreta} Si $X$ és un conjunt finit, aleshores la topologia dels complements finits és la topologia discreta.
+\end{prop}
+\begin{proof}
+Si $X$ és finit, tot subconjunt de $X$ és finit, per tant $\forall U\subseteq X$, $U^c = X\setminus U$ també és finit. Així $\forall U\subseteq X$, $U\in\tau$ i per tant $\tau = \mathscr{P}(X)$ és la topologia discreta.
+\end{proof}
+
+Una topologia molt similar a l'anterior és la topologia dels complements numerables.
+
+\begin{defi}
+[Topologia dels complements numerables]\label{def:topologiadelscomplementsnumerables} Sigui $X$ un conjunt no buit. La \textit{topologia dels complements numerables} és la col·lecció
+\begin{equation}
+    \notag
+    \tau = \{U\subseteq X\;:\;U^c\;\text{és numerable}\}
+\end{equation}
+\end{defi}
+
+\begin{prop}
+\label{prop:topologiadelscomplementsnumerables} La topologia dels complements numerables és, efectivament, una topologia sobre $X$.
+\end{prop}
+\begin{proof}
+La demostració és anàloga a (\ref{prop:composiciodecontinues}
+\end{proof}
+
+\subsection{La topologia nidificada}
+
+Aquesta és una topologia que ni als apunts de classe ni als exercicis ni als apunts del Naranjo-Navarro surt, però que a la web mathonline la presenten i l'utilitzen a alguns exemples que jo també posaré, així que la presento aquí per tenir un exemple més.
+
+\begin{defi}
+[Topologia nidificada]\label{def:topologianidificada}\index{Topologia nidificada} Sigui $X\not=\emptyset$ un conjunt. La topologia \textit{nidificada} és una col·lecció de subconjunts
+\begin{equation}
+    \notag
+    \tau = \{\emptyset,X\}\cup\{U_1,U_2,\ldots\}\cup\left\{\bigcup_{i=1}^nU_i\right\}
+\end{equation}
+que compleixen que
+\begin{equation}
+    \notag
+    \emptyset\subset U_1\subset\cdots\subset U_n\subset\cdots\subset X.
+\end{equation}
+\end{defi}
+
+\begin{prop}
+\label{prop:topologianidificada} La topologia nidificada és, en efecte, una topologia.
+\end{prop}
+\begin{proof}
+Vegem-ne les tres condicions:
+\begin{enumerate}[(1)]
+    \item $\emptyset,X\in\tau$ explícitament per la definició.
+    \item Sigui $I$ un conjunt d'índexs arbitrari i considerem la col·lecció $\{U_i\}_{i\in I}$ de $\tau$. Si $\{U_i\}_{i\in I}$ és una col·lecció finita de subconjunts de $X$, aleshores $\exists k\in I$ tal que $k = \max I$ $\bigcup_i U_i =U_k\in\tau$.
+    
+    Si, en canvi, $\{U_i\}_i$ és una família d'infinits subconjunts, com $U_i\in\tau$, $\forall i\in I$ i tenim la cadena $U_1\subset U_2\subset\cdots$, veiem que
+    \begin{equation}
+        \notag
+        \bigcup_{i\in I}U_i = \bigcup_{i=1}^n U_i\in\tau. 
+    \end{equation}
+    En qualsevol cas, se satisfà la segona condició.
+    \item Per la tercera condició, siguin $U_{k_1}, U_{k_2},\ldots,U_{k_n}\in\tau$, on $k_1<k_2<\cdots<k_n$. Aleshores, per la cadena, tenim 
+    \begin{equation}
+        \notag
+        U_{k_1}\subseteq U_{k_2}\subseteq \cdots \subseteq U_{k_n}.
+    \end{equation}
+    Per tant, 
+    \begin{equation}
+        \notag
+        \bigcup_{i=1}^n U_{k_i} = U_{k_1}\in\tau
+    \end{equation}
+\end{enumerate}
+Així doncs, hem provat que $(X,\tau)$ és un espai topològic.
+\end{proof}
+
+\subsection{Topologia subespai}
+\begin{defi}
+[Topologia subespai]\label{def:topologiasubespai}\index{Topologia subespai}\index{Topologia induïda} Si $(X,\tau)$ és un espai topològic i $Y\subseteq X$, definim la \textit{topologia subespai} (o topologia induïda) a $Y$ per $\tau$ com
+\begin{equation}
+    \notag
+    \tau_Y:=\{Y\cap A\;:\;A\in \tau\}.
+\end{equation}
+\end{defi}
+
+\begin{ej}
+Un exemple per aclarir aquest concepte. Sigui $X = \{a,b,c\}$ i considerem la topologia $\tau = \{\emptyset,\{a\},\{a,b\},X\}$. Sigui $Y = \{a,c\}\subseteq X$. Aleshores
+\begin{equation}
+    \notag
+    \tau_Y = \{\{a,c\}\cap\emptyset,\{a,c\}\cap\{a\},\{a,c\}\cap\{a,b\},\{a,c\}\cap X\} =
+\end{equation}
+\begin{equation}
+    \notag
+    = \{\emptyset,\{a\},\{a\},X\} = \{\emptyset,\{a\},X\}
+\end{equation}
+\end{ej}
+
+\begin{prop}
+\label{prop:topologiasubespai} La topologia subespai és, efectivament, una topologia.
+\end{prop}
+\begin{proof}
+Provem que satisfà els tres axiomes.
+\begin{enumerate}[(1)]
+    \item Clarament $\emptyset\in \tau_Y$, ja que $\emptyset \in\tau$ i $\emptyset\cap Y = \emptyset$. També és trivial que $Y\in\tau_Y$, ja que $X\in\tau$ i $X\cap Y = Y$, ja que $Y\subset X$.
+    \item Si $\{B_i\}_{i\in I}$ són elements de $\tau_Y$, aleshores podem escriure $B_i = Y\cap A_i$, $\forall i\in I$, on $A_i\in \tau$. Com $\tau$ és una topologia, se satisfà que 
+    \begin{equation}
+        \notag
+        \bigcup_{i\in I} B_i = \bigcup_{i\in I}Y\cap A_i = Y\cap\left(\bigcup_{i\in I}A_i\right)\in\tau_Y.
+    \end{equation}
+    perquè $\bigcup_iA_i\in \tau$.
+    \item Si $B_1,\ldots,B_n\in \tau_Y$, podem escriure $B_j = Y\cap A_j$, amb $A_j\in\tau$, per $j = 1,\ldots,n$. Aleshores
+    \begin{equation}
+        \notag
+        \bigcap_{j=1}^n B_i = \bigcap_{j=1}^n(Y\cap A_j) = Y\cap\left(\bigcap_{j=1}^n\right)\in \tau_Y
+    \end{equation}
+    Perquè $\bigcap_j A_j\in\tau$.
+\end{enumerate}
+\end{proof}
+
+Direm que $Y$ és un subespai de $X$ i amb això voldrem dir que considerarem $Y$ amb la topologia induïda per la topologia de $X$.\index{Subespai}
+
+\begin{ej}
+\label{ej:topologiasubespai2} Si $\tau$ és la topologia grollera en $X$, $\forall Y\subseteq X$ la topologia subespai $\tau_Y$ és la topologia grollera en $Y$. Anàlogament per a la discreta.
+\end{ej}
+
+\begin{ej}
+\label{ej:topologiasubespai3} Prenem a $\mathbb{R}$ la topologia euclidiana. Sigui $Y = [0,1]$. Aleshores $V = [0,1/2)$ és un obert de $Y$ en la topologia subespai. En efecte, $V = (-1/2,1/2)\cap Y$, on $(-1,2,1/2)$ és un obert a $\mathbb{R}$.
+\end{ej}
+
+\section{Comparació de topologies}
+\begin{defi}
+[Més fina]\label{def:mesfina}\index{Topologia més fina} Sigui $X$ un conjunt i siguin $\tau,\sigma$ dues topologies a $X$. Direm que $\tau$ és \textit{més fina que $\sigma$} (o bé que $\sigma$ és més grollera) si $\sigma\varsubsetneq\tau$.
+\end{defi}
+
+\begin{ej}
+La topologia grollera a $X$ és més grollera que qualsevol altra topologia a $X$, i la topologia discreta a $X$ és més fina que qualsevol altra topologia a $X$.
+\end{ej}
+
+\begin{nota}\label{nota:ordreparcialtopologies}
+La relació ``més fina que'' defineix un ordre parcial en el conjunt de totes les topologies a $X$, però en general no és un ordre total. Per exemple, si $X = \{a,b\}$, $\tau = \{\emptyset,\{a\},\{a,b\}\}$ i $\sigma = \{\emptyset,\{b\},\{a,b\}\}$, aleshores $\sigma\not=\tau$ però ni $\sigma$ és més fina que $\tau$ ni $\tau$ és més fina que $\sigma$.
+\end{nota}
+
+\begin{defi}
+[Topologia euclidiana]\label{def:topologiaeuclidiana}\index{Topologia euclidiana} Es defineix la \textit{topologia euclidiana} (o usual o estàndard) a la topologia definida per la distància euclidiana a $\mathbb{R}^n$.
+\end{defi}
+
+\begin{nota}
+Si $n\geq 1$, la topologia euclidiana a $\mathbb{R}^n$ és més fina que la grollera i més grollera que la discreta.
+\end{nota}
+
+
+
+
+
+
+
+\end{document}

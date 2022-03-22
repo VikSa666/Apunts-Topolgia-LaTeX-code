@@ -1,0 +1,562 @@
+\documentclass[../main.tex]{subfiles}
+
+
+
+
+\begin{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\chapter{Aplicacions contínues}
+
+
+
+\section{Aplicació contínua}
+\subsection{Aplicacions contínues. Definició i exemples}
+\begin{defi}
+[Aplicació contínua]\label{def:appcontinuaesptop}\index{Aplicació contínua entre espais topològics} Sigui $f:X\rightarrow Y$ una aplicació entre espais topològics. Es diu que $f$ és \textit{contínua} si, i només si, per a qualsevol obert $U\subseteq Y$, $f^{-1}(U) = \{x\in X\;:\;f(x)\in U\}$ és un obert de $X$.
+\end{defi}
+
+
+\begin{ej}
+\label{ej:appcontesptop} Alguns exemples:
+\begin{enumerate}[(1)]
+    \item Si la topologia a $X$ (resp. $Y$) prové d'una distància $d_X$ a $X$ com espai mètric (resp. $d_Y$ a $Y$) aleshores, $f$ és contínua si i només si $\forall x\in X,\;\forall \varepsilon>0,\;\exists\delta>0$ tal que si $x'\in X$ satisfà $d_X(x,x')<\delta$, aleshores $d_Y(f(x),f(x'))<\varepsilon$. (Aquesta és la definició d'aplicació contínua en un espai mètric, que és equivalent). 
+    
+    \item Si $\tau_1,\;\tau_2$ són topologies en un conjunt $X$, aleshores la identitat $id_X:(X,\tau_1)\rightarrow (X,\tau_2)$ és contínua si i només si $\tau_2\subseteq\tau_1$ (és a dir, $\tau_1$ és igual o més fina que $\tau_2$).
+    
+    \item Sigui $f:(X,\tau_X)\rightarrow (Y,\tau_Y)$ una aplicació qualsevol.
+    \begin{enumerate}[(i)]
+        \item Si $\tau_Y$ és la topologia grollera, aleshores $f$ és contínua.
+        \item Si $\tau_X$ és la topologia discreta, aleshores $f$ és contínua.
+    \end{enumerate}
+    
+    \item Les aplicacions constants són contínues: Si $f:X\rightarrow Y$ satisfà $f(X) = \{y\},\;y\in Y$, aleshores, per tot obert $U\subseteq Y$,
+    \begin{equation}
+        \notag
+        f^{-1}(U) = \left\{
+        \begin{array}{ll}
+            \emptyset & \text{si}\;y\not\in U\\
+            X & \text{si}\;y\in U
+        \end{array}
+        \right.
+    \end{equation}
+    
+    \item Sigui $X$ un espai topològic, i $A\subseteq X$ un subconjunt. Dotant $A$ de la topologia subespai, la inclusió
+    \begin{equation}
+        \notag
+        i:A\rightarrow X    
+    \end{equation}
+    és contínua. En efecte, per definició de la topologia subespai, els oberts de $A$ són de la forma $A\cap U = i^{-1}(U)$, $\forall U\subseteq X$ obert.
+\end{enumerate}
+\end{ej}
+
+\subsection{Propietats}
+
+\begin{prop}
+\label{prop:continua1} Si $f:X\rightarrow Y$ és una aplicació entre espais topològics i $\beta$ és una base a $Y$, aleshores $f$ és contínua si, i només si, $\forall U\in\beta$, $f^{-1}(U)\subseteq X$ és obert.
+\end{prop}
+\begin{proof}
+($\Rightarrow$) és immediat, ja que els elements de $\beta$ són oberts de $Y$.
+
+($\Leftarrow$) Sigui $U\subseteq Y$ un obert. Com que $\beta$ és una base, podem escriure
+\begin{equation}
+    \notag
+    U = \bigcup_{i\in I} U_i,\quad U_i\in\beta,\; \forall i\in I
+\end{equation}
+Llavors,
+\begin{equation}
+    \notag
+    f^{-1}(U) = f^{-1}\left(\bigcup_{i\in I}U_i\right) = \bigcup_{i\in I} f^{-1}(U_i)
+\end{equation}
+és un obert de $X$.
+\end{proof}
+
+
+\begin{prop}
+\label{prop:continua2} Sigui $f:X\rightarrow Y$ una aplicació entre espais topològics. Se satisfà $f$ és contínua si, i només si, $\forall T\subseteq Y$ tancat, $f^{-1}(T)$ és tancat en $X$.
+\end{prop}
+\begin{proof}
+Per a qualsevol subconjunt $A\subseteq Y$ se satisfà $f^{-1}(Y\setminus A) = X\setminus f^{-1}(A)$. En efecte, els punts que van a parar a $Y\setminus A$ són precisament tots els que no van a parar a $A$. En particular, si $T\subseteq Y$ és tancat,
+\begin{equation}
+    \notag
+    f^{-1}(Y\setminus T) = X\setminus f^{-1}(T)
+\end{equation}
+això implica immediatament l'equivalència.
+\end{proof}
+
+\begin{prop}
+\label{prop:continua3} Si $f:X\rightarrow Y$ i $g:Y\rightarrow Z$ són aplicacions contínues, aleshores
+\begin{equation}
+    \notag
+    g\circ f:X\rightarrow Z
+\end{equation}
+és contínua.
+\end{prop}
+\begin{proof}
+Com $g$ és contínua, $g^{-1}(V)$ és un obert que pertany a $Y$, per a qualsevol $V\subseteq Z$ obert. Aleshores, com $f$ és contínua, per qualsevol $U$ obert de $Y$, $f^{-1}(U)$ és un obert. En particular, $U = g^{-1}(V)$ és un obert de $Y$ i aleshores $f^{-1}(g^{-1}(U))$ és un obert de $X$. Acabem de demostrar que $(g\circ f)^{-1}(U)$ és un obert de $X$ per a qualsevol obert de $Z$ i aleshores $g\circ f$ és contínua.
+\end{proof}
+
+
+\begin{prop}
+\label{prop:continua4} Sigui $f:X\rightarrow Y$ una aplicació contínua.
+\begin{enumerate}[(i)]
+    \item Sigui $Z = f(X)\subseteq Y$ dotat de la topologia subespai. Aleshores, l'aplicació $f:X\rightarrow Z$ és contínua.
+    \item Sigui $A\subseteq X$ un subespai. Aleshores,
+    \begin{equation}
+        \notag
+        f_{|A}:A\rightarrow Y
+    \end{equation}
+    és contínua.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+\begin{enumerate}[(i)]
+    \item Denotem per $f_Z:X\rightarrow Z$ la mateixa aplicació $f$, però vista com a aplicació de $X$ a $Z$. Sigui $U\subseteq Z$ un obert. Aleshores, $\exists V\subseteq Y$ obert tal que $U = Z\cap V$. Llavors, $f_Z^{-1}(U) = f^{-1}(V)\subseteq X$ és obert.
+    \item Sigui $U\subseteq Y$ un obert. Aleshores, $(f_{|A})^{-1}(U) = A\cap f^{-1}(U)$ és un obert de $A$, perquè $f^{-1}(U)$ és un obert de $X$ (per ser $f$ contínua i $U$ obert de $Y$).
+\end{enumerate}
+\end{proof}
+
+\begin{nota}
+\label{nota:continua4} El recíproc de (i) és cert: Si $f:X\rightarrow Y$ és una aplicació entre espais topològics, i dotem $Z = f(X)\subseteq Y$ de la topologia subespai, aleshores escrivint $f = f_Z:X\rightarrow Z  $ com abans, se satisfà que $f:X\rightarrow Y$ és contínua $\Leftrightarrow f_Z$ és contínua. La demostració és idèntica. 
+\end{nota}
+
+Per últim escriuré una proposició que és necessària per alguns exercicis i que la demostració de la qual l'he tret de \cite{random}.
+
+\begin{prop}
+\label{prop:continuasiiclausura} Sigui $f:X\rightarrow Y$ una aplicació contínua entre espais topològics. Aleshores, si $A\subseteq X$ se satisfà $f(\overline{A})\subseteq \overline{f(A)}$.
+\end{prop}
+\begin{proof}
+Sigui $x\in \overline{A}$. Considerem $f(x)$ i prenem un entorn obert $V$ de $f(x)$ en $Y$. Aleshores, com $V$ conté $f(x)$ i $f$ és contínua, $f^{-1}(V)$ és un entorn obert de $x$. De (\ref{def:clausura}) i (\ref{prop:clausura1}) traiem que aleshores $f^{-1}(V)\cap A\not=\emptyset$ la qual cosa implica que $V\cap f(A)\not=\emptyset$ i per tant, com $V$ és un obert qualsevol que conté a $f(x)$, això implica que $f(x)\in \overline{f(A)}$.
+\end{proof}
+
+\section{Homeomorfismes}
+
+\subsection{Aplicacions obertes i tancades}
+
+\begin{defi}
+[Aplicació oberta i tancada]\label{def:aplicacioobertatancada}\index{Aplicació oberta}\index{Aplicació tancada} Una aplicació $f:X\rightarrow Y$ entre espais topològics es diu que és \textit{oberta} si per a tot obert $U$ de $X$, la seva imatge $f(U)$ és un obert en $Y$. Anàlogament, es diu que $f$ és tancada si per a tot tancat $T$ de $X$, la seva imatge $f(T)$ és un tancat en $Y$.
+\end{defi}
+
+Aleshores, el concepte de continuïtat d'una aplicació entre espais topològics està més a prop d'aplicacions obertes o tancades quan $f:X\rightarrow Y$ és una bijecció. Provem dos resultats simples al següent teorema en relació a les aplicacions bijectives obertes o tancades entre espais topològics.
+
+\begin{prop}
+\label{prop:aplicaciooberta} Siguin $X$ i $Y$ una aplicació bijectiva. Aleshores
+\begin{enumerate}[(a)]
+    \item Si $f$ és obert, aleshores la inversa $f^{-1}:Y\rightarrow X$ és contínua.
+    \item Si $f$ és tancat, aleshores la inversa $f^{-1}:Y\rightarrow X$ és contínua
+\end{enumerate}
+\end{prop}
+\begin{proof}
+Només demostraré (a) ja que (b) és anàleg. Suposem que tenim $f:X\rightarrow Y$ bijectiva i $f$ oberta. Com $f$ és bijectiva, la inversa $f^{-1}:Y\rightarrow X$ existeix i com $f$ és oberta tenim que per tot obert $U$ de $X$, $f(U)$ és obert en $Y$, és a dir, tenim que per tot obert $V$ del domini de $f^{-1}$, $(f^{-1})^{-1}(V)$ és un obert, i això és $f(V)$, que sabem que és obert perquè $f$ és oberta. Per tant $f^{-1}$ és contínua.
+\end{proof}
+
+\subsection{Homeomorfismes. Definició i exemples}
+
+\begin{defi}
+[Homeomorfisme]\label{def:homeomorfisme}\index{Homeomorfisme} Sigui $f:X\rightarrow Y$ una aplicació entre espais topològics. Direm que $f$ és un \textit{homeomorfisme} si i només si
+\begin{enumerate}[(i)]
+    \item $f$ és contínua,
+    \item $f$ és bijectiva,
+    \item $f^{-1}:Y\rightarrow X$ (que si és bijectiva, aleshores existeix) és contínua.
+\end{enumerate}
+\end{defi}
+
+\begin{nota}
+\label{nota:3noconsequenciade1i2} (iii) no és conseqüència de (i) més (ii). Per exemple, considerem
+\begin{equation}
+    \notag
+    \begin{array}{rl}
+        f:[0,2\pi) & \longrightarrow S^1 = \{(x,y)\in\mathbb{R}^2\;:\;x^2+y^2=1\} \\
+        t & \longmapsto (\cos t,\sin t)
+    \end{array}
+\end{equation}
+Aquesta funció és contínua i bijectiva, però en canvi
+\begin{equation}
+    \notag
+    f^{-1}:S^1\rightarrow [0,2\pi)
+\end{equation}
+no és contínua. En efecte, considerem $V = [0,\pi) = (-\pi,\pi)\cap[0,2\pi)$, on $(-\pi,\pi)$ és un obert de $\mathbb{R}$. $V$ és un obert de $[0,2\pi)$. D'altra banda,
+\begin{equation}
+    \notag
+    (f^{-1})^{-1}(U) = f(U) = \{(x,y)\in S^1\;:\; y>0\}\cup\{(1,0)\}
+\end{equation}
+no és un obert de $S^1$. Si ho fos podríem escriure $f(U) = V\cap S^1$, essent $V\subseteq \mathbb{R}^2$ un obert. En particular, podríem afirmar $(1,0)\in V$. Aleshores, existiria $\varepsilon>0$ tal que $B_\varepsilon((1,0))\subseteq V$. Si fos així tindríem que $B_\varepsilon((1,0))\cap S^1\subseteq f(U)$, però hi ha punts de $B_\varepsilon((1,0))\cap S^1$ amb $y<0$ per tant no pot ser.
+\end{nota}
+
+
+\begin{defi}
+[Espais topològics homeomorfs]\label{def:espaishomeomorfs}\index{Espais topològics homeomorfs} Direm que dos espais topològics $X$ i $Y$ són \textit{homeomorfs} si existeix un homeomorfisme $f:X\rightarrow Y$.
+\end{defi}
+
+Aleshores, si dos espais topològics $X$ i $Y$ són homeomorfs vol dir que tindran les mateixes propietats topològiques. Per exemple, $X$ satisfà el primer axioma de numerabilitat si i només si ho satisfà $Y$.
+
+\begin{prop}
+\label{prop:propietathomeomorfismes}
+Donada una aplicació $f:X\rightarrow Y$ entre espais topològics, són equivalents:
+\begin{enumerate}[(1)]
+    \item $f$ és un homeomorfisme.
+    \item $f$ és contínua, bijectiva i oberta.
+    \item $f$ és contínua, bijectiva i tancada.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+Demostrem la cadena d'implicacions:
+\begin{itemize}
+    \item \fbox{(1)$\Rightarrow$(2)} Cal veure que $f$ és oberta. Sigui $U\subseteq X$ un obert. Aleshores, $f(U) = (f^{-1})^{-1}(U)$ és obert de $Y$ perquè al ser $f$ homeomorfisme es compleix que $f^{-1}$ és contínua.
+    \item \fbox{(2)$\Rightarrow$(3)} Cal veure que $f$ és tancada. Sigui $T\subseteq X$ un tancat. Com que $f$ és bijectiva, $f(X\setminus T) = Y\setminus f(T)$ és un obert que implica que $f(T)$ és un tancat. Aleshores $f$ és tancada.
+    \item \fbox{(3)$\Rightarrow(1)$} Cal veure que $f^{-1}$ és contínua. Sigui $T\subseteq X$ un tancat. Aleshores, $(f^{-1})^{-1}(T) = f(T)$ és un tancat, ja que $f$ és tancada. Per tant $f^{-1}$ és contínua.
+\end{itemize}
+\end{proof}
+
+\begin{ej}
+\label{ej:exempleshomeomorfismes} Exemples d'homeomorfismes.
+\begin{enumerate}[(1)]
+    \item La identitat $id_X:X\rightarrow X$ és un homeomorfisme per a qualsevol espai topològic $X$.
+    \item Siguin $(a,b),\;(c,d)$ intervals oberts de $\mathbb{R}$. Aleshores,
+    \begin{equation}
+        \notag
+        \begin{array}{rl}
+            f:(a,b) & \longrightarrow (c,d) \\
+            t & \longmapsto c+(t-a)\left(\frac{d-c}{b-a}\right)
+        \end{array}
+    \end{equation}
+    és un homeomorfisme. Amb això demostrem que tots els intervals oberts i acotats de $\mathbb{R}$ són homeomorfs entre sí.
+    
+    \item Considerem la funció
+    \begin{equation}
+        \notag
+        f(x) = -\left(\frac{1}{x-1}+\frac{1}{x+1}\right) = \frac{2x}{1-x^2},\quad x\in (-1,1)
+    \end{equation}
+    és a dir,
+    \begin{equation}
+        \notag
+        \begin{array}{rl}
+            f:(-1,1) & \rightarrow \mathbb{R} \\
+            t & \mapsto \frac{2t}{1-t^2}
+        \end{array}
+    \end{equation}
+    A l'interval on està definida es veu clarament que és continua. A més,
+    \begin{equation}
+        \notag
+        f'(t) = \frac{2(1-t^2)-2t(-2t)}{(1-t^2)^2} = \frac{2+2t^2}{(1-t^2)^2} >0,\quad \forall t\in(-1,1)
+    \end{equation}
+    Per tant, $f$ és injectiva. Si no ho fos, aleshores tindríem $f(t_1) = f(t_2)$ amb $t_1<t_2$ i $t_1,t_2\in (-1,1)$. Per tant, hauria d'existir $t\in(t_1,t_2)$ tal que $f'(t) = 0$ però hem vist que era sempre positiva la derivada.
+    
+    D'altra banda, $f$ és exhaustiva: donat $s\in\mathbb{R}$, podem trobar $s_2>s$ tal que 
+    \begin{equation}
+        \notag
+        s_2\in f((-1,1)),\quad \text{perquè}\quad \lim_{t\rightarrow 1^-}f(t) = +\infty,
+    \end{equation}
+    i també un $s_1<s$ tal que 
+    \begin{equation}
+        \notag
+        s_1\in f((-1,1)),\quad \text{perquè} \quad \lim_{t\rightarrow -1^+} f(t) = -\infty
+    \end{equation}
+    i pel teorema del valor intermig $s\in f((-1,1))$.
+    
+    D'altra banda, $f$ és oberta. És suficient veure que, per tot interval $(a,b)\subseteq (-1,1)$, $f((a,b))$ és un obert de $\mathbb{R}$. Ara bé,
+    \begin{equation}
+        \notag
+        f((a,b)) = (f(a),f(b))
+    \end{equation}
+    ja que $f$ és estrictament creixent. Per tant, és obert. Amb això, per la proposició (\ref{prop:propietathomeomorfismes}) hem trobat que $(-1,1)\cong \mathbb{R}$.
+    
+    \item Si agafem la $f$ de l'exemple anterior, restringida a $(0,1)$ obtenim un homeomorfisme. En efecte, $f_{|(0,1)}$ és contínua, bijectiva pel que hem vist abans anàleg i oberta perquè $(0,1)\subseteq (-1,1)$ és obert. Amb això provem que $(0,1)\cong (0,+\infty)$
+    
+    Finalment $g:(0,+\infty)\rightarrow(-\infty,0)$, $g(x) = -x$ també és homeomorfisme, per raons anàlogues als anteriors casos.
+\end{enumerate}
+\end{ej}
+
+\begin{nota}
+\label{nota:intervalsobertssonhomeomorfs} Als dos últims exemples hem provat que tots els intervals de $\mathbb{R}$ oberts (siguin acotat o no) són homeomorfs.
+\end{nota}
+
+\begin{ej}
+\label{ej:homeomorfismes2} Més exemples:
+\begin{enumerate}[(1)]
+    \item $f:S^1\setminus\{(0,1)\}\rightarrow\mathbb{R}$, $f(x,y) = \frac{2x}{1-y}$ és un homeomorfisme.
+    \item $f:(0,2\pi)\rightarrow S^1\setminus\{(1,0)\}$, $f(t) = (\cos t,\sin t)$ també és un homeomorfisme.
+    \item Sigui $S^n = \{(x_0,\ldots,x_n)\in\mathbb{R}^{n+1}\;:\;x_0^2+\cdots+x_n^2 = 1\}$. Considerem la funció
+    \begin{equation}
+        \notag
+        \begin{array}{rl}
+            \varphi:S^n\setminus\{(0,\ldots,0,1)\} & \longrightarrow \mathbb{R}^n \\
+            (x_0,\ldots,x_n) & \longmapsto \frac{2}{1-x_n}(x_0,\ldots,x_{n-1})
+        \end{array}
+    \end{equation}
+    és un homeomorfisme.
+    
+    \item $S^1\not\cong\mathbb{R}$. De fet, cap esfera és homeomorfa a un espai euclidià.
+    \item $\mathbb{R}^n\cong\mathbb{R}^m\Longrightarrow n=m$.
+    \item $S^n\cong S^m\Longrightarrow n=m$.
+\end{enumerate}
+\end{ej}
+
+\subsection{Interior, clausura, etc. d'un subconjunt sota homeomorfismes}
+
+\subsubsection{Interior}
+
+\begin{ter}
+\label{ter:interiorhomeomorfismes} Siguin $X$ i $Y$ espais topològics i $f:X\rightarrow Y$ un homeomorfisme i sigui $A\subseteq X$. Aleshores $f(A^{o}) = (f(A))^{o}$.
+\end{ter}
+\begin{proof}
+Sigui $x\in f(A^{o})$. Aleshores $f^{-1}(x)\in A^{o}$ i per tant $f^{-1}(x)$ és un punt interior de $A$. Llavors existeix un entorn obert $U$ en $X$ de $f^{-1}(x)$ tal que
+\begin{equation}
+    \notag
+    f^{-1}\in U\subseteq A.
+\end{equation}
+Per tant, tenim que $x\in f(U)\subseteq f(A)$. Com $f$ és un homeomorfisme i $U$ és obert en $X$, tenim que $f(U)$ és obert en $Y$ per tant $f(U)$ és un entorn obert de $x$ contingut en $f(A)$. Així, $x$ és un punt interior de $f(A)$, és a dir, $x\in (f(A))^{o}$. Aleshores
+\begin{equation}
+    \notag
+    f(A^{o})\subseteq (f(A))^{o}
+\end{equation}
+Sigui ara $x\in (f(A))^{o}$. Aleshores $x$ és un punt interior de $f(A)$ i per tant existeix un entorn obert $V$ en $X$ de $x$ tal que
+\begin{equation}
+    \notag
+    x\in V\subseteq f(A)
+\end{equation}
+Així doncs, $f^{-1}(x)\in f^{-1}(V)\subseteq A$ i com $f$ és un homeomorfisme i $V$ és obert en $Y$, tenim que $f^{-1}(V)$ és obert en $X$. Per tant, $f^{-1}(V)$ és un entorn obert de $f^{-1}(x)$ contingut en $A$ i així $f^{-1}(x)\in A^{o}$ amb la qual cosa $x\in f(A^{o})$ i obtenim
+\begin{equation}
+    \notag
+    (f(A))^{o}\subseteq f(A^{o}).
+\end{equation}
+Podem concloure, doncs, que $f(A^{o}) = (f(A))^{o}$.
+\end{proof}
+
+\subsubsection{Clausura}
+
+\begin{ter}
+\label{ter:clausurahomeomorfisme} Sigui $X$ i $Y$ dos espais topològics i $f:X\rightarrow Y$ un homeomorfisme, i sigui $A\subseteq X$. Aleshores $f(\overline{A}) = \overline{f(A)}$.
+\end{ter}
+\begin{proof}
+Sigui $x\in f(\overline{A})$. Aleshores $f^{-1}(x)\in \overline{A}$. Per tant $f^{-1}(x)\in A\cup A'$, on $A'$ és el conjunt de punts d'acumulació o adherents a $A$. Si $f^{-1}(x)\in A$, aleshores $x\in f(A)$ i $f(A)\subseteq\overline{f(A)}$, per tant $x\in \overline{f(A)}$ i ja tindríem  una inclusió. Si, en canvi, $f^{-1}(x)\in A'$, aleshores és un punt d'acumulació i per tant tot obert $U$ de $X$ tal que $f^{-1}(x)\in U$ compleix que 
+\begin{equation}
+    \notag
+    A\cap U\setminus\{f^{-1}(x)\}\not=\emptyset .
+\end{equation}
+Així doncs, tenim,
+\begin{equation}
+    \notag
+    f(A\cap U\setminus\{f^{-1}(x)\}) = f(A)\cap f(U)\setminus\{x\}\not=\emptyset.
+\end{equation}
+Com $f$ és un homeomorfisme i $U$ un obert en $X$, $f(U)$ és un obert de $Y$. Però cada obert de $Y$ és de la forma $f(U)$ ja que $f$ és una bijecció. Així doncs, $x$ és un punt d'acumulació de $f(A)$ per tant $x\in (f(A))'$. Però $(f(A))'\subseteq f(A)\cup (f(A))' = \overline{f(A)}$. Obtenim doncs que $x\in\overline{f(A)}$ que ens dona la inclusió
+\begin{equation}
+    \notag
+    f(\overline{A})\subseteq \overline{f(A)}
+\end{equation}
+
+Sigui ara $x\in \overline{f(A)}$. Aleshores $x$ és un punt d'acumulació de $f(A)$, per tant $x\in f(A)\cup (f(A))'$. Si $x\in f(A)$ aleshores $f^{-1}(x)\in A$. Però $A\subseteq A\cup A' = \overline{A}$ aleshores $f^{-1}(x)\in\overline{A}$ i obtenim $x\in f(\overline{A})$. Si, en canvi, $x\in (f(A))'$, tenim que $x$ és un punt d'acumulació de $f(A)$ i per tot obert $V$ de $Y$ amb $x\in V$ tenim que
+\begin{equation}
+    \notag
+    f(A)\cap V\setminus\{x\}\not=\emptyset.
+\end{equation}
+Per tant
+\begin{equation}
+    \notag
+    A\cap f^{-1}(V)\setminus\{f^{-1}(x)\}\not=\emptyset.
+\end{equation}
+Com $f$ és un homeomorfisme i $V$ un obert en $Y$ tenim que $f^{-1}(V)$ és un obert en $X$. Però tot obert en $X$ és de la forma $f^{-1}(V)$ ja que $f$ és bijectiva. Per tant $f^{-1}(x)$ és un punt d'acumulació d'$A$ per tant $f^{-1}(x)\in A'$. Llavors $x\in f(A')$. Però $f(A')\subseteq f(A\cap A') = f(\overline{A})$. I així $x\in f(\overline{A})$ i obtenim
+\begin{equation}
+    \notag
+    \overline{f(A)}\subseteq f(\overline{A})
+\end{equation}
+que ens proporciona la igualtat que buscàvem.
+\end{proof}
+
+\subsubsection{El conjunt de punts d'acumulació}
+A la demostració de (\ref{ter:clausurahomeomorfisme}) ja hem demostrat que la imatge del conjunt de punts d'acumulació és igual al conjunt de punts d'acumulació de la imatge. És a dir, que si $f:X\rightarrow Y$ és un homeomorfisme entre dos espais topològics i $A\subseteq X$, aleshores $f(A') = (f(A))'$.
+
+\subsubsection{Frontera}
+
+\begin{ter}
+\label{ter:fronterahomeomorfisme} Siguin $X$ i $Y$ dos espais topològics, $f:X\rightarrow Y$ un homeomorfisme i $A\subseteq X$. Aleshores $f(\partial A) = \partial f(A)$.
+\end{ter}
+\begin{proof}
+Sigui $x\in f(\partial A)$. Aleshores $f^{-1}(x)\in\partial A$, és a dir, $f^{-1}(x)\in \overline{A}\setminus A^{o}$. I així
+\begin{equation}
+    \notag
+    x\in f(\overline{A})\setminus f(A^{o})
+\end{equation}
+Pels teoremes que hem vist ara a (\ref{ter:interiorhomeomorfismes}) i (\ref{ter:fronterahomeomorfisme}) i com $f$ és un homeomorfisme tenim que
+\begin{equation}
+    \notag
+    f(\overline{A}) = \overline{f(A)} \quad \text{i} f(A^{o}) = (f(A))^{o}.
+\end{equation}
+Per tant tenim que $x\in \overline{f(A)}\setminus (f(A))^{o}$ i per tant
+\begin{equation}
+    \notag
+    f(\partial A)\subseteq\partial f(A)
+\end{equation}
+
+Sigui ara $x\in \partial f(A)$. Aleshores
+\begin{equation}
+    \notag
+    x\in \overline{f(A)}\setminus (f(A))^{o}
+\end{equation}
+i, de nou, per (\ref{ter:interiorhomeomorfismes}) i (\ref{ter:clausurahomeomorfisme}) obtenim que $x\in f(\overline{A})\setminus f(A^{o})$ i per tant $x\in f(\partial A)$, amb la qual cosa
+\begin{equation}
+    \notag
+    \partial f(A) = f(\partial A)
+\end{equation}
+i obtenim la igualtat.
+\end{proof}
+
+\subsection{El primer i segon axioma de numerabilitat sota homeomorfismes}
+
+\begin{ter}
+\label{ter:1anhomeomorfisme} Siguin $X$ i $Y$ dos espais topològics homeomorfs per $f:X\rightarrow Y$. Aleshores, si $X$ satisfà el primer axioma de numerabilitat, també el satisfà $Y$.
+\end{ter}
+\begin{proof}
+Sigui $X$ un espai topològic que satisfà el primer axioma de numerabilitat. Aleshores, tot $x\in X$ té una base d'entorns numerable, sigui $\beta_x$. Per definició, cada base d'entorns numerable $\beta_x$ és una col·lecció d'entorns oberts de $x$ tals que per tot entorn obert $U$ en $X$ de $x$ tenim que existeix $B\in\beta_x$ tal que $x\in B\subseteq U$. Ara, com $B\in\beta_x$ és un obert en $X$ i $x\in B$, aleshores $f(x)\in f(B)$ per tot $B\in \beta_x$ i com $f$ és un homeomorfisme, veiem que $f(B)$ és obert en $Y$ per tot $B\in \beta_x$ contenint $f(x)$, és a dir, un entorn obert de $f(x)$. A més, com $f$ és bijectiva, tenim que per tot $y\in Y$, $y = f(x)$ per algun $x\in X$ i per tant considerem el següent conjunt d'entorns oberts de $y = f(x)$:
+\begin{equation}
+    \notag
+    \beta_y = \{f(B)\;:\;B\in\beta_x\}
+\end{equation}
+Afirmem doncs que $\beta_y$ és una base d'entorns numerable per cada $y = f(x)$ en $Y$. En efecte, $\beta_y$ és numerable, per tant queda veure només que és una base d'entorns. Suposem que $\beta_y$ no és una base d'entorns de $y = f(x)$. Per tant, existeix un entorn obert $V$ de $y = f(x)$ en $Y$ tal que per tot $f(B)\in\beta_y$ tenim que $f(x)\in f(B)\not\subseteq V$. Però aleshores $x\in B\not\subseteq f^{-1}(V)$ per tot $B\in\beta_x$. En qualsevol cas, com $V$ és un entorn obert de $y = f(x)$ tenim que $y = f(x)\in V$ i $f^{-1}(y) = x \in f^{-1}(V)$, per tant $f^{-1}(V)$ és un entorn obert de $x$ tal que no existeix cap element $B\in\beta_x$ que compleixi $x\in B\subseteq f^{-1}(V)$. Però això contradiu el fet que $\beta_x$ és una base d'entorns de $x$. Aleshores no pot ser que $\beta_y$ no sigui una base d'entorns de $y$ i per tant ho és. 
+\end{proof}
+
+\begin{ter}
+\label{ter:2anhomeomorfisme} Siguin $X$ i $Y$ dos espais topològics i $f:X\rightarrow Y$ un homeomorfisme. Aleshores si $X$ satisfà el segon axioma de numerabilitat, $Y$ també el satisfà.
+\end{ter}
+\begin{proof}
+Sigui $X$ un espai que satisfà el segon axioma de numerabilitat. Aleshores existeix una base numerable $\beta$ a la topologia $\tau_X$ definida a $X$. Aleshores per tot obert $U$ en $X$ existeix $\beta^*\subseteq \beta$ tal que
+\begin{equation}
+    \notag
+    U = \bigcup_{B\in\beta^*}B.
+\end{equation}
+Aleshores
+\begin{equation}
+    \notag
+    f(U) = f\left(\bigcup_{B\in\beta^*}B\right) = \bigcup_{B\in\beta^*}f(B)
+\end{equation}
+Com $f$ és un homeomorfisme tenim que $f(U)$ és obert en $Y$. Afirmem que el següent conjunt és una base numerable de $Y$:
+\begin{equation}
+    \notag
+    \overline{\beta} = \{f(B)\;:\;B\in\beta\} .
+\end{equation}
+Clarament $\overline{\beta}$ és numerable ja que $\beta$ és numerable. Només queda veure que tot obert de $Y$ s'expressa com a unió d'oberts en $\overline{\beta}$. Però és que això ja ho hem dit ja que, com $f$ és bijectiva, tots els oberts de $Y$ són de la forma $f(U)$, on $U$ és obert de $X$. I abans ja hem vist que 
+\begin{equation}
+    \notag
+    f(U) = f\left(\bigcup_{B\in\beta^*}B\right) = \bigcup_{B\in\beta^*}f(B)
+\end{equation}
+i això demostra que tot obert de $Y$ s'expressa com a unió d'elements de $\overline{\beta}$ i així $\overline{\beta}$ és una base de $\tau_Y$ numerable.
+\end{proof}
+
+
+\section{Successions a espais topològics}
+
+\subsection{Tancats, continuïtat i convergència}
+\begin{defi}[Successió convergent]
+\label{def:successioconvergentesptopo}\index{Successió convergent en un espai topològic} Una successió $(x_n)_n$ de punts d'un espai topològic es diu que és una successió convergent, si existeix un punt $x\in X$ tal que tot entorn $U$ de $x$ conté tots els termes de la successió a partir d'un lloc, és a dir, a partir d'una certa $n_0\in\mathbb{N}$. És a dir, existeix una $n_0\in\mathbb{N}$ tal que, $\forall n\geq n_0$, $x_n\in U$. $x$ es diu punt límit d'una successió.
+\end{defi}
+
+\begin{ej}
+\label{ej:successioconvergentespaitopo} Una successió pot tenir molts límits:
+\begin{itemize}
+    \item Topologia grollera: tota successió convergeix a tots els punts.
+    \item Topologia discreta: una successió convergeix a un punt $x$ si, i només si, $\exists n_0\in\mathbb{N}\;:\;\forall n\geq n_0$, $x_n = x$.
+    \item En el cas d'espais amb topologia euclidiana, les successions tenen, com a màxim, un únic límit.
+\end{itemize}
+\end{ej}
+
+\begin{prop}
+\label{prop:succonvergentaxena} Si un subconjunt $A\subseteq X$ és tancat i una successió $(a_n)_n$ de punts de $A$ convergeix a un límit $x\in X$, aleshores $x\in A$.
+\end{prop}
+\begin{proof}
+Si $(a_n)_n$, amb $a_n\in A\;\forall n$, convergeix a $x$, tot entorn de $x$ conté punts de la successió (a partir d'un cert $n_0$) i per tant, conté punts d'$A$. Això vol dir que $x\in\overline{A} = A$ ja que $A$ és tancat.
+\end{proof}
+
+\begin{prop}
+\label{prop:funciocontinuasuccessioconvergent} Si $f:X\rightarrow Y$ és contínua i $(x_n)_n$ és una successió de $X$ convergent a un punt $x$, aleshores $(f(x_n))_n$ és una successió convergent al punt $f(x)$.
+\end{prop}
+\begin{proof}
+Suposem que $f:X\rightarrow Y$ és contínua i que $(x_n)_n$ és convergent a $x\in X$. Per a tot entorn obert $U\ni f(x)$ la antiimatge $f^{-1}(U)$ és un entorn obert de $x$. Com que $x$ és límit de $(x_n)_n$, existirà $n_0\in\mathbb{N}$ tal que $x_n\in f^{-1}(U)$ $\forall n\geq n_0$. D'on resulta que $f(x_n)\in U$ $\forall n\geq n_0$ i això ens diu que la successió $(f(x_n))_n$.
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Convergència uniforme}
+\begin{defi}
+[Convergència de funcions]\label{defi:convergenciadefuncions} Es pot definir la convergència d'una successió de funcions $f_n:X\rightarrow Y$ entre espais topològics a una certa funció $f:X\rightarrow Y$ de la següent forma: demanant que $\forall x\in X$, la successió $f_n(x)$ tingui límit $f(x)$.
+\end{defi}
+
+\begin{nota}
+Amb aquesta definició la continuïtat de les funcions $f_n$ no assegura la continuïtat de $f$.
+\end{nota}
+
+\begin{ej}
+La successió de les aplicacions contínues $f_n:\mathbb{R}\rightarrow\mathbb{R}$,
+\begin{equation}
+    \notag
+    f_n(x) = \left\{
+    \begin{array}{ll}
+        0,& \text{si}\quad x\leq 0 \\
+        nx, & \text{si} \quad x\in [0,1/n]\\
+        1, & \text{si} \quad x\geq 1/n
+    \end{array}
+    \right.
+\end{equation}
+convergeix a l'aplicació $f(x) = 0$, si $x\leq 0$, $f(x) = 1$, si $x>0$ que no és contínua.
+\end{ej}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

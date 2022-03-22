@@ -1,0 +1,237 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {catalan}{}
+\contentsline {part}{I\hspace {1em}Topologia}{7}{part.1}%
+\contentsline {chapter}{\numberline {1}Espais mètrics}{11}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Espais mètrics i isometries}{11}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Boles obertes i oberts}{12}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Funcions contínues}{15}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Espais topològics}{19}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Espais topològics}{19}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Exemples de topologies}{19}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Topologia discreta i grollera}{19}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Topologia usual i euclidiana}{20}{subsection.2.2.2}%
+\contentsline {subsubsection}{Topologia dels intervals oberts $(-n,n)$}{21}{section*.4}%
+\contentsline {subsection}{\numberline {2.2.3}Topologia del límit inferior o de Sorgenfrey}{21}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Topologia del segment inicial i final}{21}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Topologia dels complements finits i dels complements numerables}{22}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.6}La topologia nidificada}{23}{subsection.2.2.6}%
+\contentsline {subsection}{\numberline {2.2.7}Topologia subespai}{24}{subsection.2.2.7}%
+\contentsline {section}{\numberline {2.3}Comparació de topologies}{25}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Oberts i tancats}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Oberts i tancats}{27}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Punts interiors d'un conjunt en un espai topològic}{29}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Definició de punt interior i exemples}{29}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Propietats}{31}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Punts adherents d'un conjunt en un espai topològic}{32}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Definició de punt adherent o d'acumulació i exemples}{32}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Propietats}{33}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Clausura d'un conjunt en un espai topològic}{35}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Clausura d'un conjunt en un espai topològic}{35}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Propietats}{37}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Comparació de la clausura amb l'interior}{38}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}La frontera d'un conjunt a un espai topològic}{39}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}La frontera d'un conjunt a un espai topològic}{39}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Propietats}{41}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}Conjunt dens en un espai topològic}{42}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Bases de topologies}{45}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Bases}{45}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Bases. Definició i exemples}{45}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Condició suficient per ser una base}{47}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Generant topologies a partir d'una col·lecció de subconjunts}{48}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Comparació de topologies a partir de les seves bases}{49}{subsection.4.1.4}%
+\contentsline {section}{\numberline {4.2}Subbases}{49}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Entorns i bases d'entorns}{50}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Entorn d'un punt en un espai topològic}{50}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Bases d'entorns}{53}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Axiomes de numerabilitat}{55}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Recordatori dels conjunts numerables}{55}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Primer axioma de numerabilitat}{55}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Segon axioma de numerabilitat}{56}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Propietat important del segon axioma de numerabilitat}{56}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}Relació entre el primer i el segon axioma de numerabilitat}{57}{subsection.4.4.5}%
+\contentsline {chapter}{\numberline {5}Aplicacions contínues}{59}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Aplicació contínua}{59}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Aplicacions contínues. Definició i exemples}{59}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Propietats}{59}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Homeomorfismes}{61}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Aplicacions obertes i tancades}{61}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Homeomorfismes. Definició i exemples}{61}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Interior, clausura, etc. d'un subconjunt sota homeomorfismes}{64}{subsection.5.2.3}%
+\contentsline {subsubsection}{Interior}{64}{section*.5}%
+\contentsline {subsubsection}{Clausura}{64}{section*.6}%
+\contentsline {subsubsection}{El conjunt de punts d'acumulació}{65}{section*.7}%
+\contentsline {subsubsection}{Frontera}{65}{section*.8}%
+\contentsline {subsection}{\numberline {5.2.4}El primer i segon axioma de numerabilitat sota homeomorfismes}{66}{subsection.5.2.4}%
+\contentsline {section}{\numberline {5.3}Successions a espais topològics}{67}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Tancats, continuïtat i convergència}{67}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Convergència uniforme}{67}{subsection.5.3.2}%
+\contentsline {chapter}{\numberline {6}Construcció d'espais topològics}{69}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Topologies inicials i finals}{69}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Topologia inicial}{69}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Topologia final}{71}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Identificació}{72}{subsection.6.1.3}%
+\contentsline {section}{\numberline {6.2}Topologia subespai}{72}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Definició alternativa de subespai topològic}{73}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Oberts i tancats en subespais topològics}{75}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Propietats hereditàries de subespais topològics}{75}{subsection.6.2.3}%
+\contentsline {subsubsection}{Herència del primer axioma de numerabilitat}{76}{section*.9}%
+\contentsline {subsubsection}{Herència del segon axioma de numerabilitat}{76}{section*.10}%
+\contentsline {section}{\numberline {6.3}Topologia suma}{77}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Suma topològica d'espais topològics}{77}{subsection.6.3.1}%
+\contentsline {section}{\numberline {6.4}Topologia producte}{78}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Topologia producte}{78}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Oberts i tancats a la topologia producte}{80}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}L'interior, la clausura i la frontera de l'espai producte}{81}{subsection.6.4.3}%
+\contentsline {subsubsection}{Interior}{81}{section*.11}%
+\contentsline {subsubsection}{Clausura}{82}{section*.12}%
+\contentsline {subsubsection}{Conjunt de punts d'acumulació}{83}{section*.13}%
+\contentsline {section}{\numberline {6.5}Topologia quocient}{83}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Topologia quocient}{84}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Oberts i tancats a la topologia quocient}{84}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.3}Topologia quocient en espais euclidians}{85}{subsection.6.5.3}%
+\contentsline {section}{\numberline {6.6}Espais localment euclidians}{88}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Espais localment euclidians}{88}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}El lema de l'enganxament}{88}{subsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.6.3}Enganxant espais topològics a ells mateixos}{89}{subsection.6.6.3}%
+\contentsline {subsection}{\numberline {6.6.4}Enganxant espais topològics disjunts}{90}{subsection.6.6.4}%
+\contentsline {subsection}{\numberline {6.6.5}La construcció de la banda de Möbius}{91}{subsection.6.6.5}%
+\contentsline {subsection}{\numberline {6.6.6}La construcció del pla projectiu real}{92}{subsection.6.6.6}%
+\contentsline {subsection}{\numberline {6.6.7}Altres construccions}{92}{subsection.6.6.7}%
+\contentsline {chapter}{\numberline {7}Propietats de separació}{95}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Espais topològics separables}{95}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Espais topològics de Kolmogorov}{96}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Espais topològics de Fréchet}{97}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Espais topològics de Hausdorff}{98}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Espais topològics regulars i normals}{101}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Espais topològics regulars}{101}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.2}Espais topològics normals}{102}{subsection.7.5.2}%
+\contentsline {subsection}{\numberline {7.5.3}Relació entre ells}{103}{subsection.7.5.3}%
+\contentsline {chapter}{\numberline {8}Compacitat}{105}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Recobriments i subrecobriments}{105}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Espais quasi-compactes}{106}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Espais quasi-compactes}{106}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Quasi-compacitat de conjunts finits}{107}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}Propietat de la intersecció finita}{108}{subsection.8.2.3}%
+\contentsline {section}{\numberline {8.3}Propietats dels espais quasi-compactes}{109}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Tancats a espais quasi-compactes}{109}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Conjunts quasi-compactes a espais de Hausdorff}{109}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}Preservació de la quasi-compacitat per aplicacions contínues}{110}{subsection.8.3.3}%
+\contentsline {subsection}{\numberline {8.3.4}Quocients a espais quasi-compactes}{110}{subsection.8.3.4}%
+\contentsline {section}{\numberline {8.4}Productes i espais quasi-compactes}{110}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}El lema del tub}{110}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Producte de quasi-compactes}{111}{subsection.8.4.2}%
+\contentsline {section}{\numberline {8.5}Espais compactes}{112}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Espais mètrics compactes}{113}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Espais seqüencialment compactes}{114}{subsection.8.6.1}%
+\contentsline {section}{\numberline {8.7}El lema de Heine-Borel}{116}{section.8.7}%
+\contentsline {section}{\numberline {8.8}Espais localment compactess}{116}{section.8.8}%
+\contentsline {section}{\numberline {8.9}Compactificacions}{118}{section.8.9}%
+\contentsline {subsection}{\numberline {8.9.1}Compactificació per un punt o d'Alexandroff}{118}{subsection.8.9.1}%
+\contentsline {chapter}{\numberline {9}Propietats de connexió}{123}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Espais arc-connexos}{123}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Camins i espais arc-connexos}{123}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}Propietats dels espais arc-connexos}{124}{subsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.1.3}Components arc-connexes}{125}{subsection.9.1.3}%
+\contentsline {subsection}{\numberline {9.1.4}Localment arc-connex}{126}{subsection.9.1.4}%
+\contentsline {section}{\numberline {9.2}Espais connexos}{126}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Definició i exemples}{126}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}Criteris de connexió}{128}{subsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.2.3}Subespais connexos}{129}{subsection.9.2.3}%
+\contentsline {subsection}{\numberline {9.2.4}Criteris de connexió de subespais}{129}{subsection.9.2.4}%
+\contentsline {subsection}{\numberline {9.2.5}Espais connexos i homeomorfismes}{131}{subsection.9.2.5}%
+\contentsline {subsection}{\numberline {9.2.6}Producte d'espais connexos}{133}{subsection.9.2.6}%
+\contentsline {subsection}{\numberline {9.2.7}Relació entre connexió i arc-connexió}{134}{subsection.9.2.7}%
+\contentsline {subsection}{\numberline {9.2.8}Components connexes}{136}{subsection.9.2.8}%
+\contentsline {chapter}{\numberline {10}Appèndix: Projecció estereogràfica}{139}{chapter.10}%
+\contentsline {section}{\numberline {10.1}En dimensió 1}{139}{section.10.1}%
+\contentsline {subsection}{\numberline {10.1.1}Interpretació gràfica}{139}{subsection.10.1.1}%
+\contentsline {subsection}{\numberline {10.1.2}Construcció de la funció explícita}{139}{subsection.10.1.2}%
+\contentsline {subsection}{\numberline {10.1.3}Demostrem que és un homeomorfisme}{140}{subsection.10.1.3}%
+\contentsline {section}{\numberline {10.2}En dimensió 2}{140}{section.10.2}%
+\contentsline {part}{II\hspace {1em}Grup fonamental}{141}{part.2}%
+\contentsline {chapter}{\numberline {11}Homotopia}{145}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Homotopies entre aplicacions}{145}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Equivalències homotòpiques}{148}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Espais contràctils}{149}{section.11.3}%
+\contentsline {subsection}{\numberline {11.3.1}Retractes}{151}{subsection.11.3.1}%
+\contentsline {subsection}{\numberline {11.3.2}Deformacions}{153}{subsection.11.3.2}%
+\contentsline {section}{\numberline {11.4}Homotopia de camins}{155}{section.11.4}%
+\contentsline {chapter}{\numberline {12}El grup fonamental}{159}{chapter.12}%
+\contentsline {section}{\numberline {12.1}El grup fonamental}{159}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Canvi de punt base}{161}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Relació entre grups fonamentals de diferents espais}{162}{section.12.3}%
+\contentsline {subsection}{\numberline {12.3.1}El grup fonamental és un invariant topològic}{162}{subsection.12.3.1}%
+\contentsline {subsection}{\numberline {12.3.2}El grup fonamental és un invariant homotòpic}{164}{subsection.12.3.2}%
+\contentsline {subsection}{\numberline {12.3.3}El grup fonamental del producte}{165}{subsection.12.3.3}%
+\contentsline {section}{\numberline {12.4}El grup fonamental de $S^1$}{166}{section.12.4}%
+\contentsline {section}{\numberline {12.5}Aplicacions del grup fonamental a la topologia del pla}{171}{section.12.5}%
+\contentsline {subsection}{\numberline {12.5.1}Teorema del punt fix de Brouwer}{171}{subsection.12.5.1}%
+\contentsline {subsection}{\numberline {12.5.2}Índex d'un camí tancat al pla respecte un punt}{174}{subsection.12.5.2}%
+\contentsline {subsection}{\numberline {12.5.3}Teorema de Bolzano al pla}{180}{subsection.12.5.3}%
+\contentsline {subsection}{\numberline {12.5.4}Conjunt de teoremes clàssics de topologia del pla}{181}{subsection.12.5.4}%
+\contentsline {subsection}{\numberline {12.5.5}El tipus d'homotopia d'un graf}{184}{subsection.12.5.5}%
+\contentsline {subsection}{\numberline {12.5.6}Exercicis proposats}{185}{subsection.12.5.6}%
+\contentsline {section}{\numberline {12.6}El teorema de Seifert-Van Kampen}{190}{section.12.6}%
+\contentsline {subsection}{\numberline {12.6.1}Grups lliures i presentacions de grups}{190}{subsection.12.6.1}%
+\contentsline {subsection}{\numberline {12.6.2}Producte lliure amalgamat}{191}{subsection.12.6.2}%
+\contentsline {subsection}{\numberline {12.6.3}Enunciat i demostració del teorema}{192}{subsection.12.6.3}%
+\contentsline {subsection}{\numberline {12.6.4}Conseqüències i exemples}{194}{subsection.12.6.4}%
+\contentsline {chapter}{\numberline {13}Superfícies topològiques}{197}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Varietats topològiques}{197}{section.13.1}%
+\contentsline {subsection}{\numberline {13.1.1}El concepte de varietat topològica}{197}{subsection.13.1.1}%
+\contentsline {subsection}{\numberline {13.1.2}Varietats amb vora}{199}{subsection.13.1.2}%
+\contentsline {subsection}{\numberline {13.1.3}Varietats connexes}{200}{subsection.13.1.3}%
+\contentsline {subsection}{\numberline {13.1.4}Varietats de dimensió 1}{200}{subsection.13.1.4}%
+\contentsline {section}{\numberline {13.2}Superfícies topològiques}{202}{section.13.2}%
+\contentsline {subsection}{\numberline {13.2.1}Superfícies poligonals}{204}{subsection.13.2.1}%
+\contentsline {subsection}{\numberline {13.2.2}Invariància topològica de la dimensió}{206}{subsection.13.2.2}%
+\contentsline {section}{\numberline {13.3}El grup fonamental de les superfícies topològiques}{206}{section.13.3}%
+\contentsline {subsection}{\numberline {13.3.1}El cas d'un sol vèrtex}{207}{subsection.13.3.1}%
+\contentsline {subsection}{\numberline {13.3.2}El cas general}{208}{subsection.13.3.2}%
+\contentsline {subsection}{\numberline {13.3.3}Orientabilitat}{209}{subsection.13.3.3}%
+\contentsline {section}{\numberline {13.4}Classificació de superfícies}{210}{section.13.4}%
+\contentsline {subsection}{\numberline {13.4.1}Demostració del teorema de classificació de superfícies}{211}{subsection.13.4.1}%
+\contentsline {section}{\numberline {13.5}Triangulació}{213}{section.13.5}%
+\contentsline {subsection}{\numberline {13.5.1}Superfícies triangulables}{213}{subsection.13.5.1}%
+\contentsline {subsection}{\numberline {13.5.2}Triangulació de superfícies}{217}{subsection.13.5.2}%
+\contentsline {subsection}{\numberline {13.5.3}Complexos simplicials i complexos cel·lulars}{219}{subsection.13.5.3}%
+\contentsline {subsection}{\numberline {13.5.4}Teorema de classificació de superfícies triangulables}{220}{subsection.13.5.4}%
+\contentsline {subsection}{\numberline {13.5.5}Característica d'Euler}{220}{subsection.13.5.5}%
+\contentsline {part}{III\hspace {1em}Grups d'homologia}{223}{part.3}%
+\contentsline {chapter}{\numberline {14}Políedres}{227}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Símplexs i políedres simplicials}{227}{section.14.1}%
+\contentsline {section}{\numberline {14.2}Aplicacions simplicials}{230}{section.14.2}%
+\contentsline {chapter}{\numberline {15}Homologia simplicial}{233}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Cadenes d'un políedre. Homologia simplicial}{233}{section.15.1}%
+\contentsline {section}{\numberline {15.2}Complexos de $R$-m\`oduls}{238}{section.15.2}%
+\contentsline {section}{\numberline {15.3}Morfismes de complexos}{242}{section.15.3}%
+\contentsline {section}{\numberline {15.4}Homotopies entre morfismes de complexos de $R$-mòduls}{244}{section.15.4}%
+\contentsline {chapter}{\numberline {16}Homologia singular}{247}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Cadenes singulars d'un espai topològic}{247}{section.16.1}%
+\contentsline {section}{\numberline {16.2}$H_0$ i arc-connexió}{251}{section.16.2}%
+\contentsline {section}{\numberline {16.3}El teorema d'invariància homotòpica}{252}{section.16.3}%
+\contentsline {section}{\numberline {16.4}El teorema de les cadenes petites}{256}{section.16.4}%
+\contentsline {section}{\numberline {16.5}La successió exacta de Mayer-Vietoris}{261}{section.16.5}%
+\contentsline {section}{\numberline {16.6}Càlcul d'homologies singulars}{262}{section.16.6}%
+\contentsline {section}{\numberline {16.7}Homologia relativa singular}{273}{section.16.7}%
+\contentsline {section}{\numberline {16.8}El teorema d'escissió}{275}{section.16.8}%
+\contentsline {section}{\numberline {16.9}Comparació homologia singular i simplicial}{277}{section.16.9}%
+\contentsline {chapter}{\numberline {17}Aplicacions de l'homologia}{281}{chapter.17}%
+\contentsline {section}{\numberline {17.1}Homologia reduïda}{281}{section.17.1}%
+\contentsline {section}{\numberline {17.2}Teorema de no separació}{282}{section.17.2}%
+\contentsline {section}{\numberline {17.3}El teorema de separació de Jordan-Brouwer}{284}{section.17.3}%
+\contentsline {section}{\numberline {17.4}Altres teoremes importants}{287}{section.17.4}%
+\contentsline {section}{\numberline {17.5}Annex: Grau d'aplicacions entre esferes}{291}{section.17.5}%
+\contentsline {part}{IV\hspace {1em}Apèndix}{295}{part.4}%
+\contentsline {chapter}{\numberline {A}Introducció a la teoria de categories}{297}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Teoria bàsica de grups (en anglès)}{301}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Preliminary concepts}{301}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Cosets and Lagrange's Theorem}{303}{section.B.2}%
+\contentsline {section}{\numberline {B.3}Normality, quotient groups and isomorphism's theorems}{307}{section.B.3}%
+\contentsline {section}{\numberline {B.4}Actions and Sylow theorems}{311}{section.B.4}%
+\contentsline {section}{\numberline {B.5}Grups abelians finitament generats}{316}{section.B.5}%
+\contentsline {subsection}{\numberline {B.5.1}Bases}{316}{subsection.B.5.1}%
+\contentsline {subsection}{\numberline {B.5.2}Subgrup de torsió}{317}{subsection.B.5.2}%
+\contentsline {subsection}{\numberline {B.5.3}Estructura dels grups abelians finitament generats}{318}{subsection.B.5.3}%
+\contentsline {subsection}{\numberline {B.5.4}Càlcul efectiu dels factors invariants}{321}{subsection.B.5.4}%
+\contentsline {subsubsection}{Algoritme}{322}{section*.18}%

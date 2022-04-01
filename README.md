@@ -7,3 +7,5 @@ Aquest repositori no és més que un recopilatori de tots els apunts de topologi
 3. Apunts sobre l'assignatura ***Topologia Algebraica*** una optativa que he cursat més recentment i que tracta sobre la ***teoria d'homologia***.
 
 Cal dir que els apunts han estat fets al llarg de més de 2 anys i que, com a tal, es pot apreciar una progressió en l'organització i l'estil del *TeX*. 
+
+***NOTA:*** tot ha estat fet mitjançant el software online [Overleaf](https://www.overleaf.com)
